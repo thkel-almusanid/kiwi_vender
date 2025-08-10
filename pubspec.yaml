@@ -59,6 +59,10 @@ dependencies:
   dropdown_button2: ^2.3.9
   lottie: ^3.2.0
   syncfusion_flutter_datepicker: ^27.2.3
+  printing: ^5.14.2
+  pdf: ^3.11.3
+  app_settings: ^6.1.1
+  
 
 dependency_overrides:
   collection: ^1.19.0
