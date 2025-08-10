@@ -48,6 +48,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   ScreenshotController screenshotController = ScreenshotController();
   String? _warningMessage;
   bool _isConnected = true;
+  bool onPressedWifi = false;
 
   late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
 
@@ -92,18 +93,17 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   void initState() {
     super.initState();
     getBluetooth();
-    getBluetooth();
     WidgetsBinding.instance.addObserver(this);
-    _checkConnection();
+    // _checkConnection();
 
-    _connectivitySubscription =
-        Connectivity().onConnectivityChanged.listen((results) {
-      if (results.isNotEmpty) {
-        _updateConnectionStatus(results.first);
-      } else {
-        _updateConnectionStatus(ConnectivityResult.none);
-      }
-    });
+    // _connectivitySubscription =
+    //     Connectivity().onConnectivityChanged.listen((results) {
+    //   if (results.isNotEmpty) {
+    //     _updateConnectionStatus(results.first);
+    //   } else {
+    //     _updateConnectionStatus(ConnectivityResult.none);
+    //   }
+    // });
   }
 
   @override
@@ -133,6 +133,11 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
 
   void _updateConnectionStatus(ConnectivityResult result) {
     final connected = result != ConnectivityResult.none;
+    if (connected) {
+      setState(() {
+        onPressedWifi = false;
+      });
+    }
     if (connected != _isConnected) {
       setState(() {
         _isConnected = connected;
@@ -183,7 +188,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
 
   @override
   Widget build(BuildContext context) {
-    if (!_isConnected) {
+    if (!_isConnected && onPressedWifi) {
       return Scaffold(
         body: Center(
           child: Column(
@@ -396,7 +401,12 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
                 margin: const EdgeInsets.symmetric(
                     horizontal: Dimensions.paddingSizeSmall,
                     vertical: Dimensions.paddingSizeExtraSmall),
-                onPressed: () {
+                onPressed: () async {
+                  setState(() {
+                    onPressedWifi = true;
+                  });
+                  await _checkConnection();
+
                   screenshotController
                       .capture(delay: const Duration(milliseconds: 10))
                       .then((Uint8List? capturedImage) {
