@@ -94,16 +94,6 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     super.initState();
     getBluetooth();
     WidgetsBinding.instance.addObserver(this);
-    // _checkConnection();
-
-    // _connectivitySubscription =
-    //     Connectivity().onConnectivityChanged.listen((results) {
-    //   if (results.isNotEmpty) {
-    //     _updateConnectionStatus(results.first);
-    //   } else {
-    //     _updateConnectionStatus(ConnectivityResult.none);
-    //   }
-    // });
   }
 
   @override
@@ -404,4 +394,3 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     );
   }
 }
-
