@@ -23,10 +23,7 @@ class NoConnectedScreen extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () async {
-                // افتح إعدادات الواي فاي (اختياري)
-                // لو حابب تفتح إعدادات الجهاز:
                 AppSettings.openAppSettings(type: AppSettingsType.wifi);
-                // لكن تتطلب مكتبة إضافية مثل open_settings
               },
               child: const Text('تفعيل Wi-Fi'),
             )
