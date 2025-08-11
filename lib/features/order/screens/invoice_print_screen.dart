@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:app_settings/app_settings.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,6 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 import 'package:printing/printing.dart';
 import 'package:screenshot/screenshot.dart';
-import 'package:sixam_mart_store/features/order/screens/no_connected_screen.dart';
 
 import '../../../common/widgets/custom_button_widget.dart';
 import '../../../common/widgets/custom_snackbar_widget.dart';
@@ -22,6 +20,7 @@ import '../controllers/order_controller.dart';
 import '../domain/models/order_details_model.dart';
 import '../domain/models/order_model.dart';
 import '../widgets/invoice_dialog_widget.dart';
+import 'no_connected_screen.dart';
 
 class InVoicePrintScreen extends StatefulWidget {
   final OrderModel? order;
