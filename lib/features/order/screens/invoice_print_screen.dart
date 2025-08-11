@@ -179,7 +179,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   @override
   Widget build(BuildContext context) {
     if (!_isConnected && onPressedWifi) {
-      return const NoConnectedScreen();
+      return const NetworkUnavailableWidget();
     }
     return Column(
       children: [

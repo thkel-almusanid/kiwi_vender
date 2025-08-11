@@ -1,8 +1,8 @@
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 
-class NoConnectedScreen extends StatelessWidget {
-  const NoConnectedScreen({
+class NetworkUnavailableWidget extends StatelessWidget {
+  const NetworkUnavailableWidget({
     super.key,
   });
 
