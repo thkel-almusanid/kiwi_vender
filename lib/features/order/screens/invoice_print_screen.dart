@@ -49,8 +49,33 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   String? _warningMessage;
   bool _isConnected = true;
   bool onPressedWifi = false;
-
   late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
+
+//////////////////////////////////////////////////State ///////////////////////////////////////////////////////////////
+
+  @override
+  void initState() {
+    super.initState();
+    getBluetooth();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _connectivitySubscription.cancel();
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _checkConnection();
+    }
+    super.didChangeAppLifecycleState(state);
+  }
+
+//////////////////////////////////////////////////Bluetooth Connection//////////////////////////////////////////////////
 
   Future<void> getBluetooth() async {
     setState(() {
@@ -89,34 +114,43 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     }
   }
 
-  @override
-  void initState() {
-    super.initState();
-    getBluetooth();
-    WidgetsBinding.instance.addObserver(this);
-  }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    _connectivitySubscription.cancel();
-    super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      _checkConnection();
+  Future _printReceipt(Uint8List screenshot) async {
+    bool connectionStatus = await PrintBluetoothThermal.connectionStatus;
+    if (connectionStatus) {
+      List<int> ticket = await testTicket(screenshot);
+      final result = await PrintBluetoothThermal.writeBytes(ticket);
+      if (kDebugMode) {
+        print("print result: $result");
+      }
+    } else {
+      showCustomSnackBar('no_thermal_printer_connected'.tr);
     }
-    super.didChangeAppLifecycleState(state);
   }
+
+  Future<List<int>> testTicket(Uint8List screenshot) async {
+    List<int> bytes = [];
+    final img.Image? image = img.decodeImage(screenshot);
+    img.Image resized =
+        img.copyResize(image!, width: _selectedSize == 80 ? 500 : 365);
+    final profile = await CapabilityProfile.load();
+    final generator = Generator(
+        _selectedSize == 80 ? PaperSize.mm80 : PaperSize.mm58, profile);
+
+    // Using `ESC *`
+    bytes += generator.image(resized);
+
+    bytes += generator.feed(2);
+    // bytes += generator.cut();
+    return bytes;
+  }
+
+//////////////////////////////////////////////////WiFi Connection///////////////////////////////////////////////////////
 
   Future<void> _checkConnection() async {
     List<ConnectivityResult> results = await Connectivity().checkConnectivity();
     if (results.isNotEmpty) {
       _updateConnectionStatus(results.first);
     } else {
-      // إذا رجع فارغ اعتبره بلا اتصال
       _updateConnectionStatus(ConnectivityResult.none);
     }
   }
@@ -135,19 +169,6 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     }
   }
 
-  Future _printReceipt(Uint8List screenshot) async {
-    bool connectionStatus = await PrintBluetoothThermal.connectionStatus;
-    if (connectionStatus) {
-      List<int> ticket = await testTicket(screenshot);
-      final result = await PrintBluetoothThermal.writeBytes(ticket);
-      if (kDebugMode) {
-        print("print result: $result");
-      }
-    } else {
-      showCustomSnackBar('no_thermal_printer_connected'.tr);
-    }
-  }
-
   Future<void> _printReceiptWiFi(Uint8List imageBytes) async {
     await Printing.layoutPdf(onLayout: (format) async {
       final doc = pw.Document();
@@ -157,23 +178,6 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
       }));
       return doc.save();
     });
-  }
-
-  Future<List<int>> testTicket(Uint8List screenshot) async {
-    List<int> bytes = [];
-    final img.Image? image = img.decodeImage(screenshot);
-    img.Image resized =
-        img.copyResize(image!, width: _selectedSize == 80 ? 500 : 365);
-    final profile = await CapabilityProfile.load();
-    final generator = Generator(
-        _selectedSize == 80 ? PaperSize.mm80 : PaperSize.mm58, profile);
-
-    // Using `ESC *`
-    bytes += generator.image(resized);
-
-    bytes += generator.feed(2);
-    // bytes += generator.cut();
-    return bytes;
   }
 
   @override
