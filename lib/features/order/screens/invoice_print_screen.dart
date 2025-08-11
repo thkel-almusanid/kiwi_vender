@@ -11,6 +11,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:print_bluetooth_thermal/print_bluetooth_thermal.dart';
 import 'package:printing/printing.dart';
 import 'package:screenshot/screenshot.dart';
+import 'package:sixam_mart_store/features/order/screens/no_connected_screen.dart';
 
 import '../../../common/widgets/custom_button_widget.dart';
 import '../../../common/widgets/custom_snackbar_widget.dart';
@@ -189,32 +190,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   @override
   Widget build(BuildContext context) {
     if (!_isConnected && onPressedWifi) {
-      return Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.wifi_off, size: 80, color: Colors.blue),
-              const SizedBox(height: 16),
-              const Text(
-                'الرجاء تفعيل Wi-Fi للمتابعة\nوربط الطابعة على نفس الشبكة',
-                style: TextStyle(fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () async {
-                  // افتح إعدادات الواي فاي (اختياري)
-                  // لو حابب تفتح إعدادات الجهاز:
-                  AppSettings.openAppSettings(type: AppSettingsType.wifi);
-                  // لكن تتطلب مكتبة إضافية مثل open_settings
-                },
-                child: const Text('تفعيل Wi-Fi'),
-              )
-            ],
-          ),
-        ),
-      );
+      return const NoConnectedScreen();
     }
     return Column(
       children: [
@@ -429,3 +405,4 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     );
   }
 }
+
