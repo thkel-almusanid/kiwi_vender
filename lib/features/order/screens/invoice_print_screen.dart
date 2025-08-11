@@ -20,7 +20,7 @@ import '../controllers/order_controller.dart';
 import '../domain/models/order_details_model.dart';
 import '../domain/models/order_model.dart';
 import '../widgets/invoice_dialog_widget.dart';
-import 'no_connected_screen.dart';
+import 'no_connected_widget.dart';
 
 class InVoicePrintScreen extends StatefulWidget {
   final OrderModel? order;
