@@ -50,6 +50,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
   bool _isConnected = true;
   bool onPressedWifi = false;
   late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
+  bool _isLoadingButtonPrint = false;
 
 //////////////////////////////////////////////////State ///////////////////////////////////////////////////////////////
 
@@ -343,25 +344,41 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
           children: [
             Expanded(
               child: CustomButtonWidget(
+                isLoading: _isLoadingButtonPrint,
                 buttonText: 'print_invoice'.tr,
                 height: 40,
                 margin: const EdgeInsets.symmetric(
                     horizontal: Dimensions.paddingSizeSmall,
                     vertical: Dimensions.paddingSizeExtraSmall),
-                onPressed: () {
-                  screenshotController
-                      .capture(delay: const Duration(milliseconds: 10))
-                      .then((Uint8List? capturedImage) {
-                    //Capture Done
-                    if (kDebugMode) {
-                      print('Captured Image:  $capturedImage');
-                    }
-                    _printReceipt(capturedImage!);
-                  }).catchError((onError) {
-                    if (kDebugMode) {
-                      print(onError);
-                    }
+                onPressed: () async {
+                  setState(() {
+                    _isLoadingButtonPrint = true;
                   });
+
+                  try {
+                    final Uint8List? capturedImage =
+                        await screenshotController.capture(
+                      delay: const Duration(milliseconds: 10),
+                    );
+
+                    if (capturedImage != null) {
+                      if (kDebugMode) {
+                        print('Captured Image: $capturedImage');
+                      }
+                      await _printReceipt(capturedImage);
+                    } else {
+                      showCustomSnackBar('failed_to_capture_image'.tr);
+                    }
+                  } catch (error) {
+                    if (kDebugMode) {
+                      print(error);
+                    }
+                    showCustomSnackBar('error_capturing_image'.tr);
+                  } finally {
+                    setState(() {
+                      _isLoadingButtonPrint = false;
+                    });
+                  }
                 },
               ),
             ),
