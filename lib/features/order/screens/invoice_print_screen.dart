@@ -180,6 +180,8 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
     });
   }
 
+//////////////////////////////////////////////////UI-Design////////////////////////////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     if (!_isConnected && onPressedWifi) {
