@@ -69,7 +69,7 @@ dependencies:
   # flutter pub run rename getAppName --targets ios
   # flutter pub run rename setBundleId --targets android --value "com.almusanid.qewii_vendor"
   #flutter pub run rename setAppName --targets ios,android --value "اطلبها"
-  rename: ^3.0.2
+#  rename: ^3.0.2
 
 dependency_overrides:
   collection: ^1.19.0
