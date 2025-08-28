@@ -62,7 +62,14 @@ dependencies:
   printing: ^5.14.2
   pdf: ^3.11.3
   app_settings: ^6.1.1
-  
+  # this command_palette: using for get_it: package info
+  # flutter pub run rename
+  # flutter pub run rename getAppName --targets ios,android
+  # flutter pub run rename getBundleId
+  # flutter pub run rename getAppName --targets ios
+  # flutter pub run rename setBundleId --targets android --value "com.almusanid.qewii_vendor"
+  #flutter pub run rename setAppName --targets ios,android --value "اطلبها"
+  rename: ^3.0.2
 
 dependency_overrides:
   collection: ^1.19.0

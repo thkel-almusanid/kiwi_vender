@@ -1,4 +1,4 @@
-package com.sixamtech.sixam_mart_store_app
+package com.almusanid.qewii_vendor
 
 import io.flutter.embedding.android.FlutterActivity
 

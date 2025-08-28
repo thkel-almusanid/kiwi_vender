@@ -1,0 +1,2 @@
+/Users/alaakhaled/StudioProjects/kiwi_vender/android/app/.cxx/Debug/4v3j5v23/x86_64/CMakeFiles/edit_cache.dir
+/Users/alaakhaled/StudioProjects/kiwi_vender/android/app/.cxx/Debug/4v3j5v23/x86_64/CMakeFiles/rebuild_cache.dir
