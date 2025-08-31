@@ -107,6 +107,12 @@ flutter:
         - asset: assets/font/Cairo-Black.ttf
           weight: 900
 
+    - family: saudi_riyal
+      fonts:
+        - asset: assets/font/saudi_riyal.ttf
+          style: italic
+          weight: 700
+
 
 flutter_launcher_icons:
   android: "launcher_icon"
