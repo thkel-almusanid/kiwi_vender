@@ -54,6 +54,8 @@ dependencies:
   chewie: ^1.8.4
   fluttertoast: ^8.2.12
   flutter_foreground_task: ^8.17.0
+  flutter_launcher_icons: ^0.14.4
+  rename: ^3.1.0
 
   #Rental Module
   dropdown_button2: ^2.3.9
@@ -81,8 +83,21 @@ dev_dependencies:
 
   flutter_lints: ^4.0.0
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/image/logo.png"
+  # Foreground layer for adaptive icon; specify the image path.
+  # Adaptive icons are used in Android to provide a seamless icon
+  # transition between the app's launcher icon and the icon
+  # displayed in the app's UI.
+  adaptive_icon_foreground: "assets/image/logo.png" # Foreground layer for adaptive icon
+  adaptive_icon_background: "#FFFFFF" # Background color (or use an image path)  
+
 flutter:
   uses-material-design: true
+
 
   assets:
     - assets/image/

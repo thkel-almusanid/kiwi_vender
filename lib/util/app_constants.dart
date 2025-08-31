@@ -2,7 +2,7 @@ import 'package:sixam_mart_store/features/language/domain/models/language_model.
 import 'package:sixam_mart_store/util/images.dart';
 
 class AppConstants {
-  static const String appName = '6amMart Vendor';
+  static const String appName = 'Qewii Vendor';
   static const double appVersion = 3.3; ///Flutter SDK: 3.32.8
 
   static const String fontFamily = 'Roboto';
