@@ -26,6 +26,25 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:578137112526:android:88fbca2c6c7d240889759f",
+        "android_client_info": {
+          "package_name": "com.almusanid.qewii_driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNEjJP1IOhKL58QZp8WE1xeJdKoVB-TV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:578137112526:android:9662bedef95cca1589759f",
         "android_client_info": {
           "package_name": "com.almusanid.qewii_vendor"
