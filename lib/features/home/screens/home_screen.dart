@@ -153,7 +153,10 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Theme.of(context).cardColor,
         leading: Padding(
           padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
-          child: Image.asset(Images.logo, height: 30, width: 30),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20), 
+            child: Image.asset(Images.logo, height: 30, width: 30),
+          ),
         ),
         titleSpacing: 0,
         surfaceTintColor: Theme.of(context).cardColor,
