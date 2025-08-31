@@ -19,7 +19,7 @@ class PickupZoneWidget extends StatelessWidget {
               value: e.name,
               child: Row(
                 children: [
-                  Text(e.name!, style: robotoRegular),
+                  Text(e.name!, style: cairoRegular),
                   const Spacer(),
                   if (isInPickupZoneList)
                     const Icon(Icons.check, color: Colors.green),

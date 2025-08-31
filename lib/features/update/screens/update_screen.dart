@@ -29,14 +29,14 @@ class UpdateScreen extends StatelessWidget {
 
             Text(
               isUpdate ? 'update'.tr : 'we_are_under_maintenance'.tr,
-              style: robotoBold.copyWith(fontSize: MediaQuery.of(context).size.height*0.023, color: Theme.of(context).primaryColor),
+              style: cairoBold.copyWith(fontSize: MediaQuery.of(context).size.height*0.023, color: Theme.of(context).primaryColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: MediaQuery.of(context).size.height*0.01),
 
             Text(
               isUpdate ? 'your_app_is_deprecated'.tr : 'we_will_be_right_back'.tr,
-              style: robotoRegular.copyWith(fontSize: MediaQuery.of(context).size.height*0.0175, color: Theme.of(context).disabledColor),
+              style: cairoRegular.copyWith(fontSize: MediaQuery.of(context).size.height*0.0175, color: Theme.of(context).disabledColor),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: isUpdate ? MediaQuery.of(context).size.height*0.04 : 0),

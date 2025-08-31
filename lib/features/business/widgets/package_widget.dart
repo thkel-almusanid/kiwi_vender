@@ -17,7 +17,7 @@ class PackageWidget extends StatelessWidget {
           Icon(Icons.check_circle, size: 18, color: isSelect ? Theme.of(context).cardColor : Colors.green),
           const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          Text(title.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelect ? Theme.of(context).cardColor
+          Text(title.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: isSelect ? Theme.of(context).cardColor
           : Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7))),
 
         ]),

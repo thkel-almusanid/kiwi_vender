@@ -97,7 +97,7 @@ class _CategoryProductScreenState extends State<CategoryProductScreen> {
                           child: Center(
                             child: Text(
                               index == 0 ? 'all'.tr : categoryController.subCategoryList![index - 1].name ?? '',
-                              style: robotoRegular.copyWith(
+                              style: cairoRegular.copyWith(
                                 fontSize: Dimensions.fontSizeSmall,
                                 color: isSelected ? Theme.of(context).cardColor : Theme.of(context).disabledColor,
                                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w400,

@@ -90,7 +90,7 @@ class _PaginatedListWidgetState extends State<PaginatedListWidget> {
               borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
               color: Theme.of(context).primaryColor,
             ),
-            child: Text('view_more'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.white)),
+            child: Text('view_more'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.white)),
           ),
         ) : const SizedBox(),
       )),

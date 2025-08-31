@@ -99,7 +99,7 @@ class _AllItemsScreenState extends State<AllItemsScreen> {
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                               Text(
                                 index == 0 ? 'all'.tr : storeController.categoryNameList![index],
-                                style: robotoRegular.copyWith(
+                                style: cairoRegular.copyWith(
                                   fontSize: Dimensions.fontSizeSmall,
                                   color: index == storeController.categoryIndex ? Theme.of(context).cardColor : Theme.of(context).disabledColor,
                                   fontWeight: index == storeController.categoryIndex ? FontWeight.w700 : FontWeight.w400,
@@ -147,7 +147,7 @@ class _AllItemsScreenState extends State<AllItemsScreen> {
 
               Row(children: [
 
-                Text('${'item_found'.tr} ${'(${storeController.itemSize ?? 0})'}', style: robotoMedium),
+                Text('${'item_found'.tr} ${'(${storeController.itemSize ?? 0})'}', style: cairoMedium),
                 const Spacer(),
 
                 InkWell(
@@ -228,7 +228,7 @@ class _AllItemsScreenState extends State<AllItemsScreen> {
                 child: Get.find<ProfileController>().modulePermission!.item!
                   ? ItemViewWidget(scrollController: _scrollController, fromAllItems: true, type: storeController.type, search: _searchController.text) : Center(child: Padding(
                   padding: const EdgeInsets.only(top: 100),
-                  child: Text('you_have_no_permission_to_access_this_feature'.tr, style: robotoMedium),
+                  child: Text('you_have_no_permission_to_access_this_feature'.tr, style: cairoMedium),
                 )),
               ),
 

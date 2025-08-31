@@ -32,7 +32,7 @@ class EmptyAdsView extends StatelessWidget {
         const CustomAssetImageWidget(Images.adsListImage, height: 70, width: 70),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-        Text('no_data_available'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+        Text('no_data_available'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
 
       ]),
     ) : SizedBox(height: Get.height * 0.7,
@@ -41,13 +41,13 @@ class EmptyAdsView extends StatelessWidget {
         const CustomAssetImageWidget(Images.adsListImage, height: 70, width: 70,),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-        Text('advertisement_list'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+        Text('advertisement_list'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
         Text(
           'uh_oh_You_didnt_created_any_advertisement_yet'.tr,
           textAlign: TextAlign.center,
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).disabledColor),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).disabledColor),
         ),
         const SizedBox(height: Dimensions.paddingSizeExtremeLarge),
 
@@ -68,7 +68,7 @@ class EmptyAdsView extends StatelessWidget {
           child: Text(
             'by_creating_advertisement'.tr,
             textAlign: TextAlign.center,
-            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
           ),
         ),
       ]),

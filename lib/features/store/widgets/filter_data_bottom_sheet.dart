@@ -31,12 +31,12 @@ class FilterDataBottomSheet extends StatelessWidget {
           ),
           const SizedBox(height: Dimensions.paddingSizeLarge),
 
-          Text('filter_data'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+          Text('filter_data'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
 
           Padding(
             padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('foods_type'.tr, style: robotoBold),
+              Text('foods_type'.tr, style: cairoBold),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
               ...storeController.itemTypeList.map((type) {
@@ -95,7 +95,7 @@ class FilterButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title, style: robotoRegular),
+          Text(title, style: cairoRegular),
           Radio(
             value: isSelected,
             groupValue: true,

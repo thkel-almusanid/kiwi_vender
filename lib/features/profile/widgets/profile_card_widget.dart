@@ -13,12 +13,12 @@ class ProfileCardWidget extends StatelessWidget {
     return Expanded(child: DetailsCustomCard(
       height: 100,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(data, style: robotoMedium.copyWith(
+        Text(data, style: cairoMedium.copyWith(
           fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).primaryColor,
         )),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-        Text(title, style: robotoRegular.copyWith(
+        Text(title, style: cairoRegular.copyWith(
           fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor,
         )),
       ]),

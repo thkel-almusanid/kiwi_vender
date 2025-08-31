@@ -43,7 +43,7 @@ class _AddWithDrawMethodScreenState extends State<AddWithDrawMethodScreen> {
                     physics: const BouncingScrollPhysics(),
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                      Text("payment_method".tr, style: robotoBold),
+                      Text("payment_method".tr, style: cairoBold),
                       const SizedBox(height: Dimensions.paddingSizeSmall),
 
                       Container(

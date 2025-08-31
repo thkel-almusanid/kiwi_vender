@@ -28,7 +28,7 @@ class FundPaymentDialogWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
               child: Text(
                 'do_you_want_to_cancel_this_payment'.tr, textAlign: TextAlign.center,
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
               ),
             ),
 
@@ -40,7 +40,7 @@ class FundPaymentDialogWidget extends StatelessWidget {
                 backgroundColor: Theme.of(context).disabledColor.withValues(alpha: 0.3), minimumSize: const Size(1130, 40), padding: EdgeInsets.zero,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radiusSmall)),
               ),
-              child: Text('cancel_payment'.tr, textAlign: TextAlign.center, style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color)),
+              child: Text('cancel_payment'.tr, textAlign: TextAlign.center, style: cairoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color)),
             ),
 
           ]),

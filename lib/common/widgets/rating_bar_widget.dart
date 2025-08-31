@@ -39,7 +39,7 @@ class RatingBarWidget extends StatelessWidget {
     }
     ratingCount != null ? starList.add(Padding(
       padding: const EdgeInsets.only(left: Dimensions.paddingSizeExtraSmall),
-      child: Text('($ratingCount)', style: robotoRegular.copyWith(fontSize: size*0.8, color: Theme.of(context).disabledColor)),
+      child: Text('($ratingCount)', style: cairoRegular.copyWith(fontSize: size*0.8, color: Theme.of(context).disabledColor)),
     )) : const SizedBox();
 
     return Row(

@@ -101,7 +101,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
 
                     Text(
                       'commission_base_plan'.tr,
-                      style: robotoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
+                      style: cairoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -109,7 +109,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
                       '${Get.find<ProfileController>().profileModel != null && Get.find<ProfileController>().profileModel!.stores?[0].comission != null && Get.find<ProfileController>().profileModel!.stores![0].comission! > 0
                           ? Get.find<ProfileController>().profileModel!.stores![0].comission!
                           :  Get.find<SplashController>().configModel?.adminCommission} %',
-                      style: robotoBold.copyWith(color: Colors.teal, fontSize: 24),
+                      style: cairoBold.copyWith(color: Colors.teal, fontSize: 24),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -117,7 +117,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
                       padding: EdgeInsets.symmetric(horizontal: context.width * 0.15),
                       child: Text(
                         "${'vendor_will_pay'.tr} ${Get.find<SplashController>().configModel!.adminCommission}% ${'commission_to'.tr} ${Get.find<SplashController>().configModel!.businessName} ${'from_each_order_You_will_get_access_of_all'.tr}",
-                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), height: 2), textAlign: TextAlign.center,
+                        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), height: 2), textAlign: TextAlign.center,
                       ),
                     )
 
@@ -164,7 +164,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
                       children: [
                         Text(
                           'you_have_no_business_plan'.tr,
-                          style: robotoBold.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeLarge),
+                          style: cairoBold.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeLarge),
                         ),
                         const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -172,7 +172,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
                           padding: EdgeInsets.symmetric(horizontal: context.width * 0.05),
                           child: Text(
                             "chose_a_business_plan_from_the_list_so_that_you_get_more_options_to_join_the_business_for_the_growth_and_success".tr,
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).cardColor, height: 2), textAlign: TextAlign.center,
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).cardColor, height: 2), textAlign: TextAlign.center,
                           ),
                         ),
                       ],
@@ -203,7 +203,7 @@ class _MySubscriptionScreenState extends State<MySubscriptionScreen> with Ticker
               controller: _tabController,
               labelColor: Theme.of(context).primaryColor,
               unselectedLabelColor: Theme.of(context).disabledColor,
-              unselectedLabelStyle: robotoRegular,
+              unselectedLabelStyle: cairoRegular,
               indicatorColor: Theme.of(context).primaryColor,
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorPadding: const EdgeInsets.only(left: Dimensions.paddingSizeLarge, right: Dimensions.paddingSizeLarge),

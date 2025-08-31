@@ -27,7 +27,7 @@ class PaymentCartWidget extends StatelessWidget {
             alignment: Alignment.centerLeft,
             width: context.width,
             padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
-            child: Text(title, style: robotoBold.copyWith(color: businessController.paymentIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge!.color)),
+            child: Text(title, style: cairoBold.copyWith(color: businessController.paymentIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge!.color)),
           ),
         ),
 

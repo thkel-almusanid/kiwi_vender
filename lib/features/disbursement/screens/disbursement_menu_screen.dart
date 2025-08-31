@@ -57,7 +57,7 @@ class SubMenuCardWidget extends StatelessWidget {
           Image.asset(image, width: 40, height: 40, color: Theme.of(context).primaryColor),
           const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          Text(title, style: robotoMedium),
+          Text(title, style: cairoMedium),
 
         ]),
       ),

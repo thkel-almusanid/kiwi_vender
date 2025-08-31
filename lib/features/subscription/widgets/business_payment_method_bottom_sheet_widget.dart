@@ -48,14 +48,14 @@ class _PaymentMethodBottomSheetState extends State<BusinessPaymentMethodBottomSh
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    Align(alignment: Alignment.center, child: Text('payment_method'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge))),
+                    Align(alignment: Alignment.center, child: Text('payment_method'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge))),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
 
                     Row(children: [
-                      Text('pay_via_online'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                      Text('pay_via_online'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
                       Text(
                         'faster_and_secure_way_to_pay_bill'.tr,
-                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                       ),
                     ]),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
@@ -100,7 +100,7 @@ class _PaymentMethodBottomSheetState extends State<BusinessPaymentMethodBottomSh
 
                                 Text(
                                   Get.find<SplashController>().configModel!.activePaymentMethodList![index].getWayTitle ?? '',
-                                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                                 ),
                               ]),
                             ),

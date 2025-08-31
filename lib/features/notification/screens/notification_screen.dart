@@ -88,11 +88,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     )),
                     title: Text(
                       notificationController.notificationList![index].title ?? '',
-                      style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
                     subtitle: Text(
                       notificationController.notificationList![index].description ?? '',
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                       maxLines: 2, overflow: TextOverflow.ellipsis,
                     ),
                   ),

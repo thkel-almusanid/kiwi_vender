@@ -50,10 +50,10 @@ class _VerifyDeliverySheetWidgetState extends State<VerifyDeliverySheetWidget> {
             widget.verify! ? Column(children: [
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
-              Text('otp_verification'.tr, style: robotoBold, textAlign: TextAlign.center),
+              Text('otp_verification'.tr, style: cairoBold, textAlign: TextAlign.center),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
-              Text('enter_otp_number'.tr, style: robotoRegular, textAlign: TextAlign.center),
+              Text('enter_otp_number'.tr, style: cairoRegular, textAlign: TextAlign.center),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
               SizedBox(
@@ -85,7 +85,7 @@ class _VerifyDeliverySheetWidgetState extends State<VerifyDeliverySheetWidget> {
               ),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
-              Text('collect_otp_from_customer'.tr, style: robotoRegular, textAlign: TextAlign.center),
+              Text('collect_otp_from_customer'.tr, style: cairoRegular, textAlign: TextAlign.center),
               const SizedBox(height: Dimensions.paddingSizeLarge),
             ]) : const SizedBox(),
 
@@ -117,14 +117,14 @@ class _VerifyDeliverySheetWidgetState extends State<VerifyDeliverySheetWidget> {
             widget.verify! ? Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Text(
                 'did_not_receive_user_notification'.tr,
-                style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+                style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
               ),
 
               orderController.hideNotificationButton ? const SizedBox() : InkWell(
                 onTap: () => orderController.sendDeliveredNotification(widget.orderID),
                 child: Text(
                   'resend_it'.tr,
-                  style: robotoMedium.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+                  style: cairoMedium.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
                 ),
               )
             ]) : const SizedBox(),

@@ -46,12 +46,12 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
 
                     Text(
                       'vendor_registration'.tr,
-                      style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                     ),
 
                     Text(
                       widget.success ? 'registration_success'.tr : 'transaction_failed'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -79,7 +79,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
 
                       Text(
                         '${'congratulations'.tr}!',
-                        style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                        style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
                       ),
                       const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -87,7 +87,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
                         width: context.width,
                         child: RichText(
                           textAlign: TextAlign.center,
-                          text: TextSpan(style: robotoRegular.copyWith(color: Theme.of(context).hintColor, height: 1.7), children: [
+                          text: TextSpan(style: cairoRegular.copyWith(color: Theme.of(context).hintColor, height: 1.7), children: [
                             TextSpan(text: widget.fromSubscription ? 'subscription_success_message'.tr : 'commission_base_success_message'.tr),
                           ]),
                         ),
@@ -101,7 +101,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
                         },
                         child: Text(
                           'continue_to_home_page'.tr,
-                          style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault,
+                          style: cairoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault,
                               decoration: TextDecoration.underline, decorationColor: Theme.of(context).primaryColor),
                         ),
                       ),
@@ -112,7 +112,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
 
                       Text(
                         '${'transaction_failed'.tr}!',
-                        style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                        style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
                       ),
                       const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -120,7 +120,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
                         width: context.width,
                         child: Text(
                           'sorry_your_transaction_can_not_be_completed_please_choose_another_payment_method_or_try_again'.tr,
-                          style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeDefault),
+                          style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeDefault),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -132,7 +132,7 @@ class _SubscriptionSuccessOrFailedScreenState extends State<SubscriptionSuccessO
                         },
                         child: Text(
                           'try_again'.tr,
-                          style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault,
+                          style: cairoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeDefault,
                               decoration: TextDecoration.underline, decorationColor: Theme.of(context).primaryColor),
                         ),
                       ),

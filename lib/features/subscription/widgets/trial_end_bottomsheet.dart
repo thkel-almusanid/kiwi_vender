@@ -46,14 +46,14 @@ class TrialEndBottomSheet extends StatelessWidget {
               Text(
                 isTrial ? 'your_free_trial_has_been_ended'.tr : 'your_package_is_expired'.tr,
                 textAlign: TextAlign.center,
-                style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
               ),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
               Text(
                 isTrial ? 'purchase_subscription_message'.tr : 'renew_or_change_your_subscription_plan_to_unblock_the_access_to_service'.tr,
                 textAlign: TextAlign.center,
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault),
               ),
               const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 
@@ -79,7 +79,7 @@ class TrialEndBottomSheet extends StatelessWidget {
                   Flexible(
                     child: Text(
                       'all_access_to_service_has_been_blocked_due_to_no_active_subscription'.tr, textAlign: TextAlign.start,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).colorScheme.error),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).colorScheme.error),
                     ),
                   ),
                 ]),

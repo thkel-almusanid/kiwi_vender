@@ -26,7 +26,7 @@ class BottomNavItemWidget extends StatelessWidget {
 
           Text(
             title,
-            style: robotoRegular.copyWith(color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyMedium!.color!, fontSize: 12),
+            style: cairoRegular.copyWith(color: isSelected ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyMedium!.color!, fontSize: 12),
           ),
 
         ]),

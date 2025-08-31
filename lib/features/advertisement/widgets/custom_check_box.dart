@@ -28,7 +28,7 @@ class CustomCheckBox extends StatelessWidget {
           ),
           const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          Text(title.tr, style: value! ? robotoMedium : robotoRegular),
+          Text(title.tr, style: value! ? cairoMedium : cairoRegular),
         ]),
       ),
     );

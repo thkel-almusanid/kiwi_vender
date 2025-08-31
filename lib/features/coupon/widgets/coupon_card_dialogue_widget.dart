@@ -49,7 +49,7 @@ class CouponCardDialogueWidget extends StatelessWidget {
                         Positioned(
                           top: 15, left: 15,
                           child: Text(couponBody.couponType == 'free_delivery' ? '' : couponBody.discountType == 'percent' ? ' %' : ' \$',
-                            style: robotoBold.copyWith(fontSize: 18, color: Theme.of(context).cardColor),
+                            style: cairoBold.copyWith(fontSize: 18, color: Theme.of(context).cardColor),
                           ),
                         ),
                       ]),
@@ -61,9 +61,9 @@ class CouponCardDialogueWidget extends StatelessWidget {
                       PriceConverterHelper.convertPrice(double.parse(couponBody.discount.toString())) :
                       couponBody.discount}'} ${couponBody.couponType == 'free_delivery' ? '' : couponBody.discountType == 'percent' ? ' %' : ''}'
                           '${couponBody.couponType == 'free_delivery' ? '' : 'off'.tr}',
-                        style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                        style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
                       ),
-                      Text('${couponBody.code}', style: robotoMedium),
+                      Text('${couponBody.code}', style: cairoMedium),
                     ]),
                     const Spacer(),
 
@@ -92,32 +92,32 @@ class CouponCardDialogueWidget extends StatelessWidget {
                   const SizedBox(height: Dimensions.paddingSizeLarge),
 
                   Text('- ${'start_date'.tr} : ${couponBody.startDate!}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Text('- ${'expire_date'.tr} : ${couponBody.expireDate!}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Text('- ${'total_user'.tr} : ${couponBody.totalUses.toString()}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Text('- ${'min_purchase'.tr} : ${couponBody.minPurchase.toString()}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Text('- ${'limit'.tr} : ${couponBody.limit.toString()}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Text('- ${'coupon_type'.tr} : ${couponBody.couponType!.tr}',
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 

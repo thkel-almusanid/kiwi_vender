@@ -28,7 +28,7 @@ class ConfirmDialogWidget extends StatelessWidget {
 
                   Text(
                     'are_you_sure_to_delete_this_method'.tr,
-                    style: robotoMedium,
+                    style: cairoMedium,
                   ),
                   const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 

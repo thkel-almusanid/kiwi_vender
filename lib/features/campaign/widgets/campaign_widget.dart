@@ -39,12 +39,12 @@ class CampaignWidget extends StatelessWidget {
 
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
 
-            Text(campaignModel.title!, style: robotoMedium, maxLines: 1, overflow: TextOverflow.ellipsis),
+            Text(campaignModel.title!, style: cairoMedium, maxLines: 1, overflow: TextOverflow.ellipsis),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
             Text(
               campaignModel.description ?? 'no_description_found'.tr, maxLines: 2, overflow: TextOverflow.ellipsis,
-              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor),
+              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor),
             ),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
@@ -78,7 +78,7 @@ class CampaignWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                   ),
                   child: Text(campaignModel.vendorStatus == null ? 'join_now'.tr : campaignModel.vendorStatus != 'confirmed'
-                      ? campaignModel.vendorStatus!.tr : 'leave_now'.tr, textAlign: TextAlign.center, style: robotoBold.copyWith(
+                      ? campaignModel.vendorStatus!.tr : 'leave_now'.tr, textAlign: TextAlign.center, style: cairoBold.copyWith(
                     color: Theme.of(context).cardColor,
                     fontSize: Dimensions.fontSizeExtraSmall,
                   )),
@@ -90,7 +90,7 @@ class CampaignWidget extends StatelessWidget {
               const SizedBox(width: Dimensions.paddingSizeExtraSmall),
               Text(
                 DateConverterHelper.convertDateToDate(campaignModel.availableDateStarts!),
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor),
               ),
 
             ]),

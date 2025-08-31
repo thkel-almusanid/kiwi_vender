@@ -41,7 +41,7 @@ class DisbursementStatusCardWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 isPending ? 'pending_message'.tr : isCompleted ? 'completed_message'.tr : 'cancellation_message'.tr,
-                style: robotoRegular.copyWith(color: Colors.white),
+                style: cairoRegular.copyWith(color: Colors.white),
               ),
             ),
             child: InkWell(
@@ -92,7 +92,7 @@ class DisbursementStatusCardWidget extends StatelessWidget {
             Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 PriceConverterHelper.convertPrice(amount),
-                style: robotoBold.copyWith(
+                style: cairoBold.copyWith(
                   fontSize: 20, color: isPending ? Colors.blue : isCompleted ? Colors.green : Colors.red,
                 ),
                 textDirection: TextDirection.ltr,
@@ -101,7 +101,7 @@ class DisbursementStatusCardWidget extends StatelessWidget {
 
               Text(
                 text,
-                style: robotoRegular.copyWith(
+                style: cairoRegular.copyWith(
                   fontSize: Dimensions.fontSizeSmall,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),

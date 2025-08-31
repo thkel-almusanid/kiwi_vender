@@ -56,7 +56,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
               child: Column(mainAxisSize: MainAxisSize.min, children: [
 
 
-                Text(isRenew && (nonSubscription == false) ? 'renew_subscription_plan'.tr : (isRenew && nonSubscription) ? 'choose_subscription_plan'.tr : businessIsCommission ? 'shift_to_new_business_plan'.tr : 'shift_to_new_subscription_plan'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                Text(isRenew && (nonSubscription == false) ? 'renew_subscription_plan'.tr : (isRenew && nonSubscription) ? 'choose_subscription_plan'.tr : businessIsCommission ? 'shift_to_new_business_plan'.tr : 'shift_to_new_subscription_plan'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                 const SizedBox(height: Dimensions.paddingSizeLarge),
 
                 Padding(
@@ -96,16 +96,16 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                           top: 20, left: 0, right: 0,
                           child: Column(children: [
 
-                            Text(businessIsCommission ? 'commission_base_plan'.tr : activePackage?.packageName ?? '', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.cyan.shade700), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(businessIsCommission ? 'commission_base_plan'.tr : activePackage?.packageName ?? '', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.cyan.shade700), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
 
                             Divider(color: Theme.of(context).disabledColor.withValues(alpha: 0.2), indent: 40, endIndent: 40, thickness: 1),
 
                             Text(
                               businessIsCommission ? '${Get.find<SplashController>().configModel!.adminCommission}%' : PriceConverterHelper.convertPrice(activePackage?.price ?? 0),
-                              style: robotoBold.copyWith(fontSize: 25, color:  Colors.cyan.shade700),
+                              style: cairoBold.copyWith(fontSize: 25, color:  Colors.cyan.shade700),
                             ),
 
-                            businessIsCommission ? const SizedBox() : Text('${activePackage?.validity} ' 'days'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                            businessIsCommission ? const SizedBox() : Text('${activePackage?.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                             const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           ]),
@@ -150,16 +150,16 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                         top: 20, left: 0, right: 0,
                         child: Column(children: [
 
-                          Text(package.packageName ?? '', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).cardColor), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
+                          Text(package.packageName ?? '', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).cardColor), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
 
                           Divider(color: Colors.white.withValues(alpha: 0.2), indent: 40, endIndent: 40, thickness: 1),
 
                           Text(
                             PriceConverterHelper.convertPrice(package.price),
-                            style: robotoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
+                            style: cairoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
                           ),
 
-                          Text('${package.validity} ' 'days'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
+                          Text('${package.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
                         ]),
@@ -197,16 +197,16 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                           top: 20, left: 0, right: 0,
                           child: Column(children: [
 
-                            Text(package.packageName ?? '', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).cardColor), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            Text(package.packageName ?? '', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).cardColor), textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis),
 
                             Divider(color: Colors.white.withValues(alpha: 0.2), indent: 40, endIndent: 40, thickness: 1),
 
                             Text(
                               PriceConverterHelper.convertPrice(package.price),
-                              style: robotoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
+                              style: cairoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
                             ),
 
-                            Text('${package.validity} ' 'days'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
+                            Text('${package.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
                             const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           ]),
@@ -231,25 +231,25 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text('validity'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                        Text('validity'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                        Text('${package.validity} ' 'days'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                        Text('${package.validity} ' 'days'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
                       ]),
                     ),
 
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text('price'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                        Text('price'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                        Text(PriceConverterHelper.convertPrice(price), style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                        Text(PriceConverterHelper.convertPrice(price), style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
                       ]),
                     ),
 
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text('bill_status'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                        Text('bill_status'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                        Text(isRenew ? 'renew'.tr : 'migrate'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                        Text(isRenew ? 'renew'.tr : 'migrate'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
                       ]),
                     ),
 
@@ -261,7 +261,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                 (checkProductLimitModel != null && checkProductLimitModel!.backAmount != null && checkProductLimitModel!.backAmount! > 0) ? Text(
                   '${'you_will_get'.tr} ${PriceConverterHelper.convertPrice(checkProductLimitModel!.backAmount)} ${'to_your_wallet_for_remaining'.tr} ${checkProductLimitModel!.days} ${'days_subscription_plan'.tr}',
                   textAlign: TextAlign.center,
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
                 ) : const SizedBox(),
 
                 const SizedBox(height: Dimensions.paddingSizeDefault),
@@ -269,10 +269,10 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
                   child: Row(children: [
-                    Text('${'pay_via_online'.tr} ', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                    Text('${'pay_via_online'.tr} ', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
                     Text(
                       'faster_and_secure_way_to_pay_bill'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                     ),
                   ]),
                 ),
@@ -307,13 +307,13 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                       Text(
                         'wallet'.tr,
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                       ),
                       const Spacer(),
 
                       Text(
                         PriceConverterHelper.convertPrice(subscriptionController.profileModel!.balance),
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                       ),
 
                     ]),
@@ -361,7 +361,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                           Text(
                             Get.find<SplashController>().configModel!.activePaymentMethodList![index].getWayTitle!,
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                           ),
                           const Spacer(),
 

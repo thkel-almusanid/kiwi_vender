@@ -32,7 +32,7 @@ class _SearchFieldWidgetState extends State<SearchFieldWidget> {
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
           hintText: widget.hint,
-          hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+          hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(widget.fromReview ? 50 : Dimensions.radiusSmall), borderSide: BorderSide.none),
           filled: true, fillColor: Theme.of(context).cardColor,
           isDense: true,

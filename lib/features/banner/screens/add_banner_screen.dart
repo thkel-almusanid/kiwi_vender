@@ -88,7 +88,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                 padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
                 child: SingleChildScrollView(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text('title'.tr, style: robotoBold),
+                    Text('title'.tr, style: cairoBold),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Container(
@@ -111,8 +111,8 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                             indicatorWeight: 3,
                             labelColor: Theme.of(context).textTheme.bodyLarge?.color,
                             unselectedLabelColor: Theme.of(context).disabledColor,
-                            unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
-                            labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                            unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                            labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
                             labelPadding: const EdgeInsets.only(right: Dimensions.radiusDefault),
                             isScrollable: true,
                             indicatorSize: TabBarIndicatorSize.tab,
@@ -142,7 +142,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                     ),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                    Text('redirection_url_link'.tr, style: robotoBold),
+                    Text('redirection_url_link'.tr, style: cairoBold),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Container(
@@ -161,7 +161,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                     ),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                    Text('upload_banner'.tr, style: robotoBold),
+                    Text('upload_banner'.tr, style: cairoBold),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Container(
@@ -205,7 +205,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
 
                                       Text(
                                         "drag_drop_file_or_browse_file".tr,
-                                        style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                                        style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
                                       ),
                                     ]),
                                   ),
@@ -221,7 +221,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                           alignment: Alignment.center,
                           child: Text(
                             "banner_images_ration_5:1".tr,
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                           ),
                         ),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
@@ -230,7 +230,7 @@ class _AddBannerScreenState extends State<AddBannerScreen> with TickerProviderSt
                           alignment: Alignment.center,
                           child: Text(
                             "image_format_maximum_size_2mb".tr,
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor.withValues(alpha: 0.5)),
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor.withValues(alpha: 0.5)),
                           ),
                         ),
 

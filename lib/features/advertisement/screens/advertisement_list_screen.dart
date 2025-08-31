@@ -169,8 +169,8 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
                         children: [
                           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                             Row(children: [
-                              Text('ads_id'.tr, style: robotoMedium),
-                              Text(' # ${advertisementList[index].id}', style: robotoBold),
+                              Text('ads_id'.tr, style: cairoMedium),
+                              Text(' # ${advertisementList[index].id}', style: cairoBold),
                               const SizedBox(width: 5),
 
                               Container(
@@ -186,7 +186,7 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
                                 padding: const EdgeInsets.symmetric(vertical: 3, horizontal: Dimensions.paddingSizeExtraSmall),
                                 child: Text(
                                   status.tr,
-                                  style: robotoRegular.copyWith(
+                                  style: cairoRegular.copyWith(
                                     fontSize: Dimensions.fontSizeSmall,
                                     color: status == 'approved' ? Colors.green
                                         : status == 'running' ? Colors.indigo
@@ -199,7 +199,7 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
                               ),
                             ]),
 
-                            Text(advertisementList[index].addType!.tr.replaceAll('_', ' ').toTitleCase(), style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                            Text(advertisementList[index].addType!.tr.replaceAll('_', ' ').toTitleCase(), style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
                           ]),
 
 
@@ -310,7 +310,7 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
                                       const SizedBox(width: Dimensions.paddingSizeExtraSmall,),
                                       Icon(option.icon, size: Dimensions.fontSizeLarge,),
                                       const SizedBox(width: Dimensions.paddingSizeSmall,),
-                                      Text(option.title.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                                      Text(option.title.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                                     ],
                                   ),
                                 );
@@ -338,13 +338,13 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
 
                           Text(
                             '${'ads_placed'.tr}: ${DateConverterHelper.dateTimeStringForDisbursement(advertisementList[index].createdAt!)}',
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                           ),
                           const SizedBox(height: Dimensions.paddingSizeSmall),
 
                           Text(
                             '${'duration'.tr} : ${DateConverterHelper.convertDateToDate(advertisementList[index].startDate!)} - ${DateConverterHelper.convertDateToDate(advertisementList[index].endDate!)}',
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                           ),
 
                         ])),
@@ -412,7 +412,7 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
               Text(
                 title,
                 maxLines: 1, overflow: TextOverflow.ellipsis,
-                style: robotoMedium.copyWith(
+                style: cairoMedium.copyWith(
                   fontSize: Dimensions.fontSizeSmall,
                   color: isSelected ? Theme.of(context).cardColor : Theme.of(context).textTheme.bodyLarge!.color,
                 ),
@@ -428,7 +428,7 @@ class _AdvertisementListScreenState extends State<AdvertisementListScreen>{
                 child: Text(
                   adsCount.toString(),
                   maxLines: 1, overflow: TextOverflow.ellipsis,
-                  style: robotoMedium.copyWith(
+                  style: cairoMedium.copyWith(
                     fontSize: Dimensions.fontSizeSmall,
                     color: isSelected ? Theme.of(context).cardColor : Theme.of(context).textTheme.bodyLarge!.color,
                   ),

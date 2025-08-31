@@ -30,13 +30,13 @@ class AddonDeleteDialog extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
               child: Text(
                 'are_you_sure'.tr, textAlign: TextAlign.center,
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
             ),
 
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
-              child: Text('you_want_to_delete_this_addon'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center),
+              child: Text('you_want_to_delete_this_addon'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center),
             ),
             const SizedBox(height: 10),
 

@@ -63,7 +63,7 @@ class _TrialWidgetState extends State<TrialWidget> {
                 alignment: Alignment.center,
                 child: Text(
                   '$remainingDays',
-                  style: robotoBold.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeLarge),
+                  style: cairoBold.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeLarge),
                 ),
               ),
             ]),
@@ -72,7 +72,7 @@ class _TrialWidgetState extends State<TrialWidget> {
 
           Flexible(
             child: Text('days_left_in_free_trial'.tr,
-              style: robotoMedium.copyWith(color: Theme.of(context).cardColor),
+              style: cairoMedium.copyWith(color: Theme.of(context).cardColor),
             ),
           ),
           const SizedBox(width: Dimensions.paddingSizeLarge),
@@ -98,7 +98,7 @@ class _TrialWidgetState extends State<TrialWidget> {
                 padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall, horizontal: Dimensions.paddingSizeSmall),
                 child: Row(children: [
                   Text('choose_plan'.tr,
-                    style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium!.color),
+                    style: cairoBold.copyWith(color: Theme.of(context).textTheme.bodyMedium!.color),
                   ),
                   // const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 

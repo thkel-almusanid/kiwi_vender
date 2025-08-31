@@ -146,7 +146,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
 
                   Text(
                     authController.storeStatus == 0.1 ? 'provide_vendor_information_to_proceed_next'.tr : authController.storeStatus == 0.6 ? 'provide_owner_information_to_confirm'.tr : 'you_are_one_step_away_choose_your_business_plan'.tr,
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -170,7 +170,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                         key: _formKeyLogin,
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                          Text('vendor_info'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                          Text('vendor_info'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           Container(
@@ -193,8 +193,8 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                     indicatorWeight: 3,
                                     labelColor: Theme.of(context).primaryColor,
                                     unselectedLabelColor: Theme.of(context).disabledColor,
-                                    unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
-                                    labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                                    unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                                    labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
                                     labelPadding: const EdgeInsets.only(right: Dimensions.radiusDefault),
                                     isScrollable: true,
                                     indicatorSize: TabBarIndicatorSize.tab,
@@ -230,8 +230,8 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                                     Row(children: [
-                                      Text('vendor_logo'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7))),
-                                      Text(' (${'1:1'})', style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
+                                      Text('vendor_logo'.tr, style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7))),
+                                      Text(' (${'1:1'})', style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
                                     ]),
                                     const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -255,7 +255,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
                                                 child: Text(
                                                   'upload_vendor_logo'.tr,
-                                                  style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.center,
+                                                  style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.center,
                                                 ),
                                               ),
 
@@ -300,8 +300,8 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                                     Row(children: [
-                                      Text('vendor_cover'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7))),
-                                      Text(' (${'3:1'})', style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
+                                      Text('vendor_cover'.tr, style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7))),
+                                      Text(' (${'3:1'})', style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
                                     ]),
                                     const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -322,14 +322,14 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
 
                                               Text(
                                                 'upload_vendor_cover'.tr,
-                                                style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.center,
+                                                style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.center,
                                               ),
 
                                               Padding(
                                                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
                                                 child: Text(
                                                   'upload_jpg_png_gif_maximum_2_mb'.tr,
-                                                  style: robotoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall),
+                                                  style: cairoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall),
                                                   textAlign: TextAlign.center,
                                                 ),
                                               ),
@@ -376,7 +376,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                           ),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
-                          Text('location_info'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                          Text('location_info'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           addressController.zoneList != null ? SelectLocationAndModuleViewWidget(
@@ -385,7 +385,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
 
                           const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                          Text('vendor_preference'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                          Text('vendor_preference'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           Container(
@@ -415,7 +415,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                       child: Row(children: [
                                         Expanded(child: Text(
                                           '${authController.storeMinTime} : ${authController.storeMaxTime} ${authController.storeTimeUnit}',
-                                          style: robotoMedium,
+                                          style: cairoMedium,
                                         )),
                                         Icon(Icons.access_time_filled, color: Theme.of(context).primaryColor,)
                                       ]),
@@ -428,7 +428,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                           color: Theme.of(context).cardColor,
                                         ),
                                         padding: const EdgeInsets.all(5),
-                                        child: Text('select_time'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                                        child: Text('select_time'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
                                       ),
                                     ),
                                   ],
@@ -438,7 +438,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                           ),
                           const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                          Text('business_tin'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                          Text('business_tin'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                           const SizedBox(height: Dimensions.paddingSizeDefault),
 
                           Container(
@@ -488,7 +488,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                       child: Row(children: [
                                         Expanded(child: Text(
                                           authController.tinExpireDate ?? 'select_date'.tr,
-                                          style: robotoMedium,
+                                          style: cairoMedium,
                                         )),
                                         Icon(Icons.calendar_month, color: Theme.of(context).primaryColor),
                                       ]),
@@ -503,8 +503,8 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                         padding: const EdgeInsets.all(5),
                                         child: Row(
                                           children: [
-                                            Text('expire_date'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
-                                            Text(' *', style: robotoRegular.copyWith(color: Colors.red)),
+                                            Text('expire_date'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                                            Text(' *', style: cairoRegular.copyWith(color: Colors.red)),
                                           ],
                                         ),
                                       ),
@@ -514,9 +514,9 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                               ),
                               const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                              Text('tin_certificate'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                              Text('tin_certificate'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
 
-                              Text('vehicle_doc_format'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                              Text('vehicle_doc_format'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                               const SizedBox(height: Dimensions.paddingSizeLarge),
 
                               authController.tinFiles!.isEmpty ? InkWell(
@@ -550,12 +550,12 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                                               children: [
                                                 TextSpan(
                                                   text: 'click_to_upload'.tr,
-                                                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue),
+                                                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue),
                                                 ),
                                                 const TextSpan(text: '\n'),
                                                 TextSpan(
                                                   text: 'or_drag_and_drop'.tr,
-                                                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)),
+                                                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)),
                                                 ),
                                               ],
                                             ),
@@ -847,7 +847,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
 
                           Row(children: [
-                            Text('owner_info'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                            Text('owner_info'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                             const SizedBox(width: Dimensions.paddingSizeSmall),
 
                             CustomToolTip(
@@ -987,7 +987,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
 
                         Padding(
                           padding: const EdgeInsets.only(top: Dimensions.paddingSizeLarge, bottom: Dimensions.paddingSizeExtremeLarge),
-                          child: Center(child: Text('choose_your_business_plan'.tr, style: robotoBold)),
+                          child: Center(child: Text('choose_your_business_plan'.tr, style: cairoBold)),
                         ),
 
                         Padding(
@@ -1015,14 +1015,14 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
                           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
                           child: Text(
                             "${'vendor_will_pay'.tr} ${Get.find<SplashController>().configModel!.adminCommission}% ${'commission_to'.tr} ${Get.find<SplashController>().configModel!.businessName} ${'from_each_order_You_will_get_access_of_all'.tr}",
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.justify, textScaler: const TextScaler.linear(1.1),
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.justify, textScaler: const TextScaler.linear(1.1),
                           ),
                         ) : Column(children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
                             child: Text(
                               'run_vendor_by_purchasing_subscription_packages'.tr,
-                              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.justify, textScaler: const TextScaler.linear(1.1),
+                              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7)), textAlign: TextAlign.justify, textScaler: const TextScaler.linear(1.1),
                             ),
                           ),
                           const SizedBox(height: Dimensions.paddingSizeLarge),
@@ -1050,7 +1050,7 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> with 
 
                             ) : Center(child: Column(mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text('no_package_available'.tr, style: robotoMedium),
+                                  Text('no_package_available'.tr, style: cairoMedium),
                                 ]),
                             ) : const Center(child: CircularProgressIndicator()),
                           ),

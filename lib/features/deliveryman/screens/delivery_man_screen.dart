@@ -65,7 +65,7 @@ class _DeliveryManScreenState extends State<DeliveryManScreen> {
 
                     Expanded(child: Text(
                       '${deliveryMan.fName} ${deliveryMan.lName}', maxLines: 2, overflow: TextOverflow.ellipsis,
-                      style: robotoMedium,
+                      style: cairoMedium,
                     )),
                     const SizedBox(width: Dimensions.paddingSizeSmall),
 
@@ -97,7 +97,7 @@ class _DeliveryManScreenState extends State<DeliveryManScreen> {
               );
             },
           ) : Center(child: Text('no_delivery_man_found'.tr)) : const Center(child: CircularProgressIndicator());
-        }) : Center(child: Text('you_have_no_permission_to_access_this_feature'.tr, style: robotoMedium)),
+        }) : Center(child: Text('you_have_no_permission_to_access_this_feature'.tr, style: cairoMedium)),
       );
     });
   }

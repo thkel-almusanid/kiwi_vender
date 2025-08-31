@@ -40,14 +40,14 @@ class NotificationStatusChangeBottomSheet extends StatelessWidget {
             ),
             const SizedBox(height: 35),
 
-            Text('are_you_sure'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+            Text('are_you_sure'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
             const SizedBox(height: Dimensions.paddingSizeSmall),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
               child: Text(
                 !authController.notification ? 'you_want_to_enable_notification'.tr : 'you_want_to_disable_notification'.tr,
-                style: robotoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center,
+                style: cairoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center,
               ),
             ),
             const SizedBox(height: 50),

@@ -68,14 +68,14 @@ class TextFieldWidgetState extends State<TextFieldWidget> {
       widget.title ? Row(children: [
         Text(
           widget.titleName ?? widget.hintText,
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
         ),
         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-        widget.isEnabled! ? const SizedBox() : Text('(${'non_changeable'.tr})', style: robotoRegular.copyWith(
+        widget.isEnabled! ? const SizedBox() : Text('(${'non_changeable'.tr})', style: cairoRegular.copyWith(
           fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).colorScheme.error,
         )),
 
-        widget.isRequired ? Text('*', style: robotoBold.copyWith(color: Theme.of(context).primaryColor)) : const SizedBox(),
+        widget.isRequired ? Text('*', style: cairoBold.copyWith(color: Theme.of(context).primaryColor)) : const SizedBox(),
 
       ]) : const SizedBox(),
       SizedBox(height: widget.title ? Dimensions.paddingSizeExtraSmall : 0),
@@ -92,7 +92,7 @@ class TextFieldWidgetState extends State<TextFieldWidget> {
           controller: widget.controller,
           focusNode: widget.focusNode,
           readOnly: widget.readOnly,
-          style: robotoRegular,
+          style: cairoRegular,
           textInputAction: widget.nextFocus != null ? widget.inputAction : TextInputAction.done,
           keyboardType: widget.isAmount ? const TextInputType.numberWithOptions(decimal: true) : widget.isNumber ? TextInputType.number : widget.inputType,
           autofillHints: widget.inputType == TextInputType.name ? [AutofillHints.name]
@@ -116,14 +116,14 @@ class TextFieldWidgetState extends State<TextFieldWidget> {
             contentPadding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault, horizontal: Dimensions.paddingSizeDefault),
             fillColor: widget.fillColor ?? Theme.of(context).cardColor,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(Dimensions.radiusSmall), borderSide: BorderSide.none),
-            hintStyle: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+            hintStyle: cairoRegular.copyWith(color: Theme.of(context).hintColor),
             suffixIcon: widget.isPassword ? IconButton(
               icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility, color: Theme.of(context).hintColor.withValues(alpha: 0.3)),
               onPressed: _toggle,
             ) : null,
             prefixIcon: widget.amountIcon ? Padding(
               padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault, horizontal: Dimensions.paddingSizeSmall),
-              child: Text(Get.find<SplashController>().configModel!.currencySymbol!, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+              child: Text(Get.find<SplashController>().configModel!.currencySymbol!, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
             ) : null,
           ),
           onTap: widget.onTap as void Function()?,

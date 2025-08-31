@@ -45,18 +45,18 @@ class ConfirmationDialogWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Text(
               title!, textAlign: TextAlign.center,
-              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
+              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
             ),
           ) : const SizedBox(),
 
           Padding(
             padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
-            child: Text(description, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+            child: Text(description, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
           ),
 
           adminText != null && adminText!.isNotEmpty ? Padding(
             padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
-            child: Text('[$adminText]', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+            child: Text('[$adminText]', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
           ) : const SizedBox(),
           const SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -79,7 +79,7 @@ class ConfirmationDialogWidget extends StatelessWidget {
                             onNoButtonText ?? (isLogOut ? 'yes'.tr : 'no'.tr),
 
                             textAlign: TextAlign.center,
-                            style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
+                            style: cairoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
                           ),
                         )) : const SizedBox(),
                         SizedBox(width: isOnNoPressedShow ? Dimensions.paddingSizeLarge : 0),

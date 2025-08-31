@@ -76,27 +76,27 @@ class InvoiceDialogWidget extends StatelessWidget {
               padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
               child: Column(mainAxisSize: MainAxisSize.min, children: [
 
-                Text(store.name!, style: robotoMedium.copyWith(fontSize: fontSize)),
-                Text(store.address!, style: robotoRegular.copyWith(fontSize: fontSize)),
-                Text(store.phone!, style: robotoRegular.copyWith(fontSize: fontSize)),
-                Text(store.email!, style: robotoRegular.copyWith(fontSize: fontSize)),
+                Text(store.name!, style: cairoMedium.copyWith(fontSize: fontSize)),
+                Text(store.address!, style: cairoRegular.copyWith(fontSize: fontSize)),
+                Text(store.phone!, style: cairoRegular.copyWith(fontSize: fontSize)),
+                Text(store.email!, style: cairoRegular.copyWith(fontSize: fontSize)),
                 const SizedBox(height: 10),
 
                 Row(children: [
-                  Text('${'order_id'.tr}:', style: robotoRegular.copyWith(fontSize: fontSize)),
+                  Text('${'order_id'.tr}:', style: cairoRegular.copyWith(fontSize: fontSize)),
                   const SizedBox(width: 2),
-                  Expanded(child: Text(order!.id.toString(), style: robotoMedium.copyWith(fontSize: fontSize))),
-                  Text(DateConverterHelper.dateTimeStringToMonthAndTime(order!.createdAt!), style: robotoRegular.copyWith(fontSize: fontSize - 2), textAlign: TextAlign.end,),
+                  Expanded(child: Text(order!.id.toString(), style: cairoMedium.copyWith(fontSize: fontSize))),
+                  Text(DateConverterHelper.dateTimeStringToMonthAndTime(order!.createdAt!), style: cairoRegular.copyWith(fontSize: fontSize - 2), textAlign: TextAlign.end,),
                 ]),
                 order!.scheduled == 1 ? Text(
                   '${'scheduled_order_time'.tr} ${DateConverterHelper.dateTimeStringToDateTime(order!.scheduleAt!)}',
-                  style: robotoRegular.copyWith(fontSize: fontSize),
+                  style: cairoRegular.copyWith(fontSize: fontSize),
                 ) : const SizedBox(),
                 const SizedBox(height: 5),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(order!.orderType!.tr, style: robotoRegular.copyWith(fontSize: fontSize)),
-                  Text(order!.paymentMethod!.tr, style: robotoRegular.copyWith(fontSize: fontSize)),
+                  Text(order!.orderType!.tr, style: cairoRegular.copyWith(fontSize: fontSize)),
+                  Text(order!.paymentMethod!.tr, style: cairoRegular.copyWith(fontSize: fontSize)),
                 ]),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
@@ -106,22 +106,22 @@ class InvoiceDialogWidget extends StatelessWidget {
                 Align(
                   alignment: Get.find<LocalizationController>().isLtr ? Alignment.topLeft : Alignment.topRight,
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(order!.deliveryAddress?.contactPersonName ?? '', style: robotoRegular.copyWith(fontSize: fontSize)),
-                    Text(order!.deliveryAddress?.address ?? '', style: robotoRegular.copyWith(fontSize: fontSize)),
-                    Text(order!.deliveryAddress?.contactPersonNumber ?? '', style: robotoRegular.copyWith(fontSize: fontSize)),
+                    Text(order!.deliveryAddress?.contactPersonName ?? '', style: cairoRegular.copyWith(fontSize: fontSize)),
+                    Text(order!.deliveryAddress?.address ?? '', style: cairoRegular.copyWith(fontSize: fontSize)),
+                    Text(order!.deliveryAddress?.contactPersonNumber ?? '', style: cairoRegular.copyWith(fontSize: fontSize)),
                   ]),
                 ),
                 const SizedBox(height: 10),
 
                 Row(children: [
-                  Expanded(flex: 1, child: Text('sl'.tr.toUpperCase(), style: robotoMedium.copyWith(fontSize: fontSize))),
-                  Expanded(flex: 6, child: Text('item_info'.tr, style: robotoMedium.copyWith(fontSize: fontSize))),
+                  Expanded(flex: 1, child: Text('sl'.tr.toUpperCase(), style: cairoMedium.copyWith(fontSize: fontSize))),
+                  Expanded(flex: 6, child: Text('item_info'.tr, style: cairoMedium.copyWith(fontSize: fontSize))),
                   Expanded(flex: 1, child: Text(
-                    'qty'.tr, style: robotoMedium.copyWith(fontSize: fontSize),
+                    'qty'.tr, style: cairoMedium.copyWith(fontSize: fontSize),
                     textAlign: TextAlign.center,
                   )),
                   Expanded(flex: 2, child: Text(
-                    'price'.tr, style: robotoMedium.copyWith(fontSize: fontSize),
+                    'price'.tr, style: cairoMedium.copyWith(fontSize: fontSize),
                     textAlign: TextAlign.right,
                   )),
                 ]),
@@ -168,33 +168,33 @@ class InvoiceDialogWidget extends StatelessWidget {
                     return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       Expanded(flex: 1, child: Text(
                         (index+1).toString(),
-                        style: robotoRegular.copyWith(fontSize: fontSize),
+                        style: cairoRegular.copyWith(fontSize: fontSize),
                       )),
                       Expanded(flex: 5, child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(
                           orderDetails![index].itemDetails!.name!,
-                          style: robotoRegular.copyWith(fontSize: fontSize),
+                          style: cairoRegular.copyWith(fontSize: fontSize),
                         ),
                         const SizedBox(height: 2),
 
                         addOnText.isNotEmpty ? Text(
                           '${'addons'.tr}: $addOnText',
-                          style: robotoRegular.copyWith(fontSize: fontSize),
+                          style: cairoRegular.copyWith(fontSize: fontSize),
                         ) : const SizedBox(),
 
                         (orderDetails![index].variation != null && orderDetails![index].variation!.isNotEmpty) || (orderDetails![index].foodVariation != null && orderDetails![index].foodVariation!.isNotEmpty) ? Text(
                           '${'variations'.tr}: $variationText',
-                          style: robotoRegular.copyWith(fontSize: fontSize),
+                          style: cairoRegular.copyWith(fontSize: fontSize),
                         ) : const SizedBox(),
 
                       ])),
                       Expanded(flex: 2, child: Text(
                         orderDetails![index].quantity.toString(), textAlign: TextAlign.center,
-                        style: robotoRegular.copyWith(fontSize: fontSize),
+                        style: cairoRegular.copyWith(fontSize: fontSize),
                       )),
                       Expanded(flex: 2, child: Text(
                         _priceDecimal(orderDetails![index].price!), textAlign: TextAlign.right,
-                        style: robotoRegular.copyWith(fontSize: fontSize),
+                        style: cairoRegular.copyWith(fontSize: fontSize),
                       )),
                     ]);
                   },
@@ -248,7 +248,7 @@ class InvoiceDialogWidget extends StatelessWidget {
                   child: DottedDivider(height: 1, dashWidth: 4, dashHeight: 1),
                 ),
 
-                Text('thank_you'.tr, style: robotoRegular.copyWith(fontSize: fontSize)),
+                Text('thank_you'.tr, style: cairoRegular.copyWith(fontSize: fontSize)),
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
                   child: DottedDivider(height: 1, dashWidth: 4, dashHeight: 1),
@@ -256,7 +256,7 @@ class InvoiceDialogWidget extends StatelessWidget {
 
                 Text(
                   '${Get.find<SplashController>().configModel!.businessName}. ${Get.find<SplashController>().configModel!.footerText}',
-                  style: robotoRegular.copyWith(fontSize: fontSize),
+                  style: cairoRegular.copyWith(fontSize: fontSize),
                 ),
 
               ]),

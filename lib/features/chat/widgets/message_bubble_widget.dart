@@ -24,7 +24,7 @@ class MessageBubbleWidget extends StatelessWidget {
       padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-        Text('${user!.fName} ${user!.lName}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
+        Text('${user!.fName} ${user!.lName}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
         Row(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -91,7 +91,7 @@ class MessageBubbleWidget extends StatelessWidget {
 
         Text(
           DateConverterHelper.localDateToIsoStringAMPM(DateTime.parse(message.createdAt!)),
-          style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+          style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
         ),
       ]),
     )
@@ -102,7 +102,7 @@ class MessageBubbleWidget extends StatelessWidget {
 
         Text(
           '${sender!.fName} ${sender!.lName}',
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
         ),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -181,7 +181,7 @@ class MessageBubbleWidget extends StatelessWidget {
 
         Text(
           DateConverterHelper.localDateToIsoStringAMPM(DateTime.parse(message.createdAt!)),
-          style: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+          style: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
         ),
         const SizedBox(height: Dimensions.paddingSizeDefault),
 

@@ -85,7 +85,7 @@ class PaymentController extends GetxController implements GetxService {
       for(int i=0; i< widthDrawMethods!.length; i++){
         _methodList.add(DropdownMenuItem<int>(value: i, child: SizedBox(
           width: Get.context!.width-100,
-          child: Text(widthDrawMethods![i].methodName!, style: robotoBold),
+          child: Text(widthDrawMethods![i].methodName!, style: cairoBold),
         )));
       }
       _textControllerList = [];

@@ -31,7 +31,7 @@ class DottedVideoBorder extends StatelessWidget {
               ),
               const SizedBox(height: 5,),
               Text(text ?? "upload_file".tr, textAlign: TextAlign.center,
-                style: robotoMedium.copyWith(fontSize: 12,
+                style: cairoMedium.copyWith(fontSize: 12,
                   color: showErrorBorder ? Theme.of(context).colorScheme.error : Theme.of(context).textTheme.bodyLarge!.color!.withValues(alpha: 0.6),
                 ),
               ),

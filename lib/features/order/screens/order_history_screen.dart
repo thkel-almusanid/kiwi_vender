@@ -62,7 +62,7 @@ class OrderHistoryScreen extends StatelessWidget {
             ),
 
           ]),
-        ) : Center(child: Text('you_have_no_permission_to_access_this_feature'.tr, style: robotoMedium));
+        ) : Center(child: Text('you_have_no_permission_to_access_this_feature'.tr, style: cairoMedium));
       }),
     );
   }

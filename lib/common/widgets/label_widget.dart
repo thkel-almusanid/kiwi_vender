@@ -26,7 +26,7 @@ class LabelWidget extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(color: Theme.of(context).cardColor),
           padding: const EdgeInsets.all(5),
-          child: Text(labelText, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+          child: Text(labelText, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
         ),
       ),
 

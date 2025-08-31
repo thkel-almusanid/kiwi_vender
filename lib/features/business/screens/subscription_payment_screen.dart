@@ -46,12 +46,12 @@ class _SubscriptionPaymentScreenState extends State<SubscriptionPaymentScreen> {
 
                 Text(
                   'vendor_registration'.tr,
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                 ),
 
                 Text(
                   'you_are_one_step_away_choose_your_business_plan'.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                 ),
 
                 const SizedBox(height: Dimensions.paddingSizeSmall),
@@ -83,10 +83,10 @@ class _SubscriptionPaymentScreenState extends State<SubscriptionPaymentScreen> {
                       SizedBox(height: Get.find<SplashController>().configModel!.subscriptionFreeTrialStatus! ? Dimensions.paddingSizeExtremeLarge : 0),
 
                       Row(children: [
-                        Text('${'pay_via_online'.tr} ', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                        Text('${'pay_via_online'.tr} ', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault)),
                         Text(
                           'faster_and_secure_way_to_pay_bill'.tr,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor),
                         ),
                       ]),
 
@@ -128,7 +128,7 @@ class _SubscriptionPaymentScreenState extends State<SubscriptionPaymentScreen> {
 
                                 Text(
                                   Get.find<SplashController>().configModel!.activePaymentMethodList![index].getWayTitle!,
-                                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
                                 ),
                                 const Spacer(),
 

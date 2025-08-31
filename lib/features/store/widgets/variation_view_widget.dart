@@ -22,7 +22,7 @@ class VariationView extends StatelessWidget {
         padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-          Text('variations'.tr, style: robotoMedium),
+          Text('variations'.tr, style: cairoMedium),
           const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
           ListView.builder(
@@ -33,16 +33,16 @@ class VariationView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Row(children: [
 
-                Text('${item.variations![index].type!}:', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                Text('${item.variations![index].type!}:', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                 Text(
                   PriceConverterHelper.convertPrice(item.variations![index].price),
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                 ),
                 SizedBox(width: stock! ? Dimensions.paddingSizeExtraSmall : 0),
                 stock! ? Text(
                   '(${item.variations![index].stock})',
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                 ) : const SizedBox(),
 
               ]);

@@ -45,7 +45,7 @@ class NotificationDialogWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Text(
               notificationModel.title ?? '',
-              style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge),
+              style: cairoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge),
             ),
           ),
 
@@ -53,7 +53,7 @@ class NotificationDialogWidget extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
             child: Text(
               notificationModel.description ?? '',
-              style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.7)),
+              style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.7)),
             ),
           ),
 

@@ -28,7 +28,7 @@ class BaseCardWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: Dimensions.paddingSizeLarge),
           child: Align(
             alignment: Alignment.center,
-            child: Text(title, style: robotoMedium.copyWith(color: authController.businessIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), fontSize: Dimensions.fontSizeDefault,
+            child: Text(title, style: cairoMedium.copyWith(color: authController.businessIndex == index ? Theme.of(context).primaryColor : Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), fontSize: Dimensions.fontSizeDefault,
               fontWeight: authController.businessIndex == index ? FontWeight.w600 : FontWeight.w400,
             )),
           ),

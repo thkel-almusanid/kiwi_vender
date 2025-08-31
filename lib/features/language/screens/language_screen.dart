@@ -35,13 +35,13 @@ class LanguageScreen extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
-            child: Text('choose_your_language'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+            child: Text('choose_your_language'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
           ),
           const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
-            child: Text('choose_your_language_to_proceed'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+            child: Text('choose_your_language_to_proceed'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
           ),
           const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 

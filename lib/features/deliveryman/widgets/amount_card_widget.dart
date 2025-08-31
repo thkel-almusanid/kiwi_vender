@@ -19,12 +19,12 @@ class AmountCardWidget extends StatelessWidget {
       ),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
 
-        Text(value, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.white)),
+        Text(value, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.white)),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
         Text(
           title, textAlign: TextAlign.center,
-          style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+          style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white),
         ),
 
       ]),

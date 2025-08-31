@@ -93,10 +93,10 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                         const CustomAssetImageWidget(Images.taxOrderIcon, height: 30, width: 30),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-                        Text(reportController.taxReportModel!.totalOrders.toString(), style: robotoBlack.copyWith(color: const Color(0xffD89D4B), fontSize: Dimensions.fontSizeLarge)),
+                        Text(reportController.taxReportModel!.totalOrders.toString(), style: cairoBlack.copyWith(color: const Color(0xffD89D4B), fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                        Text('total_orders'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                        Text('total_orders'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
 
                       ]),
                     ),
@@ -115,10 +115,10 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                         const CustomAssetImageWidget(Images.taxAmountIcon, height: 30, width: 30),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalOrderAmount), style: robotoBlack.copyWith(color: const Color(0xff0661CB), fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalOrderAmount), style: cairoBlack.copyWith(color: const Color(0xff0661CB), fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                        Text('total_order_amount'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                        Text('total_order_amount'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
 
                       ]),
                     ),
@@ -142,10 +142,10 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
 
                       Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalTax), style: robotoBlack.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalTax), style: cairoBlack.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                        Text('total_tax_amount'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                        Text('total_tax_amount'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
 
                       ]),
 
@@ -172,12 +172,12 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                               Text(
                                 '${reportController.taxReportModel!.taxSummary?[index].taxName} '
                                     '(${(double.parse(reportController.taxReportModel?.taxSummary?[index].taxLabel ?? '0')).toStringAsFixed(1)}%)',
-                                style: robotoRegular.copyWith(
+                                style: cairoRegular.copyWith(
                                   color: Theme.of(context).hintColor,
                                   fontSize: Dimensions.fontSizeSmall,
                                 ),
                               ),
-                              Text(PriceConverterHelper.convertPrice(reportController.taxReportModel!.taxSummary?[index].totalTax), style: robotoMedium.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
+                              Text(PriceConverterHelper.convertPrice(reportController.taxReportModel!.taxSummary?[index].totalTax), style: cairoMedium.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
 
                             ]),
                           );
@@ -205,13 +205,13 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                        Text('${'order_id'.tr} #${reportController.orders?[index].id}', style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6))),
+                        Text('${'order_id'.tr} #${reportController.orders?[index].id}', style: cairoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6))),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall - 2),
 
-                        Text(PriceConverterHelper.convertPrice(reportController.orders?[index].orderAmount), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.orders?[index].orderAmount), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall - 2),
 
-                        Text('${'tax'.tr}: ${PriceConverterHelper.convertPrice(reportController.orders?[index].totalTaxAmount)}', style: robotoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                        Text('${'tax'.tr}: ${PriceConverterHelper.convertPrice(reportController.orders?[index].totalTaxAmount)}', style: cairoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
 
                       ]),
                     ),
@@ -219,7 +219,7 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
 
-                        Text(DateConverterHelper.utcToDateTime(reportController.orders![index].createdAt!), style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                        Text(DateConverterHelper.utcToDateTime(reportController.orders![index].createdAt!), style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                         reportController.orders![index].orderTaxes!.isNotEmpty ? Wrap(
@@ -230,11 +230,11 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                             padding: EdgeInsets.only(right: i == (reportController.orders![index].orderTaxes?.length ?? 0) - 1 ? 0 : Dimensions.paddingSizeSmall),
                             child: Text(
                               '${reportController.orders![index].orderTaxes?[i].taxName} ${i == (reportController.orders![index].orderTaxes?.length ?? 0) - 1 ? '' : ','}',
-                              style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall),
+                              style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall),
                             ),
                           ),
                         ),
-                        ) : Text('no_tax'.tr, style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.end),
+                        ) : Text('no_tax'.tr, style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6), fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.end),
                       ]),
 
                     ),
@@ -247,7 +247,7 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
               child: Center(
                 child: Text(
                   'no_tax_report_found'.tr,
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6)),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6)),
                 ),
               ),
             ),

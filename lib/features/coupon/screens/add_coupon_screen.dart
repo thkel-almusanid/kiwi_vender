@@ -112,7 +112,7 @@ class _AddCouponScreenState extends State<AddCouponScreen> {
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(
                       'coupon_type'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
@@ -227,7 +227,7 @@ class _AddCouponScreenState extends State<AddCouponScreen> {
                 Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(
                     'discount_type'.tr,
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                   Container(

@@ -33,7 +33,7 @@ class PreviewVideoDialogWidget extends StatelessWidget {
                 child:  Column(mainAxisSize:  MainAxisSize.min, children: [
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
-                    Text("ads_preview".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                    Text("ads_preview".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
 
                     InkWell(
                       onTap: ()=> Get.back(),
@@ -108,7 +108,7 @@ class PreviewVideoDialogWidget extends StatelessWidget {
                               ),
                             ) : Text(title!,
                               maxLines: 1,
-                              style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                              style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
                               overflow: TextOverflow.ellipsis,
                             ),
                             const SizedBox(height: Dimensions.paddingSizeSmall),
@@ -128,7 +128,7 @@ class PreviewVideoDialogWidget extends StatelessWidget {
                                     description!,
                                     maxLines: 2,
                                     overflow: TextOverflow.ellipsis,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).hintColor),
                                   ),
 
                                   const SizedBox(height: Dimensions.paddingSizeExtraSmall,),

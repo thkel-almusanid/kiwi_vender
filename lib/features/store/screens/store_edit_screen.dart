@@ -122,7 +122,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
             padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-              Text('basic_info'.tr, style: robotoBold),
+              Text('basic_info'.tr, style: cairoBold),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
               CustomCard(
@@ -138,8 +138,8 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                       indicatorWeight: 3,
                       labelColor: Theme.of(context).primaryColor,
                       unselectedLabelColor: Theme.of(context).hintColor,
-                      unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
-                      labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                      unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+                      labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
                       labelPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                       indicatorPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                       isScrollable: true,
@@ -183,7 +183,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
               ),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
-              Text('contact_info'.tr, style: robotoBold),
+              Text('contact_info'.tr, style: cairoBold),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
               CustomCard(
@@ -210,12 +210,12 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                 text: TextSpan(children: [
                   TextSpan(
                     text: 'business_logo'.tr,
-                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyLarge!.color),
+                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyLarge!.color),
                   ),
 
                   TextSpan(
                     text: '*',
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.red),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.red),
                   ),
                 ]),
               ),
@@ -248,7 +248,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
 
                             Text(
                               'click_to_upload'.tr,
-                              style: robotoMedium.copyWith(color: Colors.blue, fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,
+                              style: cairoMedium.copyWith(color: Colors.blue, fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,
                             ),
 
                           ]),
@@ -280,7 +280,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                     alignment: Alignment.center,
                     child: Text(
                       'image_format_and_ratio_for_business_logo'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
                     ),
                   ),
                 ]),
@@ -291,12 +291,12 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                 text: TextSpan(children: [
                   TextSpan(
                     text: 'cover_photo'.tr,
-                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyLarge!.color),
+                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyLarge!.color),
                   ),
 
                   TextSpan(
                     text: '*',
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.red),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Colors.red),
                   ),
                 ]),
               ),
@@ -333,7 +333,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
 
                               Text(
                                 'click_to_upload'.tr,
-                                style: robotoMedium.copyWith(color: Colors.blue, fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,
+                                style: cairoMedium.copyWith(color: Colors.blue, fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,
                               ),
 
                             ]),
@@ -366,14 +366,14 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                     alignment: Alignment.center,
                     child: Text(
                       'image_format_and_ratio_for_business_cover'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
                     ),
                   ),
                 ]),
               ),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
-              Text('meta_data'.tr, style: robotoBold),
+              Text('meta_data'.tr, style: cairoBold),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
               CustomCard(
@@ -395,8 +395,8 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                           indicatorWeight: 3,
                           labelColor: Theme.of(context).primaryColor,
                           unselectedLabelColor: Theme.of(context).hintColor,
-                          unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
-                          labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                          unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall),
+                          labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
                           labelPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                           indicatorPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                           isScrollable: true,
@@ -445,7 +445,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
               ),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
-              Text('meta_image'.tr, style: robotoMedium.copyWith(fontWeight: FontWeight.w600)),
+              Text('meta_image'.tr, style: cairoMedium.copyWith(fontWeight: FontWeight.w600)),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
               CustomCard(
@@ -506,7 +506,7 @@ class _StoreEditScreenState extends State<StoreEditScreen> with TickerProviderSt
                     alignment: Alignment.center,
                     child: Text(
                       'image_format_and_ratio_for_business_logo'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor), textAlign: TextAlign.center,
                     ),
                   ),
 

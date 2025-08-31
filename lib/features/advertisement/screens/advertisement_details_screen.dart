@@ -90,7 +90,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                             Expanded(
                               child: Text('${'ads_id'.tr} #${advertisementController.advertisementDetailsModel?.id}',
                                 overflow: TextOverflow.ellipsis,
-                                style: robotoBold.copyWith(
+                                style: cairoBold.copyWith(
                                   fontSize: Dimensions.fontSizeLarge,
                                   color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.9),
                                   decoration: TextDecoration.none,
@@ -110,7 +110,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                               padding: const EdgeInsets.symmetric(vertical: 3, horizontal: Dimensions.paddingSizeExtraSmall),
                               child: Text(
                                 status!.tr,
-                                style: robotoRegular.copyWith(
+                                style: cairoRegular.copyWith(
                                   color: status == 'approved' ? Colors.green
                                       : status == 'running' ? Colors.indigo
                                       : status == 'expired' ? Theme.of(context).disabledColor
@@ -147,7 +147,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                             title: 'ads_type'.tr,
                             subTitle: "${advertisementController.advertisementDetailsModel?.addType?.tr}".toTitleCase().replaceAll('_', ' '),
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            subtitleTextStyle : robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall + 1),
+                            subtitleTextStyle : cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall + 1),
                           ),
                           const SizedBox(height:Dimensions.paddingSizeExtraSmall + 2),
 
@@ -156,7 +156,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                             title: 'payment_status'.tr,
                             subTitle: advertisementController.advertisementDetailsModel?.isPaid == 1 ? "paid".tr : "unpaid".tr,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            subtitleTextStyle : robotoMedium.copyWith(
+                            subtitleTextStyle : cairoMedium.copyWith(
                               color: advertisementController.advertisementDetailsModel?.isPaid == 1 ? Colors.green : Theme.of(context).colorScheme.error,
                               fontSize: Dimensions.fontSizeSmall + 1,
                             ),
@@ -176,50 +176,50 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                       margin: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall, horizontal: Dimensions.paddingSizeSmall),
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                        Text("ads_title".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                        Text("ads_title".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall,),
 
                         Text("${advertisementController.advertisementDetailsModel?.title}",
-                          style: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+                          style: cairoRegular.copyWith(color: Theme.of(context).hintColor),
                           textAlign: TextAlign.justify,
                           maxLines: 10,
                         ),
                         const SizedBox(height: Dimensions.paddingSizeLarge,),
 
 
-                        Text("description".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                        Text("description".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                         Text("${advertisementController.advertisementDetailsModel?.description}",
-                          style: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+                          style: cairoRegular.copyWith(color: Theme.of(context).hintColor),
                           textAlign: TextAlign.justify, maxLines: 100,
                         ),
                         const SizedBox(height: Dimensions.paddingSizeLarge),
 
                         advertisementController.advertisementDetailsModel?.cancellationNote != null ? Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Text("denied_note".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).colorScheme.error)),
+                          Text("denied_note".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).colorScheme.error)),
                           const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                           Text("${advertisementController.advertisementDetailsModel?.cancellationNote}",
-                            style: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+                            style: cairoRegular.copyWith(color: Theme.of(context).hintColor),
                             textAlign: TextAlign.justify, maxLines: 100,
                           ),
                           const SizedBox(height: Dimensions.paddingSizeLarge),
                         ]) : const SizedBox(),
 
                         advertisementController.advertisementDetailsModel?.pauseNote != null ? Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Text("pause_note_title".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                          Text("pause_note_title".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                           const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                           Text("${advertisementController.advertisementDetailsModel?.pauseNote}",
-                            style: robotoRegular.copyWith(color: Theme.of(context).hintColor),
+                            style: cairoRegular.copyWith(color: Theme.of(context).hintColor),
                             textAlign: TextAlign.justify, maxLines: 100,
                           ),
                           const SizedBox(height: Dimensions.paddingSizeLarge),
                         ]) : const SizedBox(),
 
                         advertisementController.advertisementDetailsModel?.addType == AdsType.video_promotion.name ?
-                        Text("video".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault,)): const SizedBox(),
+                        Text("video".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault,)): const SizedBox(),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                         advertisementController.advertisementDetailsModel?.addType == AdsType.video_promotion.name ? NetworkVideoPreviewWidget(
@@ -232,7 +232,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
                             Expanded(flex: 2,
                               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                                Text("profile_image".tr, style: robotoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
+                                Text("profile_image".tr, style: cairoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
 
                                 AspectRatio(
                                   aspectRatio: 5/4.5,
@@ -260,7 +260,7 @@ class _AdvertisementDetailsScreenState extends State<AdvertisementDetailsScreen>
 
                             Expanded(flex: 3, child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                              Text("cover_image".tr, style: robotoBold),
+                              Text("cover_image".tr, style: cairoBold),
 
                               AspectRatio(
                                 aspectRatio: 20/12,

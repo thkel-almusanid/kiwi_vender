@@ -29,7 +29,7 @@ class _CustomToolTipState extends State<CustomToolTip> {
       tailBaseWidth: 20,
       content: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text(widget.message, style: robotoRegular.copyWith(color: Get.isDarkMode ? Colors.black87 : Colors.white)),
+        child: Text(widget.message, style: cairoRegular.copyWith(color: Get.isDarkMode ? Colors.black87 : Colors.white)),
       ),
       child: InkWell(
         splashColor: Colors.transparent,

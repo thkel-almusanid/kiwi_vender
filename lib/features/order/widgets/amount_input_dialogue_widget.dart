@@ -41,7 +41,7 @@ class _AmountInputDialogueWidgetState extends State<AmountInputDialogueWidget> {
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Text(
               widget.isItemPrice ? 'update_order_amount'.tr : 'update_discount_amount'.tr, textAlign: TextAlign.center,
-              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
+              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
             ),
           ),
           const SizedBox(height: Dimensions.paddingSizeExtraLarge),

@@ -73,10 +73,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               _isOwner ? Text(
                 '${profileController.profileModel!.fName} ${profileController.profileModel!.lName}',
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
               ) : Text(
                 '${profileController.profileModel!.employeeInfo!.fName} ${profileController.profileModel!.employeeInfo!.lName}',
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
               const SizedBox(height: 20),
 
@@ -115,7 +115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     const Icon(Icons.notifications_active_rounded, size: 25),
                     const SizedBox(width: Dimensions.paddingSizeSmall),
 
-                    Expanded(child: Text('background_notification'.tr, style: robotoRegular)),
+                    Expanded(child: Text('background_notification'.tr, style: cairoRegular)),
 
                     Transform.scale(
                       scale: 0.7,
@@ -156,9 +156,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(height: _isOwner ? Dimensions.paddingSizeLarge : 0),
 
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text('${'version'.tr}:', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
+                Text('${'version'.tr}:', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                Text(AppConstants.appVersion.toString(), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
+                Text(AppConstants.appVersion.toString(), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
               ]),
 
             ]),
@@ -190,13 +190,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Text(
             '${!allow ? 'allow'.tr : 'disable'.tr} ${AppConstants.appName} ${'to_run_notification_in_background'.tr}',
             textAlign: TextAlign.center,
-            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
           ),
 
           allow ? Text(
             '(${AppConstants.appName} -> Battery -> Select Optimized)',
             textAlign: TextAlign.center,
-            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
           ) : const SizedBox(),
           const SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -210,7 +210,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             children: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
-                child: Text("cancel".tr, style: robotoMedium),
+                child: Text("cancel".tr, style: cairoMedium),
               ),
               const SizedBox(width: Dimensions.paddingSizeSmall),
 
@@ -231,7 +231,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 child: Text(
                   "okay".tr,
-                  style: robotoMedium.copyWith(color: Theme.of(context).cardColor),
+                  style: cairoMedium.copyWith(color: Theme.of(context).cardColor),
                 ),
               ),
             ],
@@ -253,7 +253,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       child: Text(
         text,
-        style: robotoRegular,
+        style: cairoRegular,
       ),
     );
   }

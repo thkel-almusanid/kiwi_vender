@@ -34,7 +34,7 @@ class _PickupTimeInputState extends State<PickupTimeInput> {
                 decoration: InputDecoration(
                   contentPadding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                   hintText: 'min_20'.tr,
-                  hintStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                  hintStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                   border: InputBorder.none,
                 ),
               ),
@@ -53,7 +53,7 @@ class _PickupTimeInputState extends State<PickupTimeInput> {
                 decoration: InputDecoration(
                   contentPadding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
                   hintText: 'max_30'.tr,
-                  hintStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                  hintStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                   border: InputBorder.none,
                 ),
               ),
@@ -79,7 +79,7 @@ class _PickupTimeInputState extends State<PickupTimeInput> {
           child: Container(
             decoration: BoxDecoration(color: Theme.of(context).cardColor),
             padding: const EdgeInsets.all(5),
-            child: Text('approximate_delivery_time'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+            child: Text('approximate_delivery_time'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
           ),
         ),
 

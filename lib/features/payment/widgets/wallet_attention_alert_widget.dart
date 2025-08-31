@@ -34,7 +34,7 @@ class WalletAttentionAlertWidget extends StatelessWidget {
               Image.asset(Images.attentionWarningIcon, width: 20, height: 20),
               const SizedBox(width: Dimensions.paddingSizeSmall),
 
-              Text('attention_please'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black)),
+              Text('attention_please'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black)),
 
             ]),
             const SizedBox(height: Dimensions.paddingSizeSmall),
@@ -42,7 +42,7 @@ class WalletAttentionAlertWidget extends StatelessWidget {
             isOverFlowBlockWarning ? RichText(
               text: TextSpan(
                 text: '${'over_flow_block_warning_message'.tr}  ',
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black),
                 children: [
                   TextSpan(
                     recognizer: TapGestureRecognizer()..onTap = () {
@@ -59,11 +59,11 @@ class WalletAttentionAlertWidget extends StatelessWidget {
                       }
                     },
                     text: 'pay_the_due'.tr,
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue, decoration: TextDecoration.underline),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue, decoration: TextDecoration.underline),
                   ),
                 ],
               ),
-            ) : Text('over_flow_warning_message'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black)),
+            ) : Text('over_flow_warning_message'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.black)),
           ]),
         );
       }

@@ -24,8 +24,8 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
 
       Row(
         children: [
-          Text('food_variation'.tr, style: robotoBold),
-          Text(' (${'optional'.tr})', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+          Text('food_variation'.tr, style: cairoBold),
+          Text(' (${'optional'.tr})', style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
         ],
       ),
       const SizedBox(height: Dimensions.paddingSizeSmall),
@@ -48,7 +48,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
               Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('${'variation'.tr} ${index + 1}', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                  Text('${'variation'.tr} ${index + 1}', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                   Row(children: [
@@ -66,7 +66,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
                     ),
                     const SizedBox(width: 5),
 
-                    Text('required_this_variation'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                    Text('required_this_variation'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
 
                   ]),
 
@@ -114,7 +114,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
                       ),
 
                       Text(
-                        'single_selection'.tr, style: robotoMedium.copyWith(
+                        'single_selection'.tr, style: cairoMedium.copyWith(
                         fontSize: Dimensions.fontSizeSmall, color: widget.storeController.variationList![index].isSingle ? Theme.of(context).textTheme.bodyLarge?.color : Theme.of(context).disabledColor),
                       ),
 
@@ -136,7 +136,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
                       ),
 
                       Text(
-                        'multi_selection'.tr, style: robotoMedium.copyWith(
+                        'multi_selection'.tr, style: cairoMedium.copyWith(
                          fontSize: Dimensions.fontSizeSmall, color: widget.storeController.variationList![index].isSingle ? Theme.of(context).disabledColor : Theme.of(context).textTheme.bodyLarge?.color),
                       ),
 
@@ -184,7 +184,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
                         color: Theme.of(context).disabledColor.withValues(alpha: 0.08),
                       ),
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text('selection_option'.tr, style: robotoMedium),
+                        Text('selection_option'.tr, style: cairoMedium),
                         const SizedBox(height: Dimensions.paddingSizeDefault),
 
                         CustomTextFieldWidget(
@@ -238,7 +238,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
                     Icon(Icons.add, size: 20, color: Theme.of(context).primaryColor),
                     const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                    Text('new_option'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor)),
+                    Text('new_option'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor)),
                   ]),
                 ),
               ),
@@ -255,7 +255,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge, vertical: Dimensions.paddingSizeSmall),
           decoration: BoxDecoration(color: Theme.of(context).primaryColor, borderRadius: BorderRadius.circular(Dimensions.radiusSmall)),
-          child: Text('new_variation'.tr, style: robotoMedium.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeDefault)),
+          child: Text('new_variation'.tr, style: cairoMedium.copyWith(color: Theme.of(context).cardColor, fontSize: Dimensions.fontSizeDefault)),
         ),
       ) : Container(
         padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeSmall),
@@ -276,7 +276,7 @@ class _FoodVariationViewWidgetState extends State<FoodVariationViewWidget> {
 
               const Icon(Icons.add, size: 24),
 
-              Text('add_variation'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+              Text('add_variation'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
 
             ]),
           ),

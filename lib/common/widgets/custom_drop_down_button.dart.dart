@@ -62,20 +62,20 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
         ),
         hint: Text(
           widget.hintText ?? 'select_an_option'.tr,
-          style: robotoRegular.copyWith(color: Colors.grey),
+          style: cairoRegular.copyWith(color: Colors.grey),
         ),
         value: widget.selectedValue,
         items: (widget.dropdownMenuItems ?? widget.items?.map((item) => DropdownMenuItem<String>(
           value: item,
           child: Text(
-            item.tr, style: robotoRegular,
+            item.tr, style: cairoRegular,
           ),
         )).toList()) ?? [
           DropdownMenuItem<String>(
             value: null,
             child: Text(
               'no_data_available'.tr,
-              style: robotoRegular.copyWith(color: Colors.grey),
+              style: cairoRegular.copyWith(color: Colors.grey),
             ),
           )
         ],

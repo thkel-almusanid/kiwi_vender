@@ -36,13 +36,13 @@ class AdsSectionWidget extends StatelessWidget {
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                    Text('want_to_get_highlighted'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                    Text('want_to_get_highlighted'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Text(
                       'in_the_customer_app_and_websites'.tr,
                       textAlign: TextAlign.center,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).disabledColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).disabledColor),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 

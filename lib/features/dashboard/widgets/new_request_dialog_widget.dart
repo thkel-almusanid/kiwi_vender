@@ -61,7 +61,7 @@ class _NewRequestDialogWidgetState extends State<NewRequestDialogWidget> {
             padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
             child: Text(
               isRental ? 'new_trip_booked'.tr : 'new_order_placed'.tr, textAlign: TextAlign.center,
-              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
+              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
             ),
           ),
 

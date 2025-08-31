@@ -37,14 +37,14 @@ class AdsCreateSuccessBottomSheet extends StatelessWidget {
 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-          child: Text('ads_created_successfully'.tr, textAlign: TextAlign.center, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+          child: Text('ads_created_successfully'.tr, textAlign: TextAlign.center, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
         ),
         const SizedBox(height: Dimensions.paddingSizeDefault),
 
 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-          child: Text('congratulation_description'.tr, textAlign: TextAlign.center, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor)),
+          child: Text('congratulation_description'.tr, textAlign: TextAlign.center, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor)),
         ),
         const SizedBox(height: Dimensions.paddingSizeLarge),
 

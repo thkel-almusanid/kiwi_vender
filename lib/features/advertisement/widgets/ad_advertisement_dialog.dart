@@ -38,7 +38,7 @@ class AddAdvertisementDialog extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
               child: Text(
                 'want_to_get_highlighted'.tr, textAlign: TextAlign.center,
-                style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
             ),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
@@ -48,7 +48,7 @@ class AddAdvertisementDialog extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
               child: Text(
                 'create_ads_to_get_highlighted_on_the_app_and_web_browser'.tr, textAlign: TextAlign.center,
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
               ),
             ),
             const SizedBox(height: Dimensions.paddingSizeDefault),

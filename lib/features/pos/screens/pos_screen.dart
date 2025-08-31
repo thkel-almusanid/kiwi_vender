@@ -51,10 +51,10 @@ class _PosScreenState extends State<PosScreen> {
                 borderRadius: BorderRadius.circular(10),
                 borderSide: const BorderSide(style: BorderStyle.none, width: 0),
               ),
-              hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor),
+              hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor),
               filled: true, fillColor: Theme.of(context).cardColor,
             ),
-            style: robotoRegular.copyWith(
+            style: cairoRegular.copyWith(
               color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeLarge,
             ),
           ),
@@ -75,10 +75,10 @@ class _PosScreenState extends State<PosScreen> {
                 const SizedBox(width: Dimensions.paddingSizeSmall),
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(suggestion.name!, maxLines: 1, overflow: TextOverflow.ellipsis, style: robotoRegular.copyWith(
+                    Text(suggestion.name!, maxLines: 1, overflow: TextOverflow.ellipsis, style: cairoRegular.copyWith(
                       color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeLarge,
                     )),
-                    Text(PriceConverterHelper.convertPrice(suggestion.price), style: robotoRegular.copyWith(
+                    Text(PriceConverterHelper.convertPrice(suggestion.price), style: cairoRegular.copyWith(
                       color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeSmall,
                     )),
                   ]),
@@ -194,14 +194,14 @@ class _PosScreenState extends State<PosScreen> {
 
                         // Total
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('item_price'.tr, style: robotoRegular),
-                          Text(PriceConverterHelper.convertPrice(itemPrice), style: robotoRegular),
+                          Text('item_price'.tr, style: cairoRegular),
+                          Text(PriceConverterHelper.convertPrice(itemPrice), style: cairoRegular),
                         ]),
                         const SizedBox(height: 10),
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('addons'.tr, style: robotoRegular),
-                          Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: robotoRegular),
+                          Text('addons'.tr, style: cairoRegular),
+                          Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: cairoRegular),
                         ]),
 
                         Padding(
@@ -210,12 +210,12 @@ class _PosScreenState extends State<PosScreen> {
                         ),
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('subtotal'.tr, style: robotoMedium),
-                          Text(PriceConverterHelper.convertPrice(subTotal), style: robotoMedium),
+                          Text('subtotal'.tr, style: cairoMedium),
+                          Text(PriceConverterHelper.convertPrice(subTotal), style: cairoMedium),
                         ]),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
                         Row(children: [
-                          Expanded(child: Text('discount'.tr, style: robotoRegular)),
+                          Expanded(child: Text('discount'.tr, style: cairoRegular)),
                           SizedBox(
                             width: 70,
                             child: TextFieldWidget(
@@ -225,12 +225,12 @@ class _PosScreenState extends State<PosScreen> {
                               inputAction: TextInputAction.done,
                             ),
                           ),
-                          Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: robotoRegular),
+                          Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: cairoRegular),
                         ]),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Text('vat_tax'.tr, style: robotoRegular),
-                          Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: robotoRegular),
+                          Text('vat_tax'.tr, style: cairoRegular),
+                          Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: cairoRegular),
                         ]),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
@@ -239,11 +239,11 @@ class _PosScreenState extends State<PosScreen> {
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Text(
                             'total_amount'.tr,
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
                           ),
                           Text(
                             PriceConverterHelper.convertPrice(total),
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
                           ),
                         ]),
 

@@ -202,7 +202,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
                 children: [
                   Text(
                     'paired_bluetooth'.tr,
-                    style: robotoMedium.copyWith(
+                    style: cairoMedium.copyWith(
                         fontSize: Dimensions.fontSizeLarge),
                   ),
                   const SizedBox(width: Dimensions.paddingSizeSmall),
@@ -288,7 +288,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
                                   isConnected
                                       ? 'connected'.tr
                                       : "click_to_connect".tr,
-                                  style: robotoRegular.copyWith(
+                                  style: cairoRegular.copyWith(
                                       color: isConnected
                                           ? null
                                           : Theme.of(context).primaryColor),
@@ -325,7 +325,7 @@ class _InVoicePrintScreenState extends State<InVoicePrintScreen>
                           horizontal: Dimensions.paddingSizeSmall),
                       child: Text(
                         _warningMessage ?? '',
-                        style: robotoRegular.copyWith(color: Colors.redAccent),
+                        style: cairoRegular.copyWith(color: Colors.redAccent),
                       ),
                     ),
               InvoiceDialogWidget(

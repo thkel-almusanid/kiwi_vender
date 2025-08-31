@@ -38,13 +38,13 @@ class PaymentInformationDialogWidget extends StatelessWidget {
           child: Column(children: [
 
             disbursement.status == 'completed' ? Column(children: [
-              Text("payment_information".tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+              Text("payment_information".tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
               Text(
                 "you_payment_has_been_completed_your_will_receive_the_amount_within_7_day_please_wait_till_then".tr,
                 textAlign: TextAlign.center,
-                style: robotoRegular.copyWith(color: Colors.green),
+                style: cairoRegular.copyWith(color: Colors.green),
               ),
             ]) : const SizedBox(),
 
@@ -53,32 +53,32 @@ class PaymentInformationDialogWidget extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text("payment_information".tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                Text("payment_information".tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('payment_method'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                  Text('payment_method'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
-                  Text(disbursement.withdrawMethod!.methodName!, style: robotoBold),
+                  Text(disbursement.withdrawMethod!.methodName!, style: cairoBold),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('amount'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                  Text('amount'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
-                  Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: robotoBold),
+                  Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoBold),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('disbursement_id'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                  Text('disbursement_id'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
-                  Text(disbursement.disbursementId.toString(), style: robotoBold),
+                  Text(disbursement.disbursementId.toString(), style: cairoBold),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('status'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                  Text('status'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: Dimensions.paddingSizeExtraSmall),
@@ -86,7 +86,7 @@ class PaymentInformationDialogWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                       color: Colors.green.withValues(alpha: 0.1),
                     ),
-                    child: Text(disbursement.status!.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.green)),
+                    child: Text(disbursement.status!.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.green)),
                   ),
                 ]),
 

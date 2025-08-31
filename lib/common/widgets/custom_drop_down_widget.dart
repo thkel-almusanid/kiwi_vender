@@ -36,7 +36,7 @@ class _CustomDropDownWidgetState extends State<CustomDropDownWidget> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       widget.title != null ? Text(
         widget.title!,
-        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
       ) : const SizedBox(),
       SizedBox(height: widget.title != null ? Dimensions.paddingSizeExtraSmall : 0),
       Container(

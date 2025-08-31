@@ -59,14 +59,14 @@ class _ConfirmationBottomSheetState extends State<ConfirmationBottomSheet> {
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-                child: Text(widget.title.tr, textAlign: TextAlign.center, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                child: Text(widget.title.tr, textAlign: TextAlign.center, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
               ),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
-                child: Text(widget.description.tr, textAlign: TextAlign.center, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor)),
+                child: Text(widget.description.tr, textAlign: TextAlign.center, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).hintColor)),
               ),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 

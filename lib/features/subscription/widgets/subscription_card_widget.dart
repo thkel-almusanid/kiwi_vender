@@ -59,7 +59,7 @@ class SubscriptionCardWidget extends StatelessWidget {
                         child: Center(
                           child: Text(
                             '${package.packageName}',
-                            style: robotoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).cardColor),
+                            style: cairoBold.copyWith(fontSize: Dimensions.fontSizeOverLarge, color: Theme.of(context).cardColor),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -77,10 +77,10 @@ class SubscriptionCardWidget extends StatelessWidget {
 
       Text(
         PriceConverterHelper.convertPrice(package.price),
-        style: robotoBold.copyWith(fontSize: 35, color: color),
+        style: cairoBold.copyWith(fontSize: 35, color: color),
       ),
 
-      Text('${package.validity} ' 'days'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall)),
+      Text('${package.validity} ' 'days'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall)),
       const SizedBox(height: Dimensions.paddingSizeDefault),
 
       Divider(color: color, indent: 70, endIndent: 70, thickness: 2),

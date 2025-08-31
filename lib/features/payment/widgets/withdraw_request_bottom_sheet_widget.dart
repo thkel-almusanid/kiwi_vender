@@ -40,7 +40,7 @@ class _WithdrawRequestBottomSheetWidgetState extends State<WithdrawRequestBottom
         return SingleChildScrollView(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
 
-            Text('withdraw'.tr, style: robotoMedium),
+            Text('withdraw'.tr, style: cairoMedium),
             const SizedBox(height: Dimensions.paddingSizeExtraLarge),
 
             Image.asset(Images.bank, height: 30, width: 30),

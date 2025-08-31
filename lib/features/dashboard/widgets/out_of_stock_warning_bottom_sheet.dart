@@ -47,18 +47,18 @@ class OutOfStockWarningBottomSheet extends StatelessWidget {
               Text(
                 'warning'.tr,
                 textAlign: TextAlign.center,
-                style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
               RichText(
                 text: TextSpan(
                   text: outOfStockCount > 3 ? '${outOfStockCount > outOfStockCount - 1 ? '${outOfStockCount - 1}${'more'.tr}' : outOfStockCount}' : outOfStockCount.toString(),
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Get.isDarkMode ? Colors.white : Colors.black),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Get.isDarkMode ? Colors.white : Colors.black),
                   children: [
                     TextSpan(
                       text: outOfStockCount > 3 ? ' ${outOfStockCount > outOfStockCount - 1 ? 'products_are_low_on_stock'.tr : 'product_is_low_on_stock'.tr}' : 'product_is_low_on_stock'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault),
                     ),
                   ],
                 ),

@@ -73,7 +73,7 @@ class _WithdrawMethodScreenState extends State<WithdrawMethodScreen> {
                         child: Text(
                           '${'payment_method'.tr} : ${method.methodName}' ,
                           maxLines: 1, overflow: TextOverflow.ellipsis,
-                          style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
                         ),
                       ),
 
@@ -83,7 +83,7 @@ class _WithdrawMethodScreenState extends State<WithdrawMethodScreen> {
                           borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                         ),
                         padding: const EdgeInsets.all(Dimensions.fontSizeSmall),
-                        child: Text('default_method'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),),
+                        child: Text('default_method'.tr, style: cairoMedium.copyWith(color: Theme.of(context).primaryColor),),
                       ) : InkWell(
                         onTap: () {
                           disbursementController.makeDefaultMethod({'id': '${method.id}', 'is_default': '1'}, index);
@@ -96,7 +96,7 @@ class _WithdrawMethodScreenState extends State<WithdrawMethodScreen> {
                           padding: const EdgeInsets.all(Dimensions.fontSizeSmall),
                           child: !(disbursementController.isLoading && (index == disbursementController.index))
                               ? Text(
-                            'make_default'.tr, style: robotoMedium.copyWith(color: Theme.of(context).cardColor),
+                            'make_default'.tr, style: cairoMedium.copyWith(color: Theme.of(context).cardColor),
                           ) : SizedBox(height: 20, width: 20, child: CircularProgressIndicator(color: Theme.of(context).cardColor,),),
                         ),
                       ),
@@ -120,13 +120,13 @@ class _WithdrawMethodScreenState extends State<WithdrawMethodScreen> {
                               child: Row(children: [
                                 Expanded(
                                   child: Text(method.methodFields![index].userInput!.replaceAll('_', ' ').toTitleCase(),
-                                    style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
                                 ),
-                                const Text(' :  ', style: robotoRegular),
+                                const Text(' :  ', style: cairoRegular),
 
                                 Expanded(
                                   child: Text('${method.methodFields![index].userData}',
-                                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
                                     maxLines: 1, overflow: TextOverflow.ellipsis,),
                                 ),
 
@@ -153,7 +153,7 @@ class _WithdrawMethodScreenState extends State<WithdrawMethodScreen> {
 
               );
             },
-          ) : Center(child: Text('no_method_found'.tr, style: robotoMedium)) : const Center(child: CircularProgressIndicator());
+          ) : Center(child: Text('no_method_found'.tr, style: cairoMedium)) : const Center(child: CircularProgressIndicator());
         }
       ),
     );

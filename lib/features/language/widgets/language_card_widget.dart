@@ -43,7 +43,7 @@ class LanguageCardWidget extends StatelessWidget {
           Image.asset(languageModel.imageUrl!, width: 36, height: 36),
           const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          Text(languageModel.languageName!, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
+          Text(languageModel.languageName!, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge)),
           const Spacer(),
 
           localizationController.selectedLanguageIndex == index ? Icon(Icons.check_circle, color: Theme.of(context).primaryColor, size: 25) : const SizedBox(),

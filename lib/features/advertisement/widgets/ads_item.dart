@@ -25,7 +25,7 @@ class AdsCard extends StatelessWidget {
             children: [
               Flexible(
                 child: Text(title.tr,
-                  style: robotoRegular.copyWith(
+                  style: cairoRegular.copyWith(
                     fontSize: Dimensions.fontSizeSmall + 1,
                     color:Theme.of(context).textTheme.bodyLarge!.color!.withValues(alpha: 0.65),
                   ),
@@ -33,7 +33,7 @@ class AdsCard extends StatelessWidget {
                 ),
               ),
               Text(subTitle,
-                style: subtitleTextStyle ?? robotoRegular.copyWith(
+                style: subtitleTextStyle ?? cairoRegular.copyWith(
                   fontSize: Dimensions.fontSizeSmall + 1,
                   color: Theme.of(context).textTheme.bodyLarge!.color!.withValues(alpha: 0.65),
                 ),

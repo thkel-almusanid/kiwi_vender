@@ -129,7 +129,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                   Expanded(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       Text(
-                        item!.name!, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        item!.name!, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                         maxLines: 2, overflow: TextOverflow.ellipsis,
                       ),
                       RatingBarWidget(rating: item!.avgRating, size: 15, ratingCount: item!.ratingCount),
@@ -138,13 +138,13 @@ class ItemBottomSheetWidget extends StatelessWidget {
                         '${PriceConverterHelper.convertPrice(startingPrice, discount: discount, discountType: discountType)}'
                             '${endingPrice != null ? ' - ${PriceConverterHelper.convertPrice(endingPrice, discount: discount,
                             discountType: discountType)}' : ''}',
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                       ),
                       const SizedBox(height: 5),
                       price > priceWithDiscount ? Text(
                         '${PriceConverterHelper.convertPrice(startingPrice)}'
                             '${endingPrice != null ? ' - ${PriceConverterHelper.convertPrice(endingPrice)}' : ''}',
-                        style: robotoMedium.copyWith(color: Theme.of(context).disabledColor, decoration: TextDecoration.lineThrough),
+                        style: cairoMedium.copyWith(color: Theme.of(context).disabledColor, decoration: TextDecoration.lineThrough),
                       ) : const SizedBox(),
                     ]),
                   ),
@@ -155,9 +155,9 @@ class ItemBottomSheetWidget extends StatelessWidget {
                 (item!.description != null && item!.description!.isNotEmpty) ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('description'.tr, style: robotoMedium),
+                    Text('description'.tr, style: cairoMedium),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                    Text(item!.description!, style: robotoRegular),
+                    Text(item!.description!, style: cairoRegular),
                     const SizedBox(height: Dimensions.paddingSizeLarge),
                   ],
                 ) : const SizedBox(),
@@ -169,7 +169,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(item!.choiceOptions![index].title!, style: robotoMedium),
+                      Text(item!.choiceOptions![index].title!, style: cairoMedium),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                       GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -200,7 +200,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                                 item!.choiceOptions![index].options![i].trim(),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: robotoRegular.copyWith(
+                                style: cairoRegular.copyWith(
                                   color: posController.variationIndex![index] != i ? Colors.black : Colors.white,
                                 ),
                               ),
@@ -216,7 +216,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
 
                 // Quantity
                 Row(children: [
-                  Text('quantity'.tr, style: robotoMedium),
+                  Text('quantity'.tr, style: cairoMedium),
                   const Expanded(child: SizedBox()),
                   Row(children: [
                     QuantityButtonWidget(
@@ -227,7 +227,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                       },
                       isIncrement: false,
                     ),
-                    Text(posController.quantity.toString(), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                    Text(posController.quantity.toString(), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
                     QuantityButtonWidget(
                       onTap: () => posController.setProductQuantity(true),
                       isIncrement: true,
@@ -238,7 +238,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
 
                 // Addons
                 item!.addOns!.isNotEmpty ? Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('addons'.tr, style: robotoMedium),
+                  Text('addons'.tr, style: cairoMedium),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                   GridView.builder(
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -272,7 +272,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                               child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                                 Text(item!.addOns![index].name!,
                                   maxLines: 2, overflow: TextOverflow.ellipsis, textAlign: TextAlign.center,
-                                  style: robotoMedium.copyWith(
+                                  style: cairoMedium.copyWith(
                                     color: posController.addOnActiveList[index] ? Colors.white : Colors.black,
                                     fontSize: Dimensions.fontSizeSmall,
                                   ),
@@ -281,7 +281,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                                 Text(
                                   PriceConverterHelper.convertPrice(item!.addOns![index].price),
                                   maxLines: 1, overflow: TextOverflow.ellipsis,
-                                  style: robotoRegular.copyWith(
+                                  style: cairoRegular.copyWith(
                                     color: posController.addOnActiveList[index] ? Colors.white : Colors.black,
                                     fontSize: Dimensions.fontSizeExtraSmall,
                                   ),
@@ -306,7 +306,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                                 ),
                                 Text(
                                   posController.addOnQtyList[index].toString(),
-                                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                                 ),
                                 Expanded(
                                   child: InkWell(
@@ -326,9 +326,9 @@ class ItemBottomSheetWidget extends StatelessWidget {
                 ]) : const SizedBox(),
 
                 Row(children: [
-                  Text('${'total_amount'.tr}:', style: robotoMedium),
+                  Text('${'total_amount'.tr}:', style: cairoMedium),
                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                  Text(PriceConverterHelper.convertPrice(priceWithAddons), style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
+                  Text(PriceConverterHelper.convertPrice(priceWithAddons), style: cairoBold.copyWith(color: Theme.of(context).primaryColor)),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -343,13 +343,13 @@ class ItemBottomSheetWidget extends StatelessWidget {
                     color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                   ),
                   child: Column(children: [
-                    Text('not_available_now'.tr, style: robotoMedium.copyWith(
+                    Text('not_available_now'.tr, style: cairoMedium.copyWith(
                       color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge,
                     )),
                     Text(
                       '${'available_will_be'.tr} ${DateConverterHelper.convertStringTimeToTime(item!.availableTimeStarts!)} '
                           '- ${DateConverterHelper.convertStringTimeToTime(item!.availableTimeEnds!)}',
-                      style: robotoRegular,
+                      style: cairoRegular,
                     ),
                   ]),
                 ),

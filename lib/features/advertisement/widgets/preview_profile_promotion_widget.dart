@@ -47,7 +47,7 @@ class PreviewProviderPromotionWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault, vertical: Dimensions.paddingSizeLarge),
         child: Column(mainAxisSize:  MainAxisSize.min, children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Text("ads_preview".tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+            Text("ads_preview".tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
             InkWell(
               onTap: ()=> Get.back(),
               child: Icon(Icons.clear, color: Theme.of(context).hintColor, size: 20,),
@@ -99,13 +99,13 @@ class PreviewProviderPromotionWidget extends StatelessWidget {
                       isShowRatings != null && isShowRatings! ? Row(children: [
                         Icon(Icons.star, color: Theme.of(context).cardColor, size: 16),
                         const SizedBox(width: 2),
-                        Text('${Get.find<ProfileController>().profileModel!.stores![0].avgRating ?? 0.0}', style: robotoMedium.copyWith(color: Theme.of(context).cardColor))
+                        Text('${Get.find<ProfileController>().profileModel!.stores![0].avgRating ?? 0.0}', style: cairoMedium.copyWith(color: Theme.of(context).cardColor))
                       ]) : const SizedBox(),
                       const SizedBox(width: 5),
 
                       isShowReview != null && isShowReview! ? Text(
                         '(${Get.find<ProfileController>().profileModel!.stores![0].ratingCount ?? 0}+)',
-                        style: robotoRegular.copyWith(color: Theme.of(context).cardColor),
+                        style: cairoRegular.copyWith(color: Theme.of(context).cardColor),
                       ) : const SizedBox(),
                     ]),
                   ) : const SizedBox(),
@@ -144,7 +144,7 @@ class PreviewProviderPromotionWidget extends StatelessWidget {
                         ) : Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Expanded(
                             child: Text(title!, maxLines: 1, overflow: TextOverflow.ellipsis,
-                              style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                              style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
                             ),
                           ),
                           const SizedBox(width: Dimensions.paddingSizeDefault),
@@ -160,7 +160,7 @@ class PreviewProviderPromotionWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                             color: Theme.of(context).hintColor.withValues(alpha: 0.1),
                           ),
-                        ): Text(description!, maxLines: 2, overflow: TextOverflow.ellipsis, style: robotoRegular.copyWith(
+                        ): Text(description!, maxLines: 2, overflow: TextOverflow.ellipsis, style: cairoRegular.copyWith(
                           color: Theme.of(context).hintColor,
                         )),
                         const SizedBox(height: Dimensions.paddingSizeDefault),

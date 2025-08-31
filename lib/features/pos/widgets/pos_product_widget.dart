@@ -98,7 +98,7 @@ class PosProductWidget extends StatelessWidget {
                             child: Container(
                               alignment: Alignment.center,
                               decoration: BoxDecoration(borderRadius: BorderRadius.circular(Dimensions.radiusSmall), color: Colors.black.withValues(alpha: 0.6)),
-                              child: Text('not_available_now_break'.tr, textAlign: TextAlign.center, style: robotoRegular.copyWith(
+                              child: Text('not_available_now_break'.tr, textAlign: TextAlign.center, style: cairoRegular.copyWith(
                                 color: Colors.white, fontSize: 8,
                               )),
                             ),
@@ -111,7 +111,7 @@ class PosProductWidget extends StatelessWidget {
                         child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
                           Text(
                             cart.item!.name!,
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                             maxLines: 2, overflow: TextOverflow.ellipsis,
                           ),
                           const SizedBox(height: 2),
@@ -119,7 +119,7 @@ class PosProductWidget extends StatelessWidget {
                           const SizedBox(height: 5),
                           Text(
                             PriceConverterHelper.convertPrice(cart.discountedPrice!+cart.discountAmount!),
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                           ),
                         ]),
                       ),
@@ -135,7 +135,7 @@ class PosProductWidget extends StatelessWidget {
                           },
                           isIncrement: false,
                         ),
-                        Text(cart.quantity.toString(), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                        Text(cart.quantity.toString(), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
                         QuantityButtonWidget(
                           onTap: () => Get.find<PosController>().setQuantity(true, cart),
                           isIncrement: true,
@@ -158,10 +158,10 @@ class PosProductWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
                       child: Row(children: [
                         const SizedBox(width: 80),
-                        Text('${'addons'.tr}: ', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                        Text('${'addons'.tr}: ', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
                         Flexible(child: Text(
                           addOnText,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                         )),
                       ]),
                     ) : const SizedBox(),
@@ -170,10 +170,10 @@ class PosProductWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
                       child: Row(children: [
                         const SizedBox(width: 80),
-                        Text('${'variations'.tr}: ', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                        Text('${'variations'.tr}: ', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
                         Flexible(child: Text(
                           variationText!,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                         )),
                       ]),
                     ) : const SizedBox(),

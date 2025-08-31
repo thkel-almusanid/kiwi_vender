@@ -40,13 +40,13 @@ class _InputDialogWidgetState extends State<InputDialogWidget> {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
               child: Text(
                 widget.title!, textAlign: TextAlign.center,
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Colors.red),
               ),
             ) : const SizedBox(),
 
             Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeLarge),
-              child: Text(widget.description, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+              child: Text(widget.description, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
             ),
             const SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -85,7 +85,7 @@ class _InputDialogWidgetState extends State<InputDialogWidget> {
                   ),
                   child: Text(
                     'cancel'.tr, textAlign: TextAlign.center,
-                    style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
+                    style: cairoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
                   ),
                 )),
 

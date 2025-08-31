@@ -93,18 +93,18 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                         Text(
-                          item.name!, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                          item.name!, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                           maxLines: 1, overflow: TextOverflow.ellipsis,
                         ),
 
                         module != null && module.stock != null ? Row(children: [
 
-                          Text('${'total_stock'.tr}:', style: robotoRegular),
+                          Text('${'total_stock'.tr}:', style: cairoRegular),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                           Text(
                             item.stock.toString(),
-                            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                           ),
 
                         ]) : const SizedBox(),
@@ -112,7 +112,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
 
                         Text(
                           '${'price'.tr}: ${item.price}', maxLines: 1, overflow: TextOverflow.ellipsis,
-                          style: robotoRegular,
+                          style: cairoRegular,
                         ),
 
                         Row(children: [
@@ -121,7 +121,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             '${'discount'.tr}: ${item.discount} ${item.discountType == 'percent' ? '%'
                                 : Get.find<SplashController>().configModel!.currencySymbol}',
                             maxLines: 1, overflow: TextOverflow.ellipsis,
-                            style: robotoRegular,
+                            style: cairoRegular,
                           )),
 
                           (module!.unit! || Get.find<SplashController>().configModel!.toggleVegNonVeg!) ? Container(
@@ -132,7 +132,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             ),
                             child: Text(
                               module.unit! ? item.unitType??'' : item.veg == 0 ? 'non_veg'.tr : 'veg'.tr,
-                              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
                             ),
                           ) : const SizedBox(),
 
@@ -146,14 +146,14 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
 
                     module.itemAvailableTime! ? Row(children: [
 
-                      Text('daily_time'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                      Text('daily_time'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor)),
                       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                       Expanded(child: Text(
                         '${DateConverterHelper.convertStringTimeToTime(item.availableTimeStarts!)}'
                             ' - ${DateConverterHelper.convertStringTimeToTime(item.availableTimeEnds!)}',
                         maxLines: 1,
-                        style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),
+                        style: cairoMedium.copyWith(color: Theme.of(context).primaryColor),
                       )),
 
                     ]) : const SizedBox(),
@@ -162,12 +162,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
 
                       Icon(Icons.star, color: Theme.of(context).primaryColor, size: 20),
 
-                      Text(item.avgRating!.toStringAsFixed(1), style: robotoRegular),
+                      Text(item.avgRating!.toStringAsFixed(1), style: cairoRegular),
                       const SizedBox(width: Dimensions.paddingSizeSmall),
 
                       Expanded(child: Text(
                         '${item.ratingCount} ${'ratings'.tr}',
-                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                       )),
 
                     ]),
@@ -188,7 +188,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                     Expanded(
                       child: Text(
                         'available'.tr,
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                       ),
                     ),
 
@@ -217,7 +217,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                     Expanded(
                       child: Text(
                         'recommended'.tr,
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                       ),
                     ),
 
@@ -245,7 +245,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                     Expanded(
                       child: Text(
                         'organic'.tr,
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                       ),
                     ),
 
@@ -275,12 +275,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                    Text('nutrition'.tr, style: robotoMedium),
+                    Text('nutrition'.tr, style: cairoMedium),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Text(
                       item.nutrition!.join(', '),
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
 
                   ]),
@@ -297,12 +297,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                    Text('allergic_ingredients'.tr, style: robotoMedium),
+                    Text('allergic_ingredients'.tr, style: cairoMedium),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Text(
                       item.allergies!.join(', '),
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
 
                   ]),
@@ -319,12 +319,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                    Text('generic_name'.tr, style: robotoMedium),
+                    Text('generic_name'.tr, style: cairoMedium),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Text(
                       item.genericName!.join(', '),
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
 
                   ]),
@@ -341,7 +341,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('addons'.tr, style: robotoMedium),
+                      Text('addons'.tr, style: cairoMedium),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                       ListView.builder(
@@ -351,11 +351,11 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         itemBuilder: (context, index) {
                           return Row(children: [
 
-                            Text('${item.addOns![index].name!}:', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                            Text('${item.addOns![index].name!}:', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                             Text(
                               PriceConverterHelper.convertPrice(item.addOns![index].price),
-                              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                             ),
 
                           ]);
@@ -377,9 +377,9 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('description'.tr, style: robotoMedium),
+                      Text('description'.tr, style: cairoMedium),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                      Text(item.description ?? '', style: robotoRegular),
+                      Text(item.description ?? '', style: cairoRegular),
                     ],
                   ),
                 ) : const SizedBox(),
@@ -396,7 +396,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('vat_tax'.tr, style: robotoMedium),
+                      Text('vat_tax'.tr, style: cairoMedium),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                       ListView.builder(
@@ -406,12 +406,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         itemBuilder: (context, index) {
                           return Row(children: [
 
-                            Text('${item.taxData?[index].name}:', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                            Text('${item.taxData?[index].name}:', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                             Text(
                               '(${item.taxData![index].taxRate} %)',
-                              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                             ),
 
                           ]);
@@ -433,7 +433,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
-                        child: Text('reviews'.tr, style: robotoMedium),
+                        child: Text('reviews'.tr, style: cairoMedium),
                       ),
                       const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -452,7 +452,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                         ),
                       ) : Padding(
                         padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall, bottom: Dimensions.paddingSizeExtremeLarge),
-                        child: Center(child: Text('no_review_found'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor))),
+                        child: Center(child: Text('no_review_found'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor))),
                       ) : const Padding(
                         padding: EdgeInsets.only(top: Dimensions.paddingSizeSmall, bottom: Dimensions.paddingSizeExtremeLarge),
                         child: Center(child: CircularProgressIndicator()),
@@ -536,7 +536,7 @@ class FoodVariationView extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: Dimensions.paddingSizeDefault),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-        Text('variations'.tr, style: robotoMedium),
+        Text('variations'.tr, style: cairoMedium),
         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
         ListView.builder(
@@ -549,11 +549,11 @@ class FoodVariationView extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                 Row(children: [
-                  Text('${item.foodVariations![index].name!} - ', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                  Text('${item.foodVariations![index].name!} - ', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                   Text(
                     ' ${item.foodVariations![index].type == 'multi' ? 'multiple_select'.tr : 'single_select'.tr}'
                       ' (${item.foodVariations![index].required == 'on' ? 'required'.tr : 'optional'.tr})',
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                   ),
                 ]),
 
@@ -568,7 +568,7 @@ class FoodVariationView extends StatelessWidget {
                     return Text(
                       '${item.foodVariations![index].variationValues![i].level}'
                           ' - ${PriceConverterHelper.convertPrice(double.parse(item.foodVariations![index].variationValues![i].optionPrice!))}',
-                      style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
+                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
                     );
                   },
                 ),

@@ -39,7 +39,7 @@ class CameraButtonSheetWidget extends StatelessWidget {
               ),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
-              Text('from_camera'.tr, style: robotoMedium)
+              Text('from_camera'.tr, style: cairoMedium)
             ]),
           ),
 
@@ -58,7 +58,7 @@ class CameraButtonSheetWidget extends StatelessWidget {
               ),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
-              Text('from_gallery'.tr, style: robotoMedium),
+              Text('from_gallery'.tr, style: cairoMedium),
             ]),
           )
         ]),

@@ -162,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
         surfaceTintColor: Theme.of(context).cardColor,
         shadowColor: Theme.of(context).disabledColor.withValues(alpha: 0.5),
         elevation: 2,
-        title: Text(AppConstants.appName, maxLines: 1, overflow: TextOverflow.ellipsis, style: robotoMedium.copyWith(
+        title: Text(AppConstants.appName, maxLines: 1, overflow: TextOverflow.ellipsis, style: cairoMedium.copyWith(
           color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeDefault,
         )),
         actions: [IconButton(
@@ -243,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Row(children: [
                           Expanded(child: Text(
-                            Get.find<SplashController>().configModel!.moduleConfig!.module!.showRestaurantText! ? 'restaurant_temporarily_closed'.tr : 'store_temporarily_closed'.tr, style: robotoMedium,
+                            Get.find<SplashController>().configModel!.moduleConfig!.module!.showRestaurantText! ? 'restaurant_temporarily_closed'.tr : 'store_temporarily_closed'.tr, style: cairoMedium,
                             maxLines: 1, overflow: TextOverflow.ellipsis,
                           )),
 
@@ -295,12 +295,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               Text(
                                 'today'.tr,
-                                style: robotoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
+                                style: cairoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
                               ),
                               const SizedBox(height: Dimensions.paddingSizeSmall),
                               Text(
                                 profileController.profileModel != null ? PriceConverterHelper.convertPrice(profileController.profileModel!.todaysEarning) : '0',
-                                style: robotoBold.copyWith(fontSize: 24, color: Theme.of(context).cardColor),
+                                style: cairoBold.copyWith(fontSize: 24, color: Theme.of(context).cardColor),
                               ),
 
                             ]),
@@ -322,12 +322,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   Text(
                                     'this_week'.tr,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
                                   ),
                                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                                   Text(
                                     profileController.profileModel != null ? PriceConverterHelper.convertPrice(profileController.profileModel!.thisWeekEarning) : '0',
-                                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).cardColor),
+                                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).cardColor),
                                   ),
 
                                 ]),
@@ -345,12 +345,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   Text(
                                     'this_month'.tr,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).cardColor.withValues(alpha: 0.7)),
                                   ),
                                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                                   Text(
                                     profileController.profileModel != null ? PriceConverterHelper.convertPrice(profileController.profileModel!.thisMonthEarning) : '0',
-                                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).cardColor),
+                                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).cardColor),
                                   ),
 
                                 ]),
@@ -410,7 +410,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               Text(
                                 'campaign_order'.tr,
-                                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                               ),
                             ]),
                           ),
@@ -437,7 +437,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       ]) : Center(child: Padding(
                         padding: const EdgeInsets.only(top: 100),
-                        child: Text('you_have_no_permission_to_access_this_feature'.tr, style: robotoMedium),
+                        child: Text('you_have_no_permission_to_access_this_feature'.tr, style: cairoMedium),
                       )) : ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
@@ -485,7 +485,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         isBatteryPermission ? 'for_better_performance_allow_notification_to_run_in_background'.tr
                             : 'notification_is_disabled_please_allow_notification'.tr,
-                        maxLines: 2, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white),
+                        maxLines: 2, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white),
                       ),
                     ),
                     const SizedBox(width: Dimensions.paddingSizeSmall),

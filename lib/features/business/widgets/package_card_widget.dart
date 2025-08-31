@@ -50,16 +50,16 @@ class PackageCardWidget extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-              child: Text(package.packageName ?? '', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor), textAlign: TextAlign.center),
+              child: Text(package.packageName ?? '', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor), textAlign: TextAlign.center),
             ),
             const SizedBox(height: Dimensions.paddingSizeSmall),
 
             Text(
               isCommission ? '${package.price} %' : PriceConverterHelper.convertPrice(package.price),
-              style: robotoBold.copyWith(fontSize: 30, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor),
+              style: cairoBold.copyWith(fontSize: 30, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor),
             ),
 
-            isCommission ? const SizedBox() : Text('${package.validity} ' '${'days'.tr}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).cardColor)),
+            isCommission ? const SizedBox() : Text('${package.validity} ' '${'days'.tr}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).cardColor)),
 
             isCommission ? const SizedBox() : Divider(color: currentIndex != null ? Theme.of(context).cardColor.withValues(alpha: 0.2) : Theme.of(context).disabledColor.withValues(alpha: 0.3), indent: 70, endIndent: 70, thickness: 1),
             const SizedBox(height: Dimensions.paddingSizeDefault),
@@ -67,7 +67,7 @@ class PackageCardWidget extends StatelessWidget {
             isCommission ? Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
               child: Text(package.description ?? '', textAlign: TextAlign.center,
-                  style: robotoRegular.copyWith(color: currentIndex != null ? Theme.of(context).cardColor.withValues(alpha: 0.8) : Theme.of(context).disabledColor.withValues(alpha: 0.3)),
+                  style: cairoRegular.copyWith(color: currentIndex != null ? Theme.of(context).cardColor.withValues(alpha: 0.8) : Theme.of(context).disabledColor.withValues(alpha: 0.3)),
               ),
             ) : Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 

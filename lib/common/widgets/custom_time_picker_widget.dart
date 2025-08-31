@@ -62,7 +62,7 @@ class _CustomTimePickerWidgetState extends State<CustomTimePickerWidget> {
             child: Row(children: [
 
               Expanded(child: Text(
-                _myTime != null ? DateConverterHelper.convertStringTimeToTime(_myTime!) : ' - -  : - - ${'min'.tr}', style: robotoRegular.copyWith(color: _myTime != null ? Theme.of(context).textTheme.bodyLarge?.color : Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeDefault),
+                _myTime != null ? DateConverterHelper.convertStringTimeToTime(_myTime!) : ' - -  : - - ${'min'.tr}', style: cairoRegular.copyWith(color: _myTime != null ? Theme.of(context).textTheme.bodyLarge?.color : Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeDefault),
               )),
 
               Icon(Icons.access_time_filled, size: 20, color: Theme.of(context).primaryColor),
@@ -75,7 +75,7 @@ class _CustomTimePickerWidgetState extends State<CustomTimePickerWidget> {
             child: Container(
               decoration: BoxDecoration(color: Theme.of(context).cardColor),
               padding: const EdgeInsets.all(5),
-              child: Text(widget.title, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+              child: Text(widget.title, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
             ),
           ),
 

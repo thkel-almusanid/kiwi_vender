@@ -317,7 +317,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                 physics: const BouncingScrollPhysics(),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                  Text('item_info'.tr, style: robotoMedium),
+                  Text('item_info'.tr, style: cairoMedium),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -338,8 +338,8 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                           indicatorWeight: 3,
                           labelColor: Theme.of(context).primaryColor,
                           unselectedLabelColor: Theme.of(context).disabledColor,
-                          unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
-                          labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                          unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                          labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
                           labelPadding: const EdgeInsets.only(right: Dimensions.radiusDefault),
                           isScrollable: true,
                           indicatorSize: TabBarIndicatorSize.tab,
@@ -355,7 +355,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                         child: Divider(height: 0),
                       ),
 
-                      Text('insert_language_wise_item_name_and_description'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                      Text('insert_language_wise_item_name_and_description'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                       const SizedBox(height: Dimensions.paddingSizeDefault),
 
                       CustomTextFieldWidget(
@@ -385,7 +385,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   ),
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
-                  Text('item_setup'.tr, style: robotoBold),
+                  Text('item_setup'.tr, style: cairoBold),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -427,7 +427,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                             padding: const EdgeInsets.only(left: 8),
                             child: Text(
                               widget.item != null && categoryController.categoryIndex != null ? categoryController.categoryList![categoryController.categoryIndex!].name! : 'category'.tr,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                             ),
                           ),
                         ),
@@ -463,7 +463,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                             padding: const EdgeInsets.only(left: 8),
                             child: Text(
                               widget.item != null && categoryController.subCategoryIndex != null ? categoryController.subCategoryList![categoryController.subCategoryIndex!].name! : 'sub_category'.tr,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                             ),
                           ),
                         ),
@@ -499,7 +499,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                             padding: const EdgeInsets.only(left: 8),
                             child: Text(
                               widget.item != null && storeController.suitableTagIndex != null ? storeController.suitableTagList![storeController.suitableTagIndex!].name! : 'suitable_for'.tr,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                             ),
                           ),
                         ),
@@ -535,7 +535,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                             padding: const EdgeInsets.only(left: 8),
                             child: Text(
                               widget.item != null && storeController.brandIndex != null ? storeController.brandList![storeController.brandIndex!].name! : 'brand'.tr,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                             ),
                           ),
                         ),
@@ -606,8 +606,8 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                     decoration: InputDecoration(
                                       hintText: 'generic_name'.tr,
                                       labelText: 'generic_name'.tr,
-                                      hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
-                                      labelStyle : robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      labelStyle : cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                                         borderSide: BorderSide(color: Theme.of(context).disabledColor.withValues(alpha: 0.5)),
@@ -704,8 +704,8 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                     decoration: InputDecoration(
                                       hintText: 'type_and_click_add_button'.tr,
                                       labelText: 'nutrition'.tr,
-                                      hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
-                                      labelStyle : robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      labelStyle : cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                                         borderSide: BorderSide(color: Theme.of(context).disabledColor.withValues(alpha: 0.5)),
@@ -768,7 +768,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
 
                                   Text(
                                     storeController.selectedNutritionList![index]!,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
                                   ),
 
                                   InkWell(
@@ -853,8 +853,8 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                     decoration: InputDecoration(
                                       hintText: 'type_and_click_add_button'.tr,
                                       labelText: 'allergic_ingredients'.tr,
-                                      hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
-                                      labelStyle : robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+                                      labelStyle : cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                                         borderSide: BorderSide(color: Theme.of(context).disabledColor.withValues(alpha: 0.5)),
@@ -917,7 +917,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
 
                                   Text(
                                     storeController.selectedAllergicIngredientsList![index]!,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
                                   ),
 
                                   InkWell(
@@ -953,7 +953,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                               ),
 
                               Text(
-                                'veg'.tr, style: robotoMedium.copyWith(
+                                'veg'.tr, style: cairoMedium.copyWith(
                                   fontSize: Dimensions.fontSizeSmall, color: storeController.isVeg ? Theme.of(context).textTheme.bodyLarge?.color : Theme.of(context).disabledColor),
                               ),
 
@@ -973,7 +973,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                               ),
 
                               Text(
-                                'non_veg'.tr, style: robotoMedium.copyWith(
+                                'non_veg'.tr, style: cairoMedium.copyWith(
                                   fontSize: Dimensions.fontSizeSmall, color: storeController.isVeg ? Theme.of(context).disabledColor : Theme.of(context).textTheme.bodyLarge?.color),
                               ),
 
@@ -992,7 +992,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                         ),
                         child: Row(children: [
 
-                          Expanded(child: Text('status'.tr, style: robotoMedium)),
+                          Expanded(child: Text('status'.tr, style: cairoMedium)),
 
                           Transform.scale(
                             scale: 0.7,
@@ -1013,7 +1013,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                         ),
                         child: Row(children: [
 
-                          Expanded(child: Text('status'.tr, style: robotoMedium)),
+                          Expanded(child: Text('status'.tr, style: cairoMedium)),
 
                           Transform.scale(
                             scale: 0.7,
@@ -1036,7 +1036,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                             value: e.name,
                             child: Row(
                               children: [
-                                Text('${e.name!} (${e.taxRate}%)', style: robotoRegular),
+                                Text('${e.name!} (${e.taxRate}%)', style: cairoRegular),
                                 const Spacer(),
                                 if (isInVatTaxList)
                                   const Icon(Icons.check, color: Colors.green),
@@ -1099,7 +1099,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
                   isPharmacy ? Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text('prescription_required'.tr, style: robotoBold),
+                    Text('prescription_required'.tr, style: cairoBold),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Container(
@@ -1115,7 +1115,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                           value: storeController.isPrescriptionRequired,
                           onChanged: (bool? isChecked) => storeController.togglePrescriptionRequired(),
                         ),
-                        title: Text('this_item_need_prescription_to_place_order'.tr, style: robotoMedium),
+                        title: Text('this_item_need_prescription_to_place_order'.tr, style: cairoMedium),
                         contentPadding: EdgeInsets.zero,
                         dense: true,
                         horizontalTitleGap: 0,
@@ -1124,7 +1124,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   ]) : const SizedBox(),
                   SizedBox(height: isPharmacy ? Dimensions.paddingSizeDefault : 0),
 
-                  Text('price_info'.tr, style: robotoBold),
+                  Text('price_info'.tr, style: cairoBold),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -1179,7 +1179,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                   padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     widget.item != null ? storeController.discountTypeList[storeController.discountTypeIndex]!.tr : 'discount_type'.tr,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                                   ),
                                 ),
                               ),
@@ -1248,7 +1248,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                   padding: const EdgeInsets.only(left: 8),
                                   child: Text(
                                     widget.item != null && storeController.unitList != null ? storeController.unitList![storeController.unitIndex!].unit!.tr : 'unit'.tr,
-                                    style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
+                                    style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge),
                                   ),
                                 ),
                               ),
@@ -1266,7 +1266,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                     storeController: storeController, item: widget.item,
                   ) : AttributeViewWidget(storeController: storeController, product: widget.item),
 
-                  _module.addOn! ? Text('addons'.tr, style: robotoBold) : const SizedBox(),
+                  _module.addOn! ? Text('addons'.tr, style: cairoBold) : const SizedBox(),
                   SizedBox(height: _module.addOn! ? Dimensions.paddingSizeSmall : 0),
 
                   _module.addOn! ? Container(
@@ -1338,7 +1338,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                   GetBuilder<AddonController>(builder: (addonController) {
                                     return Text(
                                       addonController.addonList![storeController.selectedAddons![index]].name!,
-                                      style: robotoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
+                                      style: cairoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
                                     );
                                   }),
                                   InkWell(
@@ -1358,7 +1358,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   ) : const SizedBox(),
                   SizedBox(height: _module.addOn! ? Dimensions.paddingSizeDefault : 0),
 
-                  Text('tag'.tr, style: robotoBold),
+                  Text('tag'.tr, style: cairoBold),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -1412,7 +1412,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
                               decoration: BoxDecoration(color: Theme.of(context).disabledColor.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(Dimensions.radiusSmall)),
                               child: Center(child: Row(children: [
-                                Text(storeController.tagList[index]!, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7))),
+                                Text(storeController.tagList[index]!, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor.withValues(alpha: 0.7))),
                                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                                 InkWell(onTap: () => storeController.removeTag(index), child: Icon(Icons.clear, size: 18, color: Theme.of(context).disabledColor.withValues(alpha: 0.7))),
@@ -1424,7 +1424,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   ),
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
-                  _module.itemAvailableTime! ? Text('availability'.tr, style: robotoBold) : const SizedBox(),
+                  _module.itemAvailableTime! ? Text('availability'.tr, style: cairoBold) : const SizedBox(),
                   SizedBox(height: _module.itemAvailableTime! ? Dimensions.paddingSizeSmall : 0),
 
                   _module.itemAvailableTime! ? Container(
@@ -1451,7 +1451,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   ) : const SizedBox(),
                   SizedBox(height: _module.itemAvailableTime! ? Dimensions.paddingSizeDefault : 0),
 
-                  Text('thumbnail_image'.tr, style: robotoBold),
+                  Text('thumbnail_image'.tr, style: cairoBold),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                   Container(
@@ -1488,7 +1488,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                               RichText(
                                 textAlign: TextAlign.center,
                                 text: TextSpan(children: [
-                                  TextSpan(text: 'click_to_upload'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                                  TextSpan(text: 'click_to_upload'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                                 ]),
                               ),
 
@@ -1515,7 +1515,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                       const SizedBox(height: Dimensions.paddingSizeDefault),
                       
                       Text(
-                        'thumbnail_image_format'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                        'thumbnail_image_format'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                         textAlign: TextAlign.center,
                       ),
                       
@@ -1524,12 +1524,12 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
                   Row(children: [
-                    Text('item_images'.tr, style: robotoBold),
+                    Text('item_images'.tr, style: cairoBold),
                     const SizedBox(width: Dimensions.paddingSizeSmall),
 
                     Text(
                       '(${'max_size_2_mb'.tr})',
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).colorScheme.error),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).colorScheme.error),
                     ),
                   ]),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
@@ -1582,7 +1582,7 @@ class _AddItemScreenState extends State<AddItemScreen> with TickerProviderStateM
                                   RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(children: [
-                                      TextSpan(text: 'click_to_upload'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                                      TextSpan(text: 'click_to_upload'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                                     ]),
                                   ),
 

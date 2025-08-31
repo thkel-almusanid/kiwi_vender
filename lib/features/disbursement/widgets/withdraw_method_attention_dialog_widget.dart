@@ -38,14 +38,14 @@ class WithdrawMethodAttentionDialogWidget extends StatelessWidget {
           Image.asset(Images.attentionWarningIcon, width: 20, height: 20),
           const SizedBox(width: Dimensions.paddingSizeSmall),
 
-          Text('attention_please'.tr, style: robotoBold.copyWith(color: Colors.black)),
+          Text('attention_please'.tr, style: cairoBold.copyWith(color: Colors.black)),
         ]),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
         RichText(
           text: TextSpan(
             text: '${'withdraw_methods_attention_message'.tr}  ',
-            style: robotoRegular.copyWith(color: Colors.black),
+            style: cairoRegular.copyWith(color: Colors.black),
             children: [
               TextSpan(
                 recognizer: TapGestureRecognizer()..onTap = () {
@@ -59,7 +59,7 @@ class WithdrawMethodAttentionDialogWidget extends StatelessWidget {
 
                 },
                 text: 'set_default_withdraw_method'.tr,
-                style: robotoRegular.copyWith(color: Colors.blue, decoration: TextDecoration.underline),
+                style: cairoRegular.copyWith(color: Colors.blue, decoration: TextDecoration.underline),
               ),
             ],
           ),

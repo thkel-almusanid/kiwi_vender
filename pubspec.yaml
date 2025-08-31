@@ -83,17 +83,6 @@ dev_dependencies:
 
   flutter_lints: ^4.0.0
 
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  remove_alpha_ios: true
-  image_path: "assets/image/logo.png"
-  # Foreground layer for adaptive icon; specify the image path.
-  # Adaptive icons are used in Android to provide a seamless icon
-  # transition between the app's launcher icon and the icon
-  # displayed in the app's UI.
-  adaptive_icon_foreground: "assets/image/logo.png" # Foreground layer for adaptive icon
-  adaptive_icon_background: "#FFFFFF" # Background color (or use an image path)  
 
 flutter:
   uses-material-design: true
@@ -107,13 +96,26 @@ flutter:
     - assets/json/
 
   fonts:
-    - family: Roboto
+    - family: Cairo
       fonts:
-        - asset: assets/font/Roboto-Regular.ttf
+        - asset: assets/font/Cairo-Regular.ttf
           weight: 400
-        - asset: assets/font/Roboto-Medium.ttf
+        - asset: assets/font/Cairo-Medium.ttf
           weight: 500
-        - asset: assets/font/Roboto-Bold.ttf
+        - asset: assets/font/Cairo-Bold.ttf
           weight: 700
-        - asset: assets/font/Roboto-Black.ttf
+        - asset: assets/font/Cairo-Black.ttf
           weight: 900
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/image/logo.png"
+  # Foreground layer for adaptive icon; specify the image path.
+  # Adaptive icons are used in Android to provide a seamless icon
+  # transition between the app's launcher icon and the icon
+  # displayed in the app's UI.
+  adaptive_icon_foreground: "assets/image/logo.png" # Foreground layer for adaptive icon
+  adaptive_icon_background: "#FFFFFF" # Background color (or use an image path)         

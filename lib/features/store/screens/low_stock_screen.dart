@@ -76,7 +76,7 @@ class _LowStockScreenState extends State<LowStockScreen> {
                     height: 100, width: 100,
                     color: Theme.of(context).disabledColor,
                   ),
-                  Text('no_item_found'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                  Text('no_item_found'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
                 ]),
               ): const Center(child: CircularProgressIndicator()),
             ),
@@ -138,14 +138,14 @@ class _LowStockScreenState extends State<LowStockScreen> {
               Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
                 Text(
                   item.name ?? '', textAlign: TextAlign.start,
-                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                   maxLines: 1, overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(width: item.imageFullUrl == null ? Dimensions.paddingSizeExtraSmall : 0),
 
                 item.imageFullUrl == null ? Text(
                   '(${discount! > 0 ? '$discount${discountType == 'percent' ? '%' : Get.find<SplashController>().configModel!.currencySymbol} ${'off'.tr}' : 'free_delivery'.tr})',
-                  style: robotoMedium.copyWith(color: Colors.green, fontSize: Dimensions.fontSizeExtraSmall),
+                  style: cairoMedium.copyWith(color: Colors.green, fontSize: Dimensions.fontSizeExtraSmall),
                 ) : const SizedBox(),
               ]),
               SizedBox(height: item.imageFullUrl != null ? Dimensions.paddingSizeExtraSmall : 0),
@@ -160,7 +160,7 @@ class _LowStockScreenState extends State<LowStockScreen> {
                   padding: const EdgeInsets.only(left: 5.0),
                   child: Text(
                     '(${'not_available_now'.tr})', textAlign: TextAlign.center,
-                    style: robotoRegular.copyWith(color: Colors.red, fontSize: Dimensions.fontSizeExtraSmall),
+                    style: cairoRegular.copyWith(color: Colors.red, fontSize: Dimensions.fontSizeExtraSmall),
                   ),
                 ) : const SizedBox(),
               ]),
@@ -170,13 +170,13 @@ class _LowStockScreenState extends State<LowStockScreen> {
 
                 Text(
                   PriceConverterHelper.convertPrice(item.price, discount: discount, discountType: discountType),
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
                 ),
                 SizedBox(width: discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
 
                 discount > 0 ? Text(
                   PriceConverterHelper.convertPrice(item.price),
-                  style: robotoBold.copyWith(
+                  style: cairoBold.copyWith(
                     fontSize: Dimensions.fontSizeExtraSmall,
                     color: Theme.of(context).disabledColor,
                     decoration: TextDecoration.lineThrough,
@@ -193,7 +193,7 @@ class _LowStockScreenState extends State<LowStockScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Text('${'stock'.tr}: ${item.stock}', style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),),
+              Text('${'stock'.tr}: ${item.stock}', style: cairoMedium.copyWith(color: Theme.of(context).primaryColor),),
 
               IconButton(
                 onPressed: () {

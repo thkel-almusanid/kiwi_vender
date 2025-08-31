@@ -71,13 +71,13 @@ class _AddonScreenState extends State<AddonScreen> {
                       Text(
                         addonController.addonList?[index].name ?? '',
                         maxLines: 1, overflow: TextOverflow.ellipsis,
-                        style: robotoRegular,
+                        style: cairoRegular,
                       ),
 
                       Text(
                         addonController.addonList![index].price! > 0 ? PriceConverterHelper.convertPrice(addonController.addonList![index].price) : 'free'.tr,
                         maxLines: 1, overflow: TextOverflow.ellipsis,
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6)),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6)),
                       ),
                     ]),
                   ),
@@ -90,7 +90,7 @@ class _AddonScreenState extends State<AddonScreen> {
                           child: Column(
                             children: [
                               ListTile(
-                                title: Text('edit'.tr, style: robotoRegular),
+                                title: Text('edit'.tr, style: cairoRegular),
                                 trailing: const CustomAssetImageWidget(Images.editIcon, height: 20, width: 20),
                                 contentPadding: EdgeInsets.zero,
                               ),
@@ -102,7 +102,7 @@ class _AddonScreenState extends State<AddonScreen> {
                         PopupMenuItem(
                           value: 'delete',
                           child: ListTile(
-                            title: Text('delete'.tr, style: robotoRegular),
+                            title: Text('delete'.tr, style: cairoRegular),
                             trailing: const CustomAssetImageWidget(Images.deleteIcon, height: 20, width: 20),
                             contentPadding: EdgeInsets.zero,
                           ),

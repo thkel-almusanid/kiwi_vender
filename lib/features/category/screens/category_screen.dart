@@ -62,12 +62,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
                     const SizedBox(width: Dimensions.paddingSizeSmall),
 
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(categories[index].name ?? '', style: robotoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
+                      Text(categories[index].name ?? '', style: cairoBold, maxLines: 1, overflow: TextOverflow.ellipsis),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                       Text(
                         '${'id'.tr}: ${categories[index].id}',
-                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                       ),
                     ])),
 
@@ -77,7 +77,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                         color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                       ),
-                      child: Text('${categories[index].productsCount} ${'items'.tr}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)) ,
+                      child: Text('${categories[index].productsCount} ${'items'.tr}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)) ,
                     ),
 
                   ]),

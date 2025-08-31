@@ -21,10 +21,10 @@ class WithdrawWidget extends StatelessWidget {
 
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-            Text(PriceConverterHelper.convertPrice(withdrawModel.amount), style: robotoMedium),
+            Text(PriceConverterHelper.convertPrice(withdrawModel.amount), style: cairoMedium),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-            Text('${'transferred_to'.tr} ${withdrawModel.bankName}', style: robotoRegular.copyWith(
+            Text('${'transferred_to'.tr} ${withdrawModel.bankName}', style: cairoRegular.copyWith(
               fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor,
             )),
 
@@ -35,11 +35,11 @@ class WithdrawWidget extends StatelessWidget {
 
             Text(
               DateConverterHelper.dateTimeStringToDateTime(withdrawModel.requestedAt!),
-              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
             ),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-            Text(withdrawModel.status!.tr, style: robotoRegular.copyWith(
+            Text(withdrawModel.status!.tr, style: cairoRegular.copyWith(
               fontSize: Dimensions.fontSizeSmall,
               color: withdrawModel.status == 'Approved' ? Theme.of(context).primaryColor : withdrawModel.status == 'Denied'
                   ? Theme.of(context).colorScheme.error : Colors.blue,

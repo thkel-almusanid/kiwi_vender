@@ -55,13 +55,13 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
 
                   Text(
                     'commission_base_plan'.tr,
-                    style: robotoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
+                    style: cairoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
                   Text(
                     '${Get.find<SplashController>().configModel?.adminCommission} %',
-                    style: robotoBold.copyWith(color: Colors.teal, fontSize: 24),
+                    style: cairoBold.copyWith(color: Colors.teal, fontSize: 24),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -69,7 +69,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                     padding: EdgeInsets.symmetric(horizontal: context.width * 0.15),
                     child: Text(
                       "${'vendor_will_pay'.tr} ${Get.find<SplashController>().configModel!.adminCommission}% ${'commission_to'.tr} ${Get.find<SplashController>().configModel!.businessName} ${'from_each_order_You_will_get_access_of_all'.tr}",
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), height: 2), textAlign: TextAlign.center,
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.7), height: 2), textAlign: TextAlign.center,
                     ),
                   )
                   
@@ -80,7 +80,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
 
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
-                Text('billing_details'.tr, style: robotoMedium),
+                Text('billing_details'.tr, style: cairoMedium),
 
                 (DateConverterHelper.differenceInDaysIgnoringTime(DateTime.parse(widget.subscriptionController.profileModel!.subscription!.expiryDate!), null) <= Get.find<SplashController>().configModel!.subscriptionDeadlineWarningDays!
                 && widget.subscriptionController.profileModel!.id != null /*&& Get.find<SplashController>().configModel!.businessPlan!.subscription != 0*/) ? JustTheTooltip(
@@ -96,7 +96,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
 
                       Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
-                        Text('${'attention'.tr} !!!', style: robotoMedium.copyWith(color: Colors.white, fontSize: Dimensions.fontSizeLarge)),
+                        Text('${'attention'.tr} !!!', style: cairoMedium.copyWith(color: Colors.white, fontSize: Dimensions.fontSizeLarge)),
 
                         InkWell(
                           onTap: () {
@@ -109,7 +109,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
 
                       Text(
                         '${'attention_text_1'.tr} ${DateConverterHelper.localDateToMonthDateSince(DateTime.parse(widget.subscriptionController.profileModel!.subscription!.expiryDate!))} ${'attention_text_2'.tr}',
-                        style: robotoRegular.copyWith(color: Colors.white, fontSize: Dimensions.fontSizeSmall),
+                        style: cairoRegular.copyWith(color: Colors.white, fontSize: Dimensions.fontSizeSmall),
                       ),
 
                     ]),
@@ -166,7 +166,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
               const SizedBox(height: Dimensions.paddingSizeExtraOverLarge),
 
               Row(children: [
-                Text('package_overview'.tr, style: robotoMedium),
+                Text('package_overview'.tr, style: cairoMedium),
                 const SizedBox(width: Dimensions.paddingSizeSmall),
 
                 widget.subscriptionController.profileModel!.subscription!.status == 0 ? Container(
@@ -175,7 +175,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                     borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: 5),
-                  child: Text('expired'.tr, style: robotoMedium.copyWith(color: Colors.white)),
+                  child: Text('expired'.tr, style: cairoMedium.copyWith(color: Colors.white)),
                 ) : const SizedBox(),
 
                 widget.subscriptionController.profileModel!.subscription!.status == 0 ? widget.subscriptionController.profileModel!.subscription!.isCanceled == 1 ? Container(
@@ -184,7 +184,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                     borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: 5),
-                  child: Text('canceled'.tr, style: robotoMedium.copyWith(color: Colors.white)),
+                  child: Text('canceled'.tr, style: cairoMedium.copyWith(color: Colors.white)),
                 ) : const SizedBox() : const SizedBox(),
               ]),
               const SizedBox(height: Dimensions.paddingSizeDefault),
@@ -203,13 +203,13 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                       flex: 4,
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(widget.subscriptionController.profileModel?.subscription?.package?.packageName ?? '',
-                          style: robotoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
+                          style: cairoBold.copyWith(color: const Color(0xff006161), fontSize: Dimensions.fontSizeLarge),
                           maxLines: 1, overflow: TextOverflow.ellipsis,
                         ),
                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                         Text(widget.subscriptionController.profileModel?.subscription?.package?.text ?? '',
-                          style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
+                          style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall),
                           maxLines: 2, overflow: TextOverflow.ellipsis,
                         ),
                       ]),
@@ -219,9 +219,9 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                     Expanded(
                       flex: 3,
                       child: Wrap(alignment: WrapAlignment.end, crossAxisAlignment: WrapCrossAlignment.end, children: [
-                        Text('${PriceConverterHelper.convertPrice(widget.subscriptionController.profileModel!.subscription!.package!.price)} /', style: robotoBold.copyWith(fontSize: 22)),
+                        Text('${PriceConverterHelper.convertPrice(widget.subscriptionController.profileModel!.subscription!.package!.price)} /', style: cairoBold.copyWith(fontSize: 22)),
 
-                        Text(' ${widget.subscriptionController.profileModel!.subscription!.package!.validity} ${'days'.tr}', style: robotoMedium),
+                        Text(' ${widget.subscriptionController.profileModel!.subscription!.package!.validity} ${'days'.tr}', style: cairoMedium),
                       ]),
                     ),
 
@@ -297,7 +297,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                 borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
                 border: Border.all(color: Theme.of(context).disabledColor.withValues(alpha: 0.7)),
               ),
-              child: Text('cancel_subscription'.tr, style: robotoMedium.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+              child: Text('cancel_subscription'.tr, style: cairoMedium.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
             ),
           ) : const SizedBox(),
 
@@ -320,10 +320,10 @@ class PackageFeatureItem extends StatelessWidget {
       const Icon(Icons.check_circle, color: Colors.blue, size: 20),
       const SizedBox(width: Dimensions.paddingSizeDefault),
     
-      Text(title, style: robotoRegular),
+      Text(title, style: cairoRegular),
       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-      leftValue != null ? Text('($leftValue)', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)) : const SizedBox(),
+      leftValue != null ? Text('($leftValue)', style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)) : const SizedBox(),
     
     ]);
   }

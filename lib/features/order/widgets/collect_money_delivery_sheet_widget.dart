@@ -44,19 +44,19 @@ class CollectMoneyDeliverySheetWidget extends StatelessWidget {
 
               Text(
                 'collect_money_from_customer'.tr, textAlign: TextAlign.center,
-                style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
               ),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Text(
                   '${'order_amount'.tr}:', textAlign: TextAlign.center,
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge),
                 ),
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                 Text(
                   PriceConverterHelper.convertPrice(orderAmount), textAlign: TextAlign.center,
-                  style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
                 ),
               ]),
               SizedBox(height: verify! ? 20 : 40),

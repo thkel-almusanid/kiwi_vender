@@ -201,7 +201,7 @@ class _SelectLocationAndModuleViewWidgetState extends State<SelectLocationAndMod
                   ),
                   padding: const EdgeInsets.only(left: 10),
                   alignment: Alignment.centerLeft,
-                  child: Text('search'.tr, style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                  child: Text('search'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
                 ),
               ),
             ),

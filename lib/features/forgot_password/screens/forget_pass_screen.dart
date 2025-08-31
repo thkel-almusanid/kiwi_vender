@@ -29,7 +29,7 @@ class _ForgetPassScreenState extends State<ForgetPassScreen> {
         padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
         child: Center(child: SizedBox(width: 1170, child: Column(children: [
 
-          Text('please_enter_email'.tr, style: robotoRegular, textAlign: TextAlign.center),
+          Text('please_enter_email'.tr, style: cairoRegular, textAlign: TextAlign.center),
           const SizedBox(height: 50),
 
           CustomTextFieldWidget(

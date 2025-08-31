@@ -26,12 +26,12 @@ class OrderWidget extends StatelessWidget {
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
             Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text('${'order_id'.tr}: #${orderModel.id}', style: robotoMedium),
+              Text('${'order_id'.tr}: #${orderModel.id}', style: cairoMedium),
               const SizedBox(height: Dimensions.paddingSizeExtraSmall),
               Row(children: [
                 Text(
                   DateConverterHelper.dateTimeStringToDateTime(orderModel.createdAt!),
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                 ),
                 Container(
                   height: 10, width: 1, color: Theme.of(context).disabledColor,
@@ -39,7 +39,7 @@ class OrderWidget extends StatelessWidget {
                 ),
                 Text(
                   orderModel.orderType!.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
                 ),
               ]),
             ])),
@@ -55,13 +55,13 @@ class OrderWidget extends StatelessWidget {
                 builder: (context) {
                   return Text(
                     orderModel.orderStatus!.tr,
-                    style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
+                    style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).primaryColor),
                   );
                 }
               ),
             ) : Text(
               '${orderModel.detailsCount} ${orderModel.detailsCount! < 2 ? 'item'.tr : 'items'.tr}',
-              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
             ),
 
             showStatus ? const SizedBox() : Icon(Icons.keyboard_arrow_right, size: 30, color: Theme.of(context).primaryColor),

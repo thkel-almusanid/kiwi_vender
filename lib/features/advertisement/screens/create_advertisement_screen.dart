@@ -119,7 +119,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('category_info'.tr, style: robotoMedium),
+                  Text('category_info'.tr, style: cairoMedium),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -223,9 +223,9 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                               unselectedLabelColor:Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.5),
                               indicatorColor: Theme.of(context).primaryColor,
                               labelColor: Theme.of(context).textTheme.bodyMedium!.color,
-                              labelStyle: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                              labelStyle: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                               labelPadding: EdgeInsets.zero,
-                              unselectedLabelStyle: robotoRegular,
+                              unselectedLabelStyle: cairoRegular,
                               isScrollable : true,
                               dividerHeight: 0.2,
                               dividerColor: Theme.of(context).disabledColor.withValues(alpha: 0.5),
@@ -271,7 +271,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                   adsController.selectedAdsType == AdsType.store_promotion.name ? const SizedBox(height: Dimensions.paddingSizeLarge): const SizedBox(),
 
                   adsController.selectedAdsType == AdsType.store_promotion.name
-                      ? Text('show_review_ratings'.tr, style: robotoMedium)
+                      ? Text('show_review_ratings'.tr, style: cairoMedium)
                       : const SizedBox(),
                   adsController.selectedAdsType == AdsType.store_promotion.name ? const SizedBox(height: Dimensions.paddingSizeSmall): const SizedBox(),
 
@@ -303,7 +303,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
 
                   const SizedBox(height: Dimensions.paddingSizeLarge),
 
-                  Text('upload_files'.tr, style: robotoMedium),
+                  Text('upload_files'.tr, style: cairoMedium),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
 
                   Container(
@@ -372,7 +372,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                           padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
                           child: Text("enter_video".tr,
                             overflow: TextOverflow.ellipsis,
-                            style: robotoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
+                            style: cairoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
                           ),
                         ) : const SizedBox(),
 
@@ -382,7 +382,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                             child: Text(
                               'video_ratio_text'.tr,
                               textAlign: TextAlign.center,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                             ),
                           ),
                         ),
@@ -425,7 +425,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                             padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
                             child: Text("enter_profile_image".tr,
                               overflow: TextOverflow.ellipsis,
-                              style: robotoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
+                              style: cairoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
                             ),
                           ),
                         ) : const SizedBox(),
@@ -436,7 +436,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                             child: Text(
                               'profile_ratio_text'.tr,
                               textAlign: TextAlign.center,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                             ),
                           ),
                         ),
@@ -476,7 +476,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                           padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
                           child: Text("enter_cover_image".tr,
                             overflow: TextOverflow.ellipsis,
-                            style: robotoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
+                            style: cairoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeSmall),
                           ),
                         ) : const SizedBox(),
 
@@ -486,7 +486,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                             child: Text(
                               'cover_ratio_text'.tr,
                               textAlign: TextAlign.center,
-                              style: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                              style: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                             ),
                           ),
                         ),
@@ -592,7 +592,7 @@ class _CreateAdvertisementScreenState extends State<CreateAdvertisementScreen> w
                       child: Row(children: [
                         Icon(Icons.remove_red_eye_outlined, size: 14, color: Theme.of(context).cardColor),
                         const SizedBox(width: 2),
-                        Text('preview'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
+                        Text('preview'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
                       ]),
                     ),
                   )

@@ -77,10 +77,10 @@ class _UpdateStockBottomSheetState extends State<UpdateStockBottomSheet> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const SizedBox(height: Dimensions.paddingSizeDefault),
 
-            Text(widget.item.name ?? '', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+            Text(widget.item.name ?? '', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
             const SizedBox(height: Dimensions.paddingSizeDefault),
 
-            Text('total_quantity'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+            Text('total_quantity'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
             const SizedBox(height: Dimensions.paddingSizeDefault),
 
             CustomTextFieldWidget(
@@ -107,12 +107,12 @@ class _UpdateStockBottomSheetState extends State<UpdateStockBottomSheet> {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                 Row(children: [
-                  Expanded(flex: 3, child: Text('variation'.tr, style: robotoMedium)),
+                  Expanded(flex: 3, child: Text('variation'.tr, style: cairoMedium)),
 
-                  Expanded(flex: 3, child: Text('price'.tr, style: robotoMedium)),
+                  Expanded(flex: 3, child: Text('price'.tr, style: cairoMedium)),
                   const SizedBox(width: Dimensions.paddingSizeSmall),
 
-                  Expanded(flex: 3, child: Text('stock'.tr, style: robotoMedium)),
+                  Expanded(flex: 3, child: Text('stock'.tr, style: cairoMedium)),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
@@ -126,7 +126,7 @@ class _UpdateStockBottomSheetState extends State<UpdateStockBottomSheet> {
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Expanded(flex: 3, child: Text(widget.item.variations![index].type!, style: robotoRegular)),
+                          Expanded(flex: 3, child: Text(widget.item.variations![index].type!, style: cairoRegular)),
 
                           Expanded(
                             flex: 3,

@@ -46,24 +46,24 @@ class DeliveryManDetailsScreen extends StatelessWidget {
                 const SizedBox(width: Dimensions.paddingSizeSmall),
                 Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(
-                    '${deliveryMan.fName} ${deliveryMan.lName}', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                    '${deliveryMan.fName} ${deliveryMan.lName}', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                     maxLines: 1, overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                   Text(
                     deliveryMan.active == 1 ? 'online'.tr : 'offline'.tr,
-                    style: robotoRegular.copyWith(
+                    style: cairoRegular.copyWith(
                       color: deliveryMan.active == 1 ? Colors.green : Colors.red, fontSize: Dimensions.fontSizeExtraSmall,
                     ),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                   Row(children: [
                     Icon(Icons.star, color: Theme.of(context).primaryColor, size: 20),
-                    Text(deliveryMan.avgRating!.toStringAsFixed(1), style: robotoRegular),
+                    Text(deliveryMan.avgRating!.toStringAsFixed(1), style: cairoRegular),
                     const SizedBox(width: Dimensions.paddingSizeSmall),
                     Text(
                       '${deliveryMan.ratingCount} ${'ratings'.tr}',
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                     ),
                   ]),
                 ])),
@@ -88,7 +88,7 @@ class DeliveryManDetailsScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('reviews'.tr, style: robotoMedium),
+                  Text('reviews'.tr, style: cairoMedium),
                   const SizedBox(height: Dimensions.paddingSizeSmall),
                   dmController.dmReviewList != null ? dmController.dmReviewList!.isNotEmpty ? ListView.builder(
                     itemCount: dmController.dmReviewList!.length,
@@ -103,7 +103,7 @@ class DeliveryManDetailsScreen extends StatelessWidget {
                   ) : Padding(
                     padding: const EdgeInsets.only(top: Dimensions.paddingSizeLarge),
                     child: Center(child: Text(
-                      'no_review_found'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
+                      'no_review_found'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
                     )),
                   ) : const Padding(
                     padding: EdgeInsets.only(top: Dimensions.paddingSizeLarge),

@@ -62,7 +62,7 @@ class CampaignScreen extends StatelessWidget {
     return PopupMenuItem(
       value: status,
       height: 30,
-      child: Text(status.tr, style: robotoRegular.copyWith(color: status == 'joined' ? Colors.green : null)),
+      child: Text(status.tr, style: cairoRegular.copyWith(color: status == 'joined' ? Colors.green : null)),
     );
   }
 }

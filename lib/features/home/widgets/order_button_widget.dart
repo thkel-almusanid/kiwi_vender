@@ -39,7 +39,7 @@ class OrderButtonWidget extends StatelessWidget {
           child: Text(
             '$title${fromHistory ? '' : isSelected ? ' ($length)' : ''}',
             maxLines: 1, overflow: TextOverflow.ellipsis,
-            style: robotoMedium.copyWith(
+            style: cairoMedium.copyWith(
               fontSize: Dimensions.fontSizeDefault, fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
               color: isSelected ? Theme.of(context).cardColor : Theme.of(context).disabledColor,
             ),

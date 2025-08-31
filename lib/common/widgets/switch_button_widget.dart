@@ -30,11 +30,11 @@ class SwitchButtonWidget extends StatelessWidget {
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-              Text(title, style: robotoRegular),
+              Text(title, style: cairoRegular),
 
               description != null ? Padding(
                 padding: const EdgeInsets.only(top: Dimensions.paddingSizeExtraSmall),
-                child: Text(description!, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)),
+                child: Text(description!, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)),
               ) : const SizedBox(),
 
             ]),

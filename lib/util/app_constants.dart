@@ -5,7 +5,7 @@ class AppConstants {
   static const String appName = 'Qewii Vendor';
   static const double appVersion = 3.3; ///Flutter SDK: 3.32.8
 
-  static const String fontFamily = 'Roboto';
+  static const String fontFamily = 'Cairo';
   static const double limitOfPickedVideoSizeInMB = 50;
   static const double maxSizeOfASingleFile = 10;
 

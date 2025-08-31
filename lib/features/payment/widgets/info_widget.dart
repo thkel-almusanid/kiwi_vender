@@ -15,10 +15,10 @@ class InfoWidget extends StatelessWidget {
       Image.asset(icon, height: 20, width: 20, color: Theme.of(context).disabledColor),
       const SizedBox(width: Dimensions.paddingSizeSmall),
 
-      Text('$title:', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor)),
+      Text('$title:', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor)),
       const SizedBox(width: Dimensions.paddingSizeSmall),
 
-      Flexible(child: Text(data!, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge))),
+      Flexible(child: Text(data!, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge))),
       
     ]);
   }

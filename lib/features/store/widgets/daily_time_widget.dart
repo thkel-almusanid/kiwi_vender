@@ -31,7 +31,7 @@ class DailyTimeWidget extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: Dimensions.paddingSizeSmall),
       child: Row(children: [
 
-        Expanded(flex: 3, child: Text(dayString.tr, style: robotoMedium)),
+        Expanded(flex: 3, child: Text(dayString.tr, style: cairoMedium)),
 
         Expanded(flex: 7, child: SizedBox(height: 60, child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -48,7 +48,7 @@ class DailyTimeWidget extends StatelessWidget {
 
                       Text(
                         '${'schedule_for'.tr} ${dayString.tr}',
-                        style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                        style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                       ),
                       const SizedBox(height: Dimensions.paddingSizeLarge),
 
@@ -79,7 +79,7 @@ class DailyTimeWidget extends StatelessWidget {
                             ),
                             child: Text(
                               'cancel'.tr, textAlign: TextAlign.center,
-                              style: robotoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
+                              style: cairoBold.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
                             ),
                           )),
                           const SizedBox(width: Dimensions.paddingSizeLarge),

@@ -24,26 +24,26 @@ class WalletWidget extends StatelessWidget {
 
         Text(
           PriceConverterHelper.convertPrice(value), textDirection: TextDirection.ltr,
-          style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
         ),
         const SizedBox(width: Dimensions.paddingSizeSmall),
 
         Text(
           title, textAlign: TextAlign.center,
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
         ),
 
       ]) : Column(children: [
 
         Text(
           PriceConverterHelper.convertPrice(value), textDirection: TextDirection.ltr,
-          style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
         ),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
         Text(
           title, textAlign: TextAlign.center,
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
         ),
 
       ]),

@@ -15,7 +15,7 @@ class CountWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
         child: Column(children: [
 
-          Text(title, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).cardColor)),
+          Text(title, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).cardColor)),
           const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -23,7 +23,7 @@ class CountWidget extends StatelessWidget {
             Image.asset(Images.order, color: Theme.of(context).cardColor, height: 12, width: 12),
             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-            Text(count.toString(), style: robotoMedium.copyWith(
+            Text(count.toString(), style: cairoMedium.copyWith(
               fontSize: Dimensions.fontSizeExtraLarge, color: Theme.of(context).cardColor,
             )),
 

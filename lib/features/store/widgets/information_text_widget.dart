@@ -19,17 +19,17 @@ class InformationTextWidget extends StatelessWidget {
         Row(children: [
           Expanded(
             flex: 3,
-            child: Text(title, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+            child: Text(title, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
           ),
 
           Expanded(
             flex: 7,
             child: Row(
               children: [
-                Text(':', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                Text(':', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                 const SizedBox(width: Dimensions.paddingSizeSmall),
 
-                Text(value, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                Text(value, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
               ],
             ),
           ),

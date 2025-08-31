@@ -56,7 +56,7 @@ class _AnnouncementScreenState extends State<AnnouncementScreen> {
             child: Column(children: [
 
               Row(children: [
-                Text("announcement_content".tr, style: robotoRegular),
+                Text("announcement_content".tr, style: cairoRegular),
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
                 JustTheTooltip(
@@ -67,7 +67,7 @@ class _AnnouncementScreenState extends State<AnnouncementScreen> {
                   tailBaseWidth: 20,
                   content: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text('this_feature_is_for_sharing_important_information_or_announcements_related_to_the_vendor'.tr,style: robotoRegular.copyWith(color: Theme.of(context).cardColor)),
+                    child: Text('this_feature_is_for_sharing_important_information_or_announcements_related_to_the_vendor'.tr,style: cairoRegular.copyWith(color: Theme.of(context).cardColor)),
                   ),
                   child: InkWell(
                     onTap: () => tooltipController.showTooltip(),

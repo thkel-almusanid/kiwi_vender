@@ -32,7 +32,7 @@ class CancellationDialogueWidget extends StatelessWidget {
                   boxShadow: Get.isDarkMode ? null : [BoxShadow(color: Colors.grey[200]!, spreadRadius: 1, blurRadius: 5)],
                 ),
                 child: Column(children: [
-                  Text('select_cancellation_reasons'.tr, style: robotoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                  Text('select_cancellation_reasons'.tr, style: cairoMedium.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                 ]),
               ),
@@ -53,7 +53,7 @@ class CancellationDialogueWidget extends StatelessWidget {
                           Icon(orderController.orderCancelReasons![index].reason == orderController.cancelReason ? Icons.radio_button_checked : Icons.radio_button_off, color: Theme.of(context).primaryColor, size: 18),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
-                          Flexible(child: Text(orderController.orderCancelReasons![index].reason!, style: robotoRegular, maxLines: 3, overflow: TextOverflow.ellipsis)),
+                          Flexible(child: Text(orderController.orderCancelReasons![index].reason!, style: cairoRegular, maxLines: 3, overflow: TextOverflow.ellipsis)),
                         ],
                       ),
                     ),

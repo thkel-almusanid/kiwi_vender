@@ -48,29 +48,29 @@ class TransactionDetailsBottomSheet extends StatelessWidget {
 
             Column(children: [
 
-              Text('${'transaction_successful'.tr}!', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6))),
+              Text('${'transaction_successful'.tr}!', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6))),
 
-              Text('${'for'.tr} ${transactions.package!.packageName} ${'package'.tr}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+              Text('${'for'.tr} ${transactions.package!.packageName} ${'package'.tr}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text('${'purchase_status'.tr} : ', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                Text('${'purchase_status'.tr} : ', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                 Text(
                   transactions.planType == 'renew' ? 'renewed'.tr : transactions.planType == 'new_plan' ? 'migrated'.tr : transactions.planType == 'free_trial' ? 'free_trial'.tr : 'purchased'.tr,
-                  style: robotoBold.copyWith(color: Theme.of(context).primaryColor),
+                  style: cairoBold.copyWith(color: Theme.of(context).primaryColor),
                 ),
               ]),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
-              Text(transactions.store?.name ?? '', style: robotoBold.copyWith(fontSize: 15)),
+              Text(transactions.store?.name ?? '', style: cairoBold.copyWith(fontSize: 15)),
               const SizedBox(height: Dimensions.paddingSizeSmall),
 
               RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(children: [
-                  TextSpan(text: 'thank_you_for_transaction_with'.tr, style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
-                  TextSpan(text: ' ${AppConstants.appName} ', style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
-                  TextSpan(text: '${'in'.tr} ${transactions.package!.packageName} ${'package'.tr}', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+                  TextSpan(text: 'thank_you_for_transaction_with'.tr, style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+                  TextSpan(text: ' ${AppConstants.appName} ', style: cairoBold.copyWith(color: Theme.of(context).primaryColor)),
+                  TextSpan(text: '${'in'.tr} ${transactions.package!.packageName} ${'package'.tr}', style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
                 ]),
               ),
 
@@ -88,32 +88,32 @@ class TransactionDetailsBottomSheet extends StatelessWidget {
               child: Column(mainAxisSize: MainAxisSize.min, children: [
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('transaction_id'.tr, style: robotoRegular),
-                  Text(transactions.id!, style: robotoRegular),
+                  Text('transaction_id'.tr, style: cairoRegular),
+                  Text(transactions.id!, style: cairoRegular),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('package_name'.tr, style: robotoRegular),
-                  Text(transactions.package?.packageName ?? '', style: robotoRegular),
+                  Text('package_name'.tr, style: cairoRegular),
+                  Text(transactions.package?.packageName ?? '', style: cairoRegular),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('time'.tr, style: robotoRegular),
-                  Text(DateConverterHelper.utcToDate(transactions.createdAt!), style: robotoRegular),
+                  Text('time'.tr, style: cairoRegular),
+                  Text(DateConverterHelper.utcToDate(transactions.createdAt!), style: cairoRegular),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('validity'.tr, style: robotoRegular),
-                  Text('${transactions.validity} ${'days'.tr}', style: robotoRegular),
+                  Text('validity'.tr, style: cairoRegular),
+                  Text('${transactions.validity} ${'days'.tr}', style: cairoRegular),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text('amount'.tr, style: robotoRegular),
-                  Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: robotoRegular),
+                  Text('amount'.tr, style: cairoRegular),
+                  Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: cairoRegular),
                 ]),
                 const SizedBox(height: 40),
 

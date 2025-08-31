@@ -42,14 +42,14 @@ class _AnnouncementStatusBottomSheetState extends State<AnnouncementStatusBottom
           ),
           const SizedBox(height: 35),
 
-          Text('are_you_sure'.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
+          Text('are_you_sure'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge), textAlign: TextAlign.center),
           const SizedBox(height: Dimensions.paddingSizeSmall),
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
             child: Text(
               storeController.announcementStatus ? 'you_want_to_disable_announcement'.tr : 'you_want_to_enable_announcement'.tr,
-              style: robotoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center,
+              style: cairoRegular.copyWith(color: Theme.of(context).hintColor), textAlign: TextAlign.center,
             ),
           ),
           const SizedBox(height: 50),

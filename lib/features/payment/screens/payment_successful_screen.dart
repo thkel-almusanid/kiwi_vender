@@ -47,7 +47,7 @@ class _PaymentSuccessfulScreenState extends State<PaymentSuccessfulScreen> {
 
           Text(
             widget.success ? 'your_payment_is_successfully_placed'.tr : 'your_payment_is_not_done'.tr,
-            style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
           ),
           const SizedBox(height: Dimensions.paddingSizeSmall),
 

@@ -70,7 +70,7 @@ class _CouponScreenState extends State<CouponScreen> {
                                 Center(child: Image.asset(Images.couponVertical, color: Theme.of(context).primaryColor)),
                                 Center(
                                   child: Text(couponController.coupons![index].discountType == 'percent' ? '%' : '\$',
-                                    style: robotoBold.copyWith(fontSize: 18, color: Theme.of(context).cardColor),
+                                    style: cairoBold.copyWith(fontSize: 18, color: Theme.of(context).cardColor),
                                   ),
                                 ),
                               ],
@@ -91,7 +91,7 @@ class _CouponScreenState extends State<CouponScreen> {
                                   PriceConverterHelper.convertPrice(double.parse(couponController.coupons![index].discount.toString())) :
                                   couponController.coupons![index].discount}'} ${couponController.coupons![index].couponType == 'free_delivery' ? '' : couponController.coupons![index].discountType == 'percent' ? '%' : ''}'
                                       '${couponController.coupons![index].couponType == 'free_delivery' ? '' : 'off'.tr}',
-                                    style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
                                   ),
 
                                   Row(
@@ -117,11 +117,11 @@ class _CouponScreenState extends State<CouponScreen> {
                                             return <PopupMenuEntry>[
                                               PopupMenuItem(
                                                 value: 'edit',
-                                                child: Text('edit'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                                                child: Text('edit'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                                               ),
                                               PopupMenuItem(
                                                 value: 'delete',
-                                                child: Text('delete'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.red)),
+                                                child: Text('delete'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.red)),
                                               ),
                                             ];
                                           },
@@ -159,14 +159,14 @@ class _CouponScreenState extends State<CouponScreen> {
                                   ),
                                 ]),
 
-                                Text('${'code'.tr}: ${couponController.coupons![index].code!}', style: robotoMedium),
+                                Text('${'code'.tr}: ${couponController.coupons![index].code!}', style: cairoMedium),
                                 const SizedBox(height: 5),
 
-                                Text('${'total_users'.tr}: ${couponController.coupons![index].totalUses}', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
+                                Text('${'total_users'.tr}: ${couponController.coupons![index].totalUses}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall)),
                                 const SizedBox(height: 5),
 
                                 Text('${'valid_until'.tr} ${couponController.coupons![index].startDate!} ${'to'.tr} ${couponController.coupons![index].expireDate!}',
-                                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
+                                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
                                 ),
 
                               ]),

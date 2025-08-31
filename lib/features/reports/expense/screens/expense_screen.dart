@@ -120,7 +120,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
           ),
 
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text('from'.tr, style: robotoMedium.copyWith(color: Theme.of(context).disabledColor)),
+            Text('from'.tr, style: cairoMedium.copyWith(color: Theme.of(context).disabledColor)),
             const SizedBox(width: Dimensions.fontSizeExtraSmall),
 
             Container(
@@ -129,11 +129,11 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                 borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                 color: Theme.of(context).primaryColor.withValues(alpha: 0.05),
               ),
-              child: Text(DateConverterHelper.convertDateToDate(expenseController.from!), style: robotoMedium),
+              child: Text(DateConverterHelper.convertDateToDate(expenseController.from!), style: cairoMedium),
             ),
             const SizedBox(width: 5),
 
-            Text('to'.tr, style: robotoMedium.copyWith(color: Theme.of(context).disabledColor)),
+            Text('to'.tr, style: cairoMedium.copyWith(color: Theme.of(context).disabledColor)),
             const SizedBox(width: 5),
 
             Container(
@@ -142,7 +142,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                 borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                 color: Theme.of(context).primaryColor.withValues(alpha: 0.05),
               ),
-              child: Text(DateConverterHelper.convertDateToDate(expenseController.to!), style: robotoMedium),
+              child: Text(DateConverterHelper.convertDateToDate(expenseController.to!), style: cairoMedium),
             ),
 
           ]),
@@ -154,7 +154,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
                 shrinkWrap: true,
                 itemBuilder: (context, index){
               return ExpenseCardWidget(expense: expenseController.expenses![index]);
-            }) : Center(child: Text('no_expense_found'.tr, style: robotoMedium)) : const Center(child: CircularProgressIndicator()),
+            }) : Center(child: Text('no_expense_found'.tr, style: cairoMedium)) : const Center(child: CircularProgressIndicator()),
           ),
 
           expenseController.isLoading ? Center(child: Padding(

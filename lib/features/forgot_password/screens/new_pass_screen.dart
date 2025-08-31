@@ -47,7 +47,7 @@ class _NewPassScreenState extends State<NewPassScreen> {
         padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
         child: Center(child: SizedBox(width: 1170, child: Column(children: [
 
-          Text('enter_new_password'.tr, style: robotoRegular, textAlign: TextAlign.center),
+          Text('enter_new_password'.tr, style: cairoRegular, textAlign: TextAlign.center),
           const SizedBox(height: 50),
 
           GetBuilder<AuthController>(builder: (authController) {

@@ -34,11 +34,11 @@ class ReviewCardWidget extends StatelessWidget {
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
             Row(children: [
-              Text('${'review_id'.tr} # ', style: robotoRegular),
-              Text(review.reviewId != null ? review.reviewId.toString() : '', style: robotoBold),
+              Text('${'review_id'.tr} # ', style: cairoRegular),
+              Text(review.reviewId != null ? review.reviewId.toString() : '', style: cairoBold),
             ]),
 
-            Text(DateConverterHelper.utcToDateTime(review.createdAt!), style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+            Text(DateConverterHelper.utcToDateTime(review.createdAt!), style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
 
           ]),
         ),
@@ -58,7 +58,7 @@ class ReviewCardWidget extends StatelessWidget {
             const SizedBox(width: Dimensions.paddingSizeDefault),
 
             Expanded(
-              child: Text(review.itemName ?? '', style: robotoBold, overflow: TextOverflow.ellipsis, maxLines: 1),
+              child: Text(review.itemName ?? '', style: cairoBold, overflow: TextOverflow.ellipsis, maxLines: 1),
             ),
             const SizedBox(width: Dimensions.paddingSizeDefault),
 
@@ -90,14 +90,14 @@ class ReviewCardWidget extends StatelessWidget {
           padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-            Text('reviewer'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+            Text('reviewer'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
             const SizedBox(height: Dimensions.paddingSizeSmall),
 
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
 
-              Text(review.customerName ?? '', style: robotoBold),
+              Text(review.customerName ?? '', style: cairoBold),
 
-              Text(review.customerPhone ?? '', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)),
+              Text(review.customerPhone ?? '', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor)),
 
             ]),
 

@@ -25,7 +25,7 @@ class _AttributeViewWidgetState extends State<AttributeViewWidget> {
 
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-      Text('attribute'.tr, style: robotoBold),
+      Text('attribute'.tr, style: cairoBold),
       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
       SizedBox(
@@ -47,7 +47,7 @@ class _AttributeViewWidgetState extends State<AttributeViewWidget> {
                 ),
                 child: Text(
                   widget.storeController.attributeList![index].attribute.name!, maxLines: 2, textAlign: TextAlign.center,
-                  style: robotoRegular.copyWith(
+                  style: cairoRegular.copyWith(
                     color: widget.storeController.attributeList![index].active ? Theme.of(context).cardColor : Theme.of(context).disabledColor,
                   ),
                 ),
@@ -78,7 +78,7 @@ class _AttributeViewWidgetState extends State<AttributeViewWidget> {
                 ),
                 child: Text(
                   widget.storeController.attributeList![index].attribute.name!, maxLines: 2, textAlign: TextAlign.center,
-                  style: robotoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
+                  style: cairoRegular.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
                 ),
               ),
               const SizedBox(width: Dimensions.paddingSizeLarge),
@@ -122,7 +122,7 @@ class _AttributeViewWidgetState extends State<AttributeViewWidget> {
                       borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                     ),
                     child: Row(children: [
-                      Text(widget.storeController.attributeList![index].variants[i], style: robotoRegular),
+                      Text(widget.storeController.attributeList![index].variants[i], style: cairoRegular),
                       InkWell(
                         onTap: () => widget.storeController.removeVariant(index, i, widget.product),
                         child: const Padding(
@@ -162,12 +162,12 @@ class _AttributeViewWidgetState extends State<AttributeViewWidget> {
               Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(
                   '${'variant'.tr}:',
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                 ),
                 const SizedBox(width: Dimensions.paddingSizeSmall),
                 Text(
                   widget.storeController.variantTypeList![index].variantType,
-                  style: robotoRegular, textAlign: TextAlign.center, maxLines: 1,
+                  style: cairoRegular, textAlign: TextAlign.center, maxLines: 1,
                 ),
               ]),
               const SizedBox(height: Dimensions.paddingSizeSmall),

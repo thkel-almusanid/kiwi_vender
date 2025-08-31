@@ -69,7 +69,7 @@ class _PendingItemScreenState extends State<PendingItemScreen> with SingleTicker
                   Row(children: [
 
                     Expanded(
-                      child: Text('new_product'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                      child: Text('new_product'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
                     ),
                     const SizedBox(width: 40),
 
@@ -145,16 +145,16 @@ class _PendingItemScreenState extends State<PendingItemScreen> with SingleTicker
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
 
-                                    Text(storeController.pendingItem![index].name.toString(), style: robotoMedium, maxLines: 1, overflow: TextOverflow.ellipsis),
+                                    Text(storeController.pendingItem![index].name.toString(), style: cairoMedium, maxLines: 1, overflow: TextOverflow.ellipsis),
                                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                                     Row(children: [
-                                      Text('${'category'.tr} : ', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
-                                      Text(storeController.pendingItem![index].categoryIds![index].name.toString(), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                                      Text('${'category'.tr} : ', style: cairoRegular.copyWith(color: Theme.of(context).disabledColor, fontSize: Dimensions.fontSizeSmall)),
+                                      Text(storeController.pendingItem![index].categoryIds![index].name.toString(), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
                                     ]),
 
                                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                                    Text(PriceConverterHelper.convertPrice(storeController.pendingItem![index].price), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                                    Text(PriceConverterHelper.convertPrice(storeController.pendingItem![index].price), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
                                   ],
                                 ),
@@ -170,7 +170,7 @@ class _PendingItemScreenState extends State<PendingItemScreen> with SingleTicker
                                   ),
                                   child: Text(
                                     storeController.pendingItem![index].isRejected  == 0 ? 'pending'.tr : 'rejected'.tr,
-                                    style: robotoMedium.copyWith(
+                                    style: cairoMedium.copyWith(
                                       color: storeController.pendingItem![index].isRejected  == 0 ? Colors.blue : Theme.of(context).colorScheme.error,
                                       fontSize: Dimensions.fontSizeSmall,
                                     ),
@@ -208,7 +208,7 @@ class _PendingItemScreenState extends State<PendingItemScreen> with SingleTicker
     return PopupMenuItem(
       value: status,
       height: 30,
-      child: Text(status.toLowerCase().tr, style: robotoRegular.copyWith(
+      child: Text(status.toLowerCase().tr, style: cairoRegular.copyWith(
         color: status == 'pending' ? Theme.of(context).primaryColor : status == 'rejected' ? Theme.of(context).colorScheme.error : null,
       )),
     );

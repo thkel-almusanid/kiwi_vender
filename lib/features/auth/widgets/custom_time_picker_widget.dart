@@ -39,7 +39,7 @@ class CustomTimePickerWidget extends StatelessWidget {
 
             Text(
               isRental ? 'estimated_pickup_time_time'.tr : 'estimated_delivery_time'.tr ,
-              style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
             ),
             const SizedBox(height: Dimensions.paddingSizeSmall),
 
@@ -47,7 +47,7 @@ class CustomTimePickerWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
               child: Text(
                 'this_item_will_be_shown_in_the_user_app_website'.tr,
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -59,7 +59,7 @@ class CustomTimePickerWidget extends StatelessWidget {
                 width: 70,
                 child: Text(
                   'minimum'.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -69,7 +69,7 @@ class CustomTimePickerWidget extends StatelessWidget {
                 width: 75,
                 child: Text(
                   'maximum'.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -78,7 +78,7 @@ class CustomTimePickerWidget extends StatelessWidget {
                 width: 70,
                 child: Text(
                   'unit'.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge,color: Theme.of(context).disabledColor),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -93,7 +93,7 @@ class CustomTimePickerWidget extends StatelessWidget {
                 initialPosition: 10,
               ),
 
-              const Text(':', style: robotoBold),
+              const Text(':', style: cairoBold),
 
               MinMaxTimePickerWidget(
                 times: time, onChanged: (int index)=> authController.maxTimeChange(time[index]),
@@ -111,7 +111,7 @@ class CustomTimePickerWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeLarge),
               child: Text(
                 '${authController.storeMinTime} - ${authController.storeMaxTime} ${authController.storeTimeUnit}',
-                style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
               ),
             ),
 

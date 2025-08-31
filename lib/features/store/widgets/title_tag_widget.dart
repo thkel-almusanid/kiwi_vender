@@ -17,7 +17,7 @@ class TitleTagWidget extends StatelessWidget {
         color: Theme.of(context).primaryColor.withValues(alpha: 0.05),
         border: Border.symmetric(horizontal: BorderSide(color: Theme.of(context).primaryColor.withValues(alpha: 0.1))),
       ),
-      child: Text(title, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+      child: Text(title, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
     );
   }
 }

@@ -39,10 +39,10 @@ class _LanguageBottomSheetWidgetState extends State<LanguageBottomSheetWidget> {
 
           Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
 
-            Text('choose_your_language'.tr, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+            Text('choose_your_language'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-            Text('choose_your_language_to_proceed'.tr, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+            Text('choose_your_language_to_proceed'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
           ]),
           const SizedBox(height: Dimensions.paddingSizeExtraLarge),

@@ -98,7 +98,7 @@ class _DisbursementScreenState extends State<DisbursementScreen> {
               padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),
               child: Text(
                 "disbursement_history".tr,
-                style: robotoBold.copyWith(
+                style: cairoBold.copyWith(
                   fontSize: Dimensions.fontSizeLarge,
                   color: Theme.of(context).textTheme.bodyLarge!.color,
                 ),
@@ -128,14 +128,14 @@ class _DisbursementScreenState extends State<DisbursementScreen> {
                     },
                     child: ListTile(
                       contentPadding: EdgeInsets.zero,
-                      title: Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: robotoMedium),
+                      title: Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoMedium),
                       subtitle: Text(disbursement.withdrawMethod != null ? '${"payment_method".tr} : ${disbursement.withdrawMethod!.methodName}' : 'payment_method_deleted'.tr,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                       trailing: Column(crossAxisAlignment: CrossAxisAlignment.end, mainAxisAlignment: MainAxisAlignment.center, children: [
 
                         Text(
                           DateConverterHelper.dateTimeStringForDisbursement(disbursement.createdAt!),
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                         ),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
@@ -145,7 +145,7 @@ class _DisbursementScreenState extends State<DisbursementScreen> {
                             borderRadius: BorderRadius.circular(Dimensions.radiusSmall),
                             color: Colors.blue.withValues(alpha: 0.1),
                           ),
-                          child: Text(disbursement.status!.tr, style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue)),
+                          child: Text(disbursement.status!.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue)),
                         ),
 
                       ]),
@@ -155,7 +155,7 @@ class _DisbursementScreenState extends State<DisbursementScreen> {
                   const Divider(height: 2, thickness: 1),
                 ]);
               },
-            ) : Padding(padding: const EdgeInsets.only(top: 200), child: Center(child: Text('no_history_available'.tr, style: robotoMedium))),
+            ) : Padding(padding: const EdgeInsets.only(top: 200), child: Center(child: Text('no_history_available'.tr, style: cairoMedium))),
 
           ]),
           ) : const Center(child: CircularProgressIndicator());

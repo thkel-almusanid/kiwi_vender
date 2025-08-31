@@ -59,7 +59,7 @@ class BankInfoScreen extends StatelessWidget {
 
             Text(
               'currently_no_bank_account_added'.tr, textAlign: TextAlign.center,
-              style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+              style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
             ),
             const SizedBox(height: 30),
 

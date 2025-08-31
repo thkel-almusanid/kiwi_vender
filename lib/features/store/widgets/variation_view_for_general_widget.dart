@@ -24,24 +24,24 @@ class VariationViewForGeneral extends StatelessWidget {
             Row(children: [
               Expanded(
                 flex: 3,
-                child: Text(item.variations![index].type!, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                child: Text(item.variations![index].type!, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
               ),
 
               Expanded(
                 flex: 7,
                 child: Row(
                   children: [
-                    Text(':', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                    Text(':', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)),
                     const SizedBox(width: Dimensions.paddingSizeSmall),
 
                     Text(
                       PriceConverterHelper.convertPrice(item.variations![index].price),
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
                     SizedBox(width: stock! ? Dimensions.paddingSizeExtraSmall : 0),
                     stock! ? Text(
                       '(${item.variations![index].stock})',
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ) : const SizedBox(),
                   ],
                 ),

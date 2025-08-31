@@ -94,12 +94,12 @@ class _AddDeliveryManScreenState extends State<AddDeliveryManScreen> {
 
                     Align(alignment: Alignment.center, child: Text(
                       'delivery_man_image'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                     )),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                     Align(alignment: Alignment.center, child: Text(
                       '(${'max_size_2_mb'.tr})',
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).colorScheme.error),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).colorScheme.error),
                     )),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
                     Align(alignment: Alignment.center, child: Stack(children: [
@@ -187,7 +187,7 @@ class _AddDeliveryManScreenState extends State<AddDeliveryManScreen> {
                           padding: EdgeInsets.zero,
                           showFlagMain: true,
                           flagWidth: 30,
-                          textStyle: robotoRegular.copyWith(
+                          textStyle: cairoRegular.copyWith(
                             fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).textTheme.bodyLarge!.color,
                           ),
                         ),
@@ -233,7 +233,7 @@ class _AddDeliveryManScreenState extends State<AddDeliveryManScreen> {
                       Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(
                           'identity_type'.tr,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                         ),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                         Container(
@@ -274,12 +274,12 @@ class _AddDeliveryManScreenState extends State<AddDeliveryManScreen> {
                       Row(children: [
                         Text(
                           'identity_images'.tr,
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                         ),
                         const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                         Text(
                           '(${'previously_added'.tr})',
-                          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
                         ),
                       ]),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
@@ -312,7 +312,7 @@ class _AddDeliveryManScreenState extends State<AddDeliveryManScreen> {
 
                     Text(
                       'identity_images'.tr,
-                      style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
                     SizedBox(

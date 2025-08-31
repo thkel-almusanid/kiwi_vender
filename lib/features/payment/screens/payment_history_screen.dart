@@ -42,10 +42,10 @@ class _PaymentHistoryScreenState extends State<PaymentHistoryScreen> {
                   Expanded(
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                      Text(PriceConverterHelper.convertPrice(paymentController.transactions![index].amount), style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                      Text(PriceConverterHelper.convertPrice(paymentController.transactions![index].amount), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
                       const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                      Text('${'paid_via'.tr} ${paymentController.transactions![index].method?.replaceAll('_', ' ').capitalize??''}', style: robotoRegular.copyWith(
+                      Text('${'paid_via'.tr} ${paymentController.transactions![index].method?.replaceAll('_', ' ').capitalize??''}', style: cairoRegular.copyWith(
                         fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor,
                       )),
 
@@ -53,7 +53,7 @@ class _PaymentHistoryScreenState extends State<PaymentHistoryScreen> {
                   ),
 
                   Text(paymentController.transactions![index].paymentTime.toString(),
-                    style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                    style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                   ),
 
                 ]),

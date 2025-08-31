@@ -76,14 +76,14 @@ class ItemWidget extends StatelessWidget {
                   Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
                     Text(
                       item.name ?? '', textAlign: TextAlign.start,
-                      style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
                       maxLines: 1, overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(width: item.imageFullUrl == null ? Dimensions.paddingSizeExtraSmall : 0),
 
                     item.imageFullUrl == null ? Text(
                       '(${discount! > 0 ? '$discount${discountType == 'percent' ? '%' : Get.find<SplashController>().configModel!.currencySymbol} ${'off'.tr}' : 'free_delivery'.tr})',
-                      style: robotoMedium.copyWith(color: Colors.green, fontSize: Dimensions.fontSizeExtraSmall),
+                      style: cairoMedium.copyWith(color: Colors.green, fontSize: Dimensions.fontSizeExtraSmall),
                     ) : const SizedBox(),
                   ]),
                   SizedBox(height: item.imageFullUrl != null ? Dimensions.paddingSizeExtraSmall : 0),
@@ -98,7 +98,7 @@ class ItemWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 5.0),
                       child: Text(
                         '(${'not_available_now'.tr})', textAlign: TextAlign.center,
-                        style: robotoRegular.copyWith(color: Colors.red, fontSize: Dimensions.fontSizeExtraSmall),
+                        style: cairoRegular.copyWith(color: Colors.red, fontSize: Dimensions.fontSizeExtraSmall),
                       ),
                     ) : const SizedBox(),
                   ]),
@@ -108,13 +108,13 @@ class ItemWidget extends StatelessWidget {
 
                     Text(
                       PriceConverterHelper.convertPrice(item.price, discount: discount, discountType: discountType),
-                      style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
                     ),
                     SizedBox(width: discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
 
                     discount > 0 ? Text(
                       PriceConverterHelper.convertPrice(item.price),
-                      style: robotoBold.copyWith(
+                      style: cairoBold.copyWith(
                         fontSize: Dimensions.fontSizeExtraSmall,
                         color: Theme.of(context).disabledColor,
                         decoration: TextDecoration.lineThrough,
@@ -159,7 +159,7 @@ class ItemWidget extends StatelessWidget {
                   PopupMenuItem<String>(
                     value: '1',
                     child: ListTile(
-                      title: Text('stock'.tr, style: robotoMedium),
+                      title: Text('stock'.tr, style: cairoMedium),
                       leading: const Icon(Icons.add_circle, color: Colors.indigo),
                       contentPadding: EdgeInsets.zero,
                     ),
@@ -167,7 +167,7 @@ class ItemWidget extends StatelessWidget {
                   PopupMenuItem<String>(
                     value: '2',
                     child: ListTile(
-                      title: Text('edit'.tr, style: robotoMedium),
+                      title: Text('edit'.tr, style: cairoMedium),
                       leading: const Icon(Icons.edit, color: Colors.blue),
                       contentPadding: EdgeInsets.zero,
                     ),
@@ -175,7 +175,7 @@ class ItemWidget extends StatelessWidget {
                   PopupMenuItem<String>(
                     value: '3',
                     child: ListTile(
-                      title: Text('delete'.tr, style: robotoMedium),
+                      title: Text('delete'.tr, style: cairoMedium),
                       leading: const Icon(Icons.delete_forever, color: Colors.red),
                       contentPadding: EdgeInsets.zero,
                     ),

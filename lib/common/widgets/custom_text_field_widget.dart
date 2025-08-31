@@ -93,7 +93,7 @@ class CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
 
-        widget.showTitle ? Text(widget.hintText, style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)) : const SizedBox(),
+        widget.showTitle ? Text(widget.hintText, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall)) : const SizedBox(),
         SizedBox(height: widget.showTitle ? Dimensions.paddingSizeExtraSmall : 0),
 
         TextFormField(
@@ -101,7 +101,7 @@ class CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
           controller: widget.controller,
           focusNode: widget.focusNode,
           validator: widget.validator,
-          style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
+          style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge),
           textInputAction: widget.inputAction,
           keyboardType: widget.isAmount ? const TextInputType.numberWithOptions(decimal: true) : widget.isNumber ? TextInputType.number : widget.inputType,
           cursorColor: Theme.of(context).primaryColor,
@@ -142,17 +142,17 @@ class CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
             isDense: true,
             hintText: widget.hintText,
             fillColor: Theme.of(context).cardColor,
-            hintStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
+            hintStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor),
             filled: true,
-            labelStyle : widget.showLabelText ? robotoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor) : null,
-            errorStyle: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+            labelStyle : widget.showLabelText ? cairoRegular.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor) : null,
+            errorStyle: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
 
             label: widget.showLabelText ? Text.rich(TextSpan(children: [
 
-              TextSpan(text: widget.labelText ?? '', style: robotoRegular.copyWith(fontSize: widget.labelTextSize ?? Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor.withValues(alpha: .75))),
+              TextSpan(text: widget.labelText ?? '', style: cairoRegular.copyWith(fontSize: widget.labelTextSize ?? Dimensions.fontSizeLarge, color: Theme.of(context).disabledColor.withValues(alpha: .75))),
 
               if(widget.required && widget.labelText != null)
-                TextSpan(text : ' *', style: robotoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeLarge)),
+                TextSpan(text : ' *', style: cairoRegular.copyWith(color: Theme.of(context).colorScheme.error, fontSize: Dimensions.fontSizeLarge)),
 
             ])) : null,
 
@@ -176,7 +176,7 @@ class CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
                     backgroundColor: Theme.of(context).cardColor,
                     dialogBackgroundColor: Theme.of(context).cardColor,
                     favorite: [widget.countryDialCode!],
-                    textStyle: robotoRegular.copyWith(
+                    textStyle: cairoRegular.copyWith(
                       fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).textTheme.bodyMedium!.color,
                     ),
                   ),

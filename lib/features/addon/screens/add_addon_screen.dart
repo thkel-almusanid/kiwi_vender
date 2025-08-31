@@ -117,8 +117,8 @@ class _AddAddonScreenState extends State<AddAddonScreen> with TickerProviderStat
                           indicatorWeight: 3,
                           labelColor: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6),
                           unselectedLabelColor: Theme.of(context).disabledColor,
-                          unselectedLabelStyle: robotoRegular.copyWith(color: Theme.of(context).disabledColor),
-                          labelStyle: robotoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
+                          unselectedLabelStyle: cairoRegular.copyWith(color: Theme.of(context).disabledColor),
+                          labelStyle: cairoBold.copyWith(fontSize: Dimensions.fontSizeDefault),
                           labelPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                           indicatorPadding: const EdgeInsets.only(right: Dimensions.paddingSizeLarge),
                           isScrollable: true,
@@ -172,7 +172,7 @@ class _AddAddonScreenState extends State<AddAddonScreen> with TickerProviderStat
                         hintText: 'select_category'.tr,
                         dropdownMenuItems: addonController.addonCategoryList?.map((item) => DropdownMenuItem<String>(
                           value: item.name,
-                          child: Text(item.name ?? '', style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                          child: Text(item.name ?? '', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeDefault)),
                         )).toList(),
                         onChanged: (String? value) {
                           addonController.setAddonCategoryName(value);
@@ -191,7 +191,7 @@ class _AddAddonScreenState extends State<AddAddonScreen> with TickerProviderStat
                               value: e.name,
                               child: Row(
                                 children: [
-                                  Text('${e.name!} (${e.taxRate}%)', style: robotoRegular),
+                                  Text('${e.name!} (${e.taxRate}%)', style: cairoRegular),
                                   const Spacer(),
                                   if (isInVatTaxList)
                                     const Icon(Icons.check, color: Colors.green),

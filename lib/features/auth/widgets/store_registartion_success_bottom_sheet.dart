@@ -42,7 +42,7 @@ class StoreRegistrationSuccessBottomSheet extends StatelessWidget {
               const CustomAssetImageWidget(Images.storeRegistrationSuccess, height: 100, width: 130),
               const SizedBox(height: Dimensions.paddingSizeLarge),
 
-              Text('${'welcome_to'.tr} ${AppConstants.appName}!', style: robotoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+              Text('${'welcome_to'.tr} ${AppConstants.appName}!', style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
               const SizedBox(height: Dimensions.paddingSizeDefault),
 
               Padding(
@@ -50,7 +50,7 @@ class StoreRegistrationSuccessBottomSheet extends StatelessWidget {
                 child: Text(
                   'thanks_for_joining_us_your_registration_is_under_review_hang_tight_we_ll_notify_you_once_approved'.tr,
                   textAlign: TextAlign.center,
-                  style: robotoRegular,
+                  style: cairoRegular,
                 ),
               ),
               const SizedBox(height: Dimensions.paddingSizeExtraOverLarge),

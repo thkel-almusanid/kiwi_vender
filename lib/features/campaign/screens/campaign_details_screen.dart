@@ -86,29 +86,29 @@ class _CampaignDetailsScreenState extends State<CampaignDetailsScreen> {
                   const SizedBox(width: Dimensions.paddingSizeSmall),
                   Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(
-                      campaignModel?.title ?? '', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                      campaignModel?.title ?? '', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
                       maxLines: 1, overflow: TextOverflow.ellipsis,
                     ),
                     Row(children: [
-                      Text('date'.tr, style: robotoRegular.copyWith(
+                      Text('date'.tr, style: cairoRegular.copyWith(
                         fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor,
                       )),
                       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                       Text(
                         '${DateConverterHelper.convertDateToDate(campaignModel!.availableDateStarts!)}'
                             ' - ${DateConverterHelper.convertDateToDate(campaignModel!.availableDateEnds!)}',
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
                       ),
                     ]),
                     Row(children: [
-                      Text('daily_time'.tr, style: robotoRegular.copyWith(
+                      Text('daily_time'.tr, style: cairoRegular.copyWith(
                         fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).disabledColor,
                       )),
                       const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                       Text(
                         '${DateConverterHelper.convertStringTimeToTime(campaignModel!.startTime!)}'
                             ' - ${DateConverterHelper.convertStringTimeToTime(campaignModel!.endTime!)}',
-                        style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall, color: Theme.of(context).primaryColor),
                       ),
                     ]),
                   ])),
@@ -117,7 +117,7 @@ class _CampaignDetailsScreenState extends State<CampaignDetailsScreen> {
 
                 Text(
                   campaignModel?.description ?? 'no_description_found'.tr,
-                  style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                  style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                 ),
 
               ]),

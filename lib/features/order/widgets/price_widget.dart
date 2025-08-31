@@ -10,8 +10,8 @@ class PriceWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      Expanded(child: Text(title, style: robotoRegular.copyWith(fontSize: fontSize,overflow: TextOverflow.ellipsis,),maxLines: 2,)),
-      Text(value, style: robotoMedium.copyWith(fontSize: fontSize)),
+      Expanded(child: Text(title, style: cairoRegular.copyWith(fontSize: fontSize,overflow: TextOverflow.ellipsis,),maxLines: 2,)),
+      Text(value, style: cairoMedium.copyWith(fontSize: fontSize)),
     ]);
   }
 }

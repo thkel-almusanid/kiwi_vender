@@ -96,7 +96,7 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
               padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                Text('business_settings'.tr, style: robotoBold),
+                Text('business_settings'.tr, style: cairoBold),
                 const SizedBox(height: Dimensions.paddingSizeSmall),
 
                 CustomCard(
@@ -191,7 +191,7 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
                 ),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
-                Text('other_settings'.tr, style: robotoBold),
+                Text('other_settings'.tr, style: cairoBold),
                 const SizedBox(height: Dimensions.paddingSizeSmall),
 
                 CustomCard(
@@ -270,7 +270,7 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
                         Row(children: [
                           Text(
                             'minimum_stock_for_warning'.tr,
-                            style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                            style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
                           ),
                           const SizedBox(width: Dimensions.paddingSizeExtraSmall),
 
@@ -305,9 +305,9 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
                           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                            Text('gst'.tr, style: robotoRegular),
+                            Text('gst'.tr, style: cairoRegular),
 
-                            Text('gst_description'.tr, style: robotoRegular.copyWith(
+                            Text('gst_description'.tr, style: cairoRegular.copyWith(
                               fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor,
                             )),
                           ]),
@@ -354,9 +354,9 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
                           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                            Text('extra_packaging_charge'.tr, style: robotoRegular),
+                            Text('extra_packaging_charge'.tr, style: cairoRegular),
 
-                            Text('extra_packaging_charge_description'.tr, style: robotoRegular.copyWith(
+                            Text('extra_packaging_charge_description'.tr, style: cairoRegular.copyWith(
                               fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).hintColor,
                             )),
                           ]),
@@ -393,7 +393,7 @@ class _StoreSettingsScreenState extends State<StoreSettingsScreen> {
                 ),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 
-                _module.alwaysOpen! ? const SizedBox() : Text('daily_schedule_time'.tr, style: robotoBold),
+                _module.alwaysOpen! ? const SizedBox() : Text('daily_schedule_time'.tr, style: cairoBold),
                 SizedBox(height: _module.alwaysOpen! ? 0 : Dimensions.paddingSizeSmall),
 
                 _module.alwaysOpen! ? const SizedBox() : CustomCard(

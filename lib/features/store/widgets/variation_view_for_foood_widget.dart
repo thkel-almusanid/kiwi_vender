@@ -23,11 +23,11 @@ class VariationViewForFood extends StatelessWidget {
 
             Row(children: [
               const SizedBox(width: Dimensions.paddingSizeSmall),
-              Text('${item.foodVariations![index].name!} - ', style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+              Text('${item.foodVariations![index].name!} - ', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
               Text(
                 ' ${item.foodVariations![index].type == 'multi' ? 'multiple_select'.tr : 'single_select'.tr}'
                     ' (${item.foodVariations![index].required == 'on' ? 'required'.tr : 'optional'.tr})',
-                style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
+                style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor),
               ),
             ]),
 
