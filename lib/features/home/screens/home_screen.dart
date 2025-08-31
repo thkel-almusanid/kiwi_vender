@@ -154,8 +154,8 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Padding(
           padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20), 
-            child: Image.asset(Images.logo, height: 30, width: 30),
+            borderRadius: BorderRadius.circular(35), 
+            child: Image.asset(Images.logo,  fit: BoxFit.cover),
           ),
         ),
         titleSpacing: 0,
