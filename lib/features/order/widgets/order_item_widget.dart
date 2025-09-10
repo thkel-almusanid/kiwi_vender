@@ -75,7 +75,7 @@ class OrderItemWidget extends StatelessWidget {
             Row(children: [
               Expanded(child: Text(
                 PriceConverterHelper.convertPrice(orderDetails.price),
-                style: cairoMedium,
+                style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',),
               )),
               ((Get.find<SplashController>().configModel!.moduleConfig!.module!.unit! && orderDetails.itemDetails!.unitType != null)
               || (Get.find<SplashController>().configModel!.moduleConfig!.module!.vegNonVeg! && Get.find<SplashController>().configModel!.toggleVegNonVeg!)) ? Container(

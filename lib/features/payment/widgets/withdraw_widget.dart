@@ -21,7 +21,7 @@ class WithdrawWidget extends StatelessWidget {
 
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-            Text(PriceConverterHelper.convertPrice(withdrawModel.amount), style: cairoMedium),
+            Text(PriceConverterHelper.convertPrice(withdrawModel.amount), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',)),
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
             Text('${'transferred_to'.tr} ${withdrawModel.bankName}', style: cairoRegular.copyWith(

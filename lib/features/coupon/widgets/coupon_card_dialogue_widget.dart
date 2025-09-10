@@ -61,7 +61,7 @@ class CouponCardDialogueWidget extends StatelessWidget {
                       PriceConverterHelper.convertPrice(double.parse(couponBody.discount.toString())) :
                       couponBody.discount}'} ${couponBody.couponType == 'free_delivery' ? '' : couponBody.discountType == 'percent' ? ' %' : ''}'
                           '${couponBody.couponType == 'free_delivery' ? '' : 'off'.tr}',
-                        style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                        style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge,fontFamily: 'saudi_riyal',),
                       ),
                       Text('${couponBody.code}', style: cairoMedium),
                     ]),

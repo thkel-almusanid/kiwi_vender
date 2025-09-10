@@ -238,7 +238,7 @@ class _TransactionWidgetState extends State<TransactionWidget> {
                             const Spacer(),
 
 
-                            Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                            Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: cairoBold.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeLarge)),
 
                           ]),
                         ),

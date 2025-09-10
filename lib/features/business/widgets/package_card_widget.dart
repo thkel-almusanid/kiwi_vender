@@ -56,7 +56,7 @@ class PackageCardWidget extends StatelessWidget {
 
             Text(
               isCommission ? '${package.price} %' : PriceConverterHelper.convertPrice(package.price),
-              style: cairoBold.copyWith(fontSize: 30, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor),
+              style: cairoBold.copyWith(fontFamily: 'saudi_riyal',fontSize: 30, color: currentIndex != null ? Theme.of(context).cardColor : Theme.of(context).primaryColor),
             ),
 
             isCommission ? const SizedBox() : Text('${package.validity} ' '${'days'.tr}', style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).cardColor)),

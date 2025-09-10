@@ -92,7 +92,7 @@ class DisbursementStatusCardWidget extends StatelessWidget {
             Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 PriceConverterHelper.convertPrice(amount),
-                style: cairoBold.copyWith(
+                style: cairoBold.copyWith(fontFamily: 'saudi_riyal',
                   fontSize: 20, color: isPending ? Colors.blue : isCompleted ? Colors.green : Colors.red,
                 ),
                 textDirection: TextDirection.ltr,

@@ -37,7 +37,7 @@ class VariationView extends StatelessWidget {
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                 Text(
                   PriceConverterHelper.convertPrice(item.variations![index].price),
-                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeSmall),
                 ),
                 SizedBox(width: stock! ? Dimensions.paddingSizeExtraSmall : 0),
                 stock! ? Text(

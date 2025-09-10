@@ -56,7 +56,7 @@ class CollectMoneyDeliverySheetWidget extends StatelessWidget {
                 const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                 Text(
                   PriceConverterHelper.convertPrice(orderAmount), textAlign: TextAlign.center,
-                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',),
                 ),
               ]),
               SizedBox(height: verify! ? 20 : 40),

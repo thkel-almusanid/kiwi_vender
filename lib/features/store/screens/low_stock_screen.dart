@@ -170,13 +170,14 @@ class _LowStockScreenState extends State<LowStockScreen> {
 
                 Text(
                   PriceConverterHelper.convertPrice(item.price, discount: discount, discountType: discountType),
-                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
+                  style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall,fontFamily: 'saudi_riyal',),
                 ),
                 SizedBox(width: discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
 
                 discount > 0 ? Text(
                   PriceConverterHelper.convertPrice(item.price),
                   style: cairoBold.copyWith(
+                    fontFamily: 'saudi_riyal',
                     fontSize: Dimensions.fontSizeExtraSmall,
                     color: Theme.of(context).disabledColor,
                     decoration: TextDecoration.lineThrough,

@@ -128,7 +128,7 @@ class _DisbursementScreenState extends State<DisbursementScreen> {
                     },
                     child: ListTile(
                       contentPadding: EdgeInsets.zero,
-                      title: Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoMedium),
+                      title: Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',)),
                       subtitle: Text(disbursement.withdrawMethod != null ? '${"payment_method".tr} : ${disbursement.withdrawMethod!.methodName}' : 'payment_method_deleted'.tr,
                           style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                       trailing: Column(crossAxisAlignment: CrossAxisAlignment.end, mainAxisAlignment: MainAxisAlignment.center, children: [

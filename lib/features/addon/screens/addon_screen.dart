@@ -77,7 +77,7 @@ class _AddonScreenState extends State<AddonScreen> {
                       Text(
                         addonController.addonList![index].price! > 0 ? PriceConverterHelper.convertPrice(addonController.addonList![index].price) : 'free'.tr,
                         maxLines: 1, overflow: TextOverflow.ellipsis,
-                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6)),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6),fontFamily: 'saudi_riyal',),
                       ),
                     ]),
                   ),

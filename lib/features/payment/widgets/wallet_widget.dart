@@ -24,7 +24,7 @@ class WalletWidget extends StatelessWidget {
 
         Text(
           PriceConverterHelper.convertPrice(value), textDirection: TextDirection.ltr,
-          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',),
         ),
         const SizedBox(width: Dimensions.paddingSizeSmall),
 
@@ -37,7 +37,7 @@ class WalletWidget extends StatelessWidget {
 
         Text(
           PriceConverterHelper.convertPrice(value), textDirection: TextDirection.ltr,
-          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+          style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',),
         ),
         const SizedBox(height: Dimensions.paddingSizeSmall),
 

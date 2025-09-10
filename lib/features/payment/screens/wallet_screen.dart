@@ -81,7 +81,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
                           Text(
                             PriceConverterHelper.convertPrice(profileController.profileModel!.dynamicBalance!),
-                            style: cairoBold.copyWith(fontSize: 22, color: Theme.of(context).cardColor),
+                            style: cairoBold.copyWith(fontSize: 22, color: Theme.of(context).cardColor,fontFamily: 'saudi_riyal',),
                             textDirection: TextDirection.ltr,
                           ),
 
@@ -331,7 +331,7 @@ class _WalletScreenState extends State<WalletScreen> {
                               child: Row(children: [
                                 Expanded(
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                    Text(PriceConverterHelper.convertPrice(bankController.transactions![index].amount), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault)),
+                                    Text(PriceConverterHelper.convertPrice(bankController.transactions![index].amount), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault,fontFamily: 'saudi_riyal',)),
                                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                                     Text('${'paid_via'.tr} ${bankController.transactions![index].method?.replaceAll('_', ' ').capitalize??''}', style: cairoRegular.copyWith(

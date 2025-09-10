@@ -113,7 +113,7 @@ class TransactionDetailsBottomSheet extends StatelessWidget {
 
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   Text('amount'.tr, style: cairoRegular),
-                  Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: cairoRegular),
+                  Text(PriceConverterHelper.convertPrice(transactions.paidAmount), style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                 ]),
                 const SizedBox(height: 40),
 

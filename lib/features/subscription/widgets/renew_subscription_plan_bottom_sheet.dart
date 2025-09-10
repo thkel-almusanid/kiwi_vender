@@ -102,7 +102,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                             Text(
                               businessIsCommission ? '${Get.find<SplashController>().configModel!.adminCommission}%' : PriceConverterHelper.convertPrice(activePackage?.price ?? 0),
-                              style: cairoBold.copyWith(fontSize: 25, color:  Colors.cyan.shade700),
+                              style: cairoBold.copyWith(fontSize: 25, fontFamily: 'saudi_riyal',color:  Colors.cyan.shade700),
                             ),
 
                             businessIsCommission ? const SizedBox() : Text('${activePackage?.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
@@ -156,7 +156,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                           Text(
                             PriceConverterHelper.convertPrice(package.price),
-                            style: cairoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
+                            style: cairoBold.copyWith(fontSize: 25, fontFamily: 'saudi_riyal',color: Theme.of(context).cardColor),
                           ),
 
                           Text('${package.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
@@ -203,7 +203,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                             Text(
                               PriceConverterHelper.convertPrice(package.price),
-                              style: cairoBold.copyWith(fontSize: 25, color: Theme.of(context).cardColor),
+                              style: cairoBold.copyWith(fontSize: 25, fontFamily: 'saudi_riyal',color: Theme.of(context).cardColor),
                             ),
 
                             Text('${package.validity} ' 'days'.tr, style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.white.withValues(alpha: 0.8))),
@@ -241,7 +241,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text('price'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).disabledColor)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                        Text(PriceConverterHelper.convertPrice(price), style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge)),
+                        Text(PriceConverterHelper.convertPrice(price), style: cairoBold.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeExtraLarge)),
                       ]),
                     ),
 
@@ -261,7 +261,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
                 (checkProductLimitModel != null && checkProductLimitModel!.backAmount != null && checkProductLimitModel!.backAmount! > 0) ? Text(
                   '${'you_will_get'.tr} ${PriceConverterHelper.convertPrice(checkProductLimitModel!.backAmount)} ${'to_your_wallet_for_remaining'.tr} ${checkProductLimitModel!.days} ${'days_subscription_plan'.tr}',
                   textAlign: TextAlign.center,
-                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, color: Theme.of(context).primaryColor),
+                  style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault, fontFamily: 'saudi_riyal',color: Theme.of(context).primaryColor),
                 ) : const SizedBox(),
 
                 const SizedBox(height: Dimensions.paddingSizeDefault),
@@ -313,7 +313,7 @@ class RenewSubscriptionPlanBottomSheet extends StatelessWidget {
 
                       Text(
                         PriceConverterHelper.convertPrice(subscriptionController.profileModel!.balance),
-                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeDefault),
+                        style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeDefault),
                       ),
 
                     ]),

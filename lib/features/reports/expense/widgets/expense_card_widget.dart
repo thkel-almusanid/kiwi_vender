@@ -41,7 +41,7 @@ class ExpenseCardWidget extends StatelessWidget {
             Text('${'expense_type'.tr} - ', style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
             Text(expense.type!.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall, color: Colors.blue)),
           ]),
-          Text(PriceConverterHelper.convertPrice(expense.amount), style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge,)),
+          Text(PriceConverterHelper.convertPrice(expense.amount), style: cairoBold.copyWith(fontSize: Dimensions.fontSizeLarge,fontFamily: 'saudi_riyal',)),
         ]),
       ]),
     );

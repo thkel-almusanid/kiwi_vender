@@ -66,7 +66,7 @@ class PaymentInformationDialogWidget extends StatelessWidget {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                   Text('amount'.tr, style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
 
-                  Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoBold),
+                  Text(PriceConverterHelper.convertPrice(disbursement.disbursementAmount), style: cairoBold.copyWith(fontFamily: 'saudi_riyal',)),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeDefault),
 

@@ -108,7 +108,7 @@ class ItemWidget extends StatelessWidget {
 
                     Text(
                       PriceConverterHelper.convertPrice(item.price, discount: discount, discountType: discountType),
-                      style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall,fontFamily: 'saudi_riyal',),
                     ),
                     SizedBox(width: discount! > 0 ? Dimensions.paddingSizeExtraSmall : 0),
 
@@ -118,6 +118,7 @@ class ItemWidget extends StatelessWidget {
                         fontSize: Dimensions.fontSizeExtraSmall,
                         color: Theme.of(context).disabledColor,
                         decoration: TextDecoration.lineThrough,
+                        fontFamily: 'saudi_riyal',
                       ),
                     ) : const SizedBox(),
 

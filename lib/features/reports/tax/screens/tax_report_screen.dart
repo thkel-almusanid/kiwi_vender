@@ -115,7 +115,7 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                         const CustomAssetImageWidget(Images.taxAmountIcon, height: 30, width: 30),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalOrderAmount), style: cairoBlack.copyWith(color: const Color(0xff0661CB), fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalOrderAmount), style: cairoBlack.copyWith(color: const Color(0xff0661CB),fontFamily: 'saudi_riyal', fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                         Text('total_order_amount'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
@@ -142,7 +142,7 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
 
                       Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
 
-                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalTax), style: cairoBlack.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.taxReportModel?.totalTax), style: cairoBlack.copyWith(color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal', fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
                         Text('total_tax_amount'.tr, style: cairoRegular.copyWith(color: Theme.of(context).hintColor)),
@@ -177,7 +177,7 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                                   fontSize: Dimensions.fontSizeSmall,
                                 ),
                               ),
-                              Text(PriceConverterHelper.convertPrice(reportController.taxReportModel!.taxSummary?[index].totalTax), style: cairoMedium.copyWith(color: Theme.of(context).hintColor, fontSize: Dimensions.fontSizeSmall)),
+                              Text(PriceConverterHelper.convertPrice(reportController.taxReportModel!.taxSummary?[index].totalTax), style: cairoMedium.copyWith(color: Theme.of(context).hintColor, fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeSmall)),
 
                             ]),
                           );
@@ -208,10 +208,10 @@ class _TaxReportScreenState extends State<TaxReportScreen> {
                         Text('${'order_id'.tr} #${reportController.orders?[index].id}', style: cairoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color?.withValues(alpha: 0.6))),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall - 2),
 
-                        Text(PriceConverterHelper.convertPrice(reportController.orders?[index].orderAmount), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge)),
+                        Text(PriceConverterHelper.convertPrice(reportController.orders?[index].orderAmount), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeLarge)),
                         const SizedBox(height: Dimensions.paddingSizeExtraSmall - 2),
 
-                        Text('${'tax'.tr}: ${PriceConverterHelper.convertPrice(reportController.orders?[index].totalTaxAmount)}', style: cairoBold.copyWith(color: Theme.of(context).primaryColor, fontSize: Dimensions.fontSizeLarge)),
+                        Text('${'tax'.tr}: ${PriceConverterHelper.convertPrice(reportController.orders?[index].totalTaxAmount)}', style: cairoBold.copyWith(color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal', fontSize: Dimensions.fontSizeLarge)),
 
                       ]),
                     ),

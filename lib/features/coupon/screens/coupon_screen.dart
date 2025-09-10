@@ -91,7 +91,7 @@ class _CouponScreenState extends State<CouponScreen> {
                                   PriceConverterHelper.convertPrice(double.parse(couponController.coupons![index].discount.toString())) :
                                   couponController.coupons![index].discount}'} ${couponController.coupons![index].couponType == 'free_delivery' ? '' : couponController.coupons![index].discountType == 'percent' ? '%' : ''}'
                                       '${couponController.coupons![index].couponType == 'free_delivery' ? '' : 'off'.tr}',
-                                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge),
+                                    style: cairoBold.copyWith(fontSize: Dimensions.fontSizeExtraLarge,fontFamily: 'saudi_riyal',),
                                   ),
 
                                   Row(

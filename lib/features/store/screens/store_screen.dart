@@ -187,7 +187,7 @@ class _StoreScreenState extends State<StoreScreen> with TickerProviderStateMixin
                         : PriceConverterHelper.convertPrice(store.discount!.discount)} '
                         '${'discount_will_be_applicable_when_order_amount_exceeds_is_more_than'.tr} ${PriceConverterHelper.convertPrice(store.discount!.minPurchase)},'
                         ' ${'max'.tr}: ${PriceConverterHelper.convertPrice(store.discount!.maxDiscount)} ${'discount_is_applicable'.tr}',
-                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall,
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall,fontFamily: 'saudi_riyal',
                         color: Colors.white,
                       ),
                       textAlign: TextAlign.center, maxLines: 3, overflow: TextOverflow.ellipsis,

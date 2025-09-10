@@ -219,7 +219,7 @@ class _SubscriptionDetailsWidgetState extends State<SubscriptionDetailsWidget> {
                     Expanded(
                       flex: 3,
                       child: Wrap(alignment: WrapAlignment.end, crossAxisAlignment: WrapCrossAlignment.end, children: [
-                        Text('${PriceConverterHelper.convertPrice(widget.subscriptionController.profileModel!.subscription!.package!.price)} /', style: cairoBold.copyWith(fontSize: 22)),
+                        Text('${PriceConverterHelper.convertPrice(widget.subscriptionController.profileModel!.subscription!.package!.price)} /', style: cairoBold.copyWith(fontFamily: 'saudi_riyal',fontSize: 22)),
 
                         Text(' ${widget.subscriptionController.profileModel!.subscription!.package!.validity} ${'days'.tr}', style: cairoMedium),
                       ]),

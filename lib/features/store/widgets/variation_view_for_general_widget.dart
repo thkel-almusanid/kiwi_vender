@@ -36,7 +36,7 @@ class VariationViewForGeneral extends StatelessWidget {
 
                     Text(
                       PriceConverterHelper.convertPrice(item.variations![index].price),
-                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall),
+                      style: cairoRegular.copyWith(fontSize: Dimensions.fontSizeSmall,fontFamily: 'saudi_riyal',),
                     ),
                     SizedBox(width: stock! ? Dimensions.paddingSizeExtraSmall : 0),
                     stock! ? Text(

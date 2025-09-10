@@ -355,7 +355,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                             const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                             Text(
                               PriceConverterHelper.convertPrice(item.addOns![index].price),
-                              style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                              style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeSmall),
                             ),
 
                           ]);
@@ -568,7 +568,7 @@ class FoodVariationView extends StatelessWidget {
                     return Text(
                       '${item.foodVariations![index].variationValues![i].level}'
                           ' - ${PriceConverterHelper.convertPrice(double.parse(item.foodVariations![index].variationValues![i].optionPrice!))}',
-                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeExtraSmall),
+                      style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeExtraSmall),
                     );
                   },
                 ),

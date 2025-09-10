@@ -138,13 +138,13 @@ class ItemBottomSheetWidget extends StatelessWidget {
                         '${PriceConverterHelper.convertPrice(startingPrice, discount: discount, discountType: discountType)}'
                             '${endingPrice != null ? ' - ${PriceConverterHelper.convertPrice(endingPrice, discount: discount,
                             discountType: discountType)}' : ''}',
-                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge),
+                        style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge,fontFamily: 'saudi_riyal',),
                       ),
                       const SizedBox(height: 5),
                       price > priceWithDiscount ? Text(
                         '${PriceConverterHelper.convertPrice(startingPrice)}'
                             '${endingPrice != null ? ' - ${PriceConverterHelper.convertPrice(endingPrice)}' : ''}',
-                        style: cairoMedium.copyWith(color: Theme.of(context).disabledColor, decoration: TextDecoration.lineThrough),
+                        style: cairoMedium.copyWith(color: Theme.of(context).disabledColor, decoration: TextDecoration.lineThrough,fontFamily: 'saudi_riyal',),
                       ) : const SizedBox(),
                     ]),
                   ),
@@ -283,7 +283,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                                   maxLines: 1, overflow: TextOverflow.ellipsis,
                                   style: cairoRegular.copyWith(
                                     color: posController.addOnActiveList[index] ? Colors.white : Colors.black,
-                                    fontSize: Dimensions.fontSizeExtraSmall,
+                                    fontSize: Dimensions.fontSizeExtraSmall,fontFamily: 'saudi_riyal',
                                   ),
                                 ),
                               ]),
@@ -328,7 +328,7 @@ class ItemBottomSheetWidget extends StatelessWidget {
                 Row(children: [
                   Text('${'total_amount'.tr}:', style: cairoMedium),
                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                  Text(PriceConverterHelper.convertPrice(priceWithAddons), style: cairoBold.copyWith(color: Theme.of(context).primaryColor)),
+                  Text(PriceConverterHelper.convertPrice(priceWithAddons), style: cairoBold.copyWith(color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',)),
                 ]),
                 const SizedBox(height: Dimensions.paddingSizeLarge),
 

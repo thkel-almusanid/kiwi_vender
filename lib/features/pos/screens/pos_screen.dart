@@ -78,7 +78,7 @@ class _PosScreenState extends State<PosScreen> {
                     Text(suggestion.name!, maxLines: 1, overflow: TextOverflow.ellipsis, style: cairoRegular.copyWith(
                       color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeLarge,
                     )),
-                    Text(PriceConverterHelper.convertPrice(suggestion.price), style: cairoRegular.copyWith(
+                    Text(PriceConverterHelper.convertPrice(suggestion.price), style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',
                       color: Theme.of(context).textTheme.bodyLarge!.color, fontSize: Dimensions.fontSizeSmall,
                     )),
                   ]),
@@ -195,13 +195,13 @@ class _PosScreenState extends State<PosScreen> {
                         // Total
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Text('item_price'.tr, style: cairoRegular),
-                          Text(PriceConverterHelper.convertPrice(itemPrice), style: cairoRegular),
+                          Text(PriceConverterHelper.convertPrice(itemPrice), style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                         ]),
                         const SizedBox(height: 10),
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Text('addons'.tr, style: cairoRegular),
-                          Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: cairoRegular),
+                          Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                         ]),
 
                         Padding(
@@ -211,7 +211,7 @@ class _PosScreenState extends State<PosScreen> {
 
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Text('subtotal'.tr, style: cairoMedium),
-                          Text(PriceConverterHelper.convertPrice(subTotal), style: cairoMedium),
+                          Text(PriceConverterHelper.convertPrice(subTotal), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',)),
                         ]),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
                         Row(children: [
@@ -225,12 +225,12 @@ class _PosScreenState extends State<PosScreen> {
                               inputAction: TextInputAction.done,
                             ),
                           ),
-                          Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: cairoRegular),
+                          Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                         ]),
                         const SizedBox(height: Dimensions.paddingSizeSmall),
                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                           Text('vat_tax'.tr, style: cairoRegular),
-                          Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: cairoRegular),
+                          Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                         ]),
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeSmall),
@@ -243,7 +243,7 @@ class _PosScreenState extends State<PosScreen> {
                           ),
                           Text(
                             PriceConverterHelper.convertPrice(total),
-                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor, fontFamily: 'saudi_riyal'),
                           ),
                         ]),
 

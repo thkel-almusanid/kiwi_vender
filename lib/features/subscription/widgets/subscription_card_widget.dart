@@ -77,7 +77,7 @@ class SubscriptionCardWidget extends StatelessWidget {
 
       Text(
         PriceConverterHelper.convertPrice(package.price),
-        style: cairoBold.copyWith(fontSize: 35, color: color),
+        style: cairoBold.copyWith(fontSize: 35,fontFamily: 'saudi_riyal', color: color),
       ),
 
       Text('${package.validity} ' 'days'.tr, style: cairoBold.copyWith(fontSize: Dimensions.fontSizeSmall)),

@@ -119,7 +119,7 @@ class PosProductWidget extends StatelessWidget {
                           const SizedBox(height: 5),
                           Text(
                             PriceConverterHelper.convertPrice(cart.discountedPrice!+cart.discountAmount!),
-                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall,fontFamily: 'saudi_riyal',),
                           ),
                         ]),
                       ),

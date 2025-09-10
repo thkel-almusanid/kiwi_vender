@@ -565,7 +565,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                         onPressed: () =>  Get.dialog(AmountInputDialogueWidget(orderId: widget.orderId, isItemPrice: true, amount: itemsPrice, additionalCharge: additionalCharge), barrierDismissible: true),
                         icon: const Icon(Icons.edit, size: 16),
                       ) : const SizedBox(),
-                      Text(PriceConverterHelper.convertPrice(itemsPrice), style: cairoRegular),
+                      Text(PriceConverterHelper.convertPrice(itemsPrice), style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ]),
                   ]),
                   const SizedBox(height: 10),
@@ -574,7 +574,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('addons'.tr, style: cairoRegular),
-                      Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: cairoRegular),
+                      Text('(+) ${PriceConverterHelper.convertPrice(addOns)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ],
                   ) : const SizedBox(),
 
@@ -586,7 +586,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('subtotal'.tr, style: cairoMedium),
-                      Text(PriceConverterHelper.convertPrice(subTotal), style: cairoMedium),
+                      Text(PriceConverterHelper.convertPrice(subTotal), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',)),
                     ],
                   ) : const SizedBox(),
                   SizedBox(height: Get.find<SplashController>().getModuleConfig(order.moduleType).addOn! ? 10 : 0),
@@ -599,7 +599,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                         onPressed: () => Get.dialog(AmountInputDialogueWidget(orderId: widget.orderId, isItemPrice: false, amount: discount), barrierDismissible: true),
                         icon: const Icon(Icons.edit, size: 16),
                       ) : const SizedBox(),
-                      Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: cairoRegular),
+                      Text('(-) ${PriceConverterHelper.convertPrice(discount)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ]),
                   ]),
                   const SizedBox(height: 10),
@@ -608,7 +608,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     Text('coupon_discount'.tr, style: cairoRegular),
                     Text(
                       '(-) ${PriceConverterHelper.convertPrice(couponDiscount)}',
-                      style: cairoRegular,
+                      style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',),
                     ),
                   ]) : const SizedBox(),
                   SizedBox(height: couponDiscount > 0 ? 10 : 0),
@@ -617,14 +617,14 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('referral_discount'.tr, style: cairoRegular),
-                      Text('(-) ${PriceConverterHelper.convertPrice(referrerBonusAmount)}', style: cairoRegular),
+                      Text('(-) ${PriceConverterHelper.convertPrice(referrerBonusAmount)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ],
                   ) : const SizedBox(),
                   SizedBox(height: referrerBonusAmount > 0 ? 10 : 0),
 
                   taxIncluded || (tax == 0) ? const SizedBox() : Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('vat_tax'.tr, style: cairoRegular),
-                    Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: cairoRegular),
+                    Text('(+) ${PriceConverterHelper.convertPrice(tax)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                   ]),
                   SizedBox(height: taxIncluded || (tax == 0) ? 0 : 10),
 
@@ -632,7 +632,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('delivery_man_tips'.tr, style: cairoRegular),
-                      Text('(+) ${PriceConverterHelper.convertPrice(dmTips)}', style: cairoRegular),
+                      Text('(+) ${PriceConverterHelper.convertPrice(dmTips)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ],
                   ),
                   const SizedBox(height: 10),
@@ -641,20 +641,20 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('extra_packaging'.tr, style: cairoRegular),
-                      Text('(+) ${PriceConverterHelper.convertPrice(extraPackagingAmount)}', style: cairoRegular),
+                      Text('(+) ${PriceConverterHelper.convertPrice(extraPackagingAmount)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                     ],
                   ) : const SizedBox(),
                   SizedBox(height: extraPackagingAmount > 0 ? 10 : 0),
 
                   (order.additionalCharge != null && order.additionalCharge! > 0) ? Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text(Get.find<SplashController>().configModel!.additionalChargeName!, style: cairoRegular),
-                    Text('(+) ${PriceConverterHelper.convertPrice(order.additionalCharge)}', style: cairoRegular, textDirection: TextDirection.ltr),
+                    Text('(+) ${PriceConverterHelper.convertPrice(order.additionalCharge)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',), textDirection: TextDirection.ltr),
                   ]) : const SizedBox(),
                   (order.additionalCharge != null && order.additionalCharge! > 0) ? const SizedBox(height: 10) : const SizedBox(),
 
                   Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('delivery_fee'.tr, style: cairoRegular),
-                    Text('(+) ${PriceConverterHelper.convertPrice(deliveryCharge)}', style: cairoRegular),
+                    Text('(+) ${PriceConverterHelper.convertPrice(deliveryCharge)}', style: cairoRegular.copyWith(fontFamily: 'saudi_riyal',)),
                   ]),
 
                   Padding(
@@ -681,7 +681,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                           )),
                           Text(
                             PriceConverterHelper.convertPrice(total),
-                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                            style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',),
                           ),
                         ]),
                         const SizedBox(height: 10),
@@ -690,7 +690,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                           Text('paid_by_wallet'.tr, style: restConfModel ? cairoMedium : cairoRegular),
                           Text(
                             PriceConverterHelper.convertPrice(order.payments![0].amount),
-                            style: restConfModel ? cairoMedium : cairoRegular,
+                            style: restConfModel ? cairoMedium.copyWith(fontFamily: 'saudi_riyal',) : cairoRegular.copyWith(fontFamily: 'saudi_riyal',),
                           ),
                         ]),
                         const SizedBox(height: 10),
@@ -699,7 +699,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
                           Text('${order.payments?[1].paymentStatus == 'paid' ? 'paid_by'.tr : 'due_amount'.tr} (${order.payments![1].paymentMethod?.tr})', style: restConfModel ? cairoMedium : cairoRegular),
                           Text(
                             PriceConverterHelper.convertPrice(order.payments![1].amount),
-                            style: restConfModel ? cairoMedium : cairoRegular,
+                            style: restConfModel ? cairoMedium.copyWith(fontFamily: 'saudi_riyal',) : cairoRegular.copyWith(fontFamily: 'saudi_riyal',),
                           ),
                         ]),
                       ]),
@@ -719,7 +719,7 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> with WidgetsBin
 
                     Text(
                       PriceConverterHelper.convertPrice(total),
-                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor),
+                      style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeLarge, color: Theme.of(context).primaryColor,fontFamily: 'saudi_riyal',),
                     ),
                   ]) : const SizedBox(),
 

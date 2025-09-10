@@ -154,7 +154,7 @@ class _PendingItemScreenState extends State<PendingItemScreen> with SingleTicker
                                     ]),
 
                                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                                    Text(PriceConverterHelper.convertPrice(storeController.pendingItem![index].price), style: cairoMedium.copyWith(fontSize: Dimensions.fontSizeSmall)),
+                                    Text(PriceConverterHelper.convertPrice(storeController.pendingItem![index].price), style: cairoMedium.copyWith(fontFamily: 'saudi_riyal',fontSize: Dimensions.fontSizeSmall)),
 
                                   ],
                                 ),
