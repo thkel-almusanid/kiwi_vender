@@ -31,9 +31,9 @@ class PriceConverterHelper {
         (Match m) => '${m[1]},',
       );
 
-  return '${isRightSide ? '' : '$riyalSymbol '}'
+  return '${isRightSide ? '' : riyalSymbol}'
       '$formattedPrice'
-      '${isRightSide ? ' $riyalSymbol' : ''}';
+      '${isRightSide ? riyalSymbol : ''}';
 }
 
   static double? convertWithDiscount(double? price, double? discount, String? discountType) {
