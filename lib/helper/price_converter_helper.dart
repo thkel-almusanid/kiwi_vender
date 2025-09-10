@@ -21,7 +21,6 @@ class PriceConverterHelper {
           .currencySymbolDirection ==
       'right';
 
-  // رمز الريال من الخط
   String riyalSymbol = '\u200A${String.fromCharCode(0xE900)}';
 
   String formattedPrice = price!
