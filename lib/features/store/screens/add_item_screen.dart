@@ -1997,7 +1997,6 @@ class _AddItemScreenState extends State<AddItemScreen>
                             ),
                             const SizedBox(
                                 height: Dimensions.paddingSizeDefault),
-
                             isPharmacy
                                 ? Column(
                                     crossAxisAlignment:
@@ -2186,55 +2185,102 @@ class _AddItemScreenState extends State<AddItemScreen>
                                                   : 0),
                                           _module.unit!
                                               ? Expanded(
-  child: Container(
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-      color: Theme.of(context).cardColor,
-      border: Border.all(
-        color: Theme.of(context).disabledColor.withValues(alpha: 0.5),
-      ),
-    ),
-    child: CustomDropdown<int>(
-      onChange: (int? value, int index) {
-        if (value != null) {
-          storeController.setUnitIndex(value, true);
-        }
-      },
-      dropdownButtonStyle: DropdownButtonStyle(
-        height: 45,
-        padding: const EdgeInsets.symmetric(
-          vertical: Dimensions.paddingSizeExtraSmall,
-          horizontal: Dimensions.paddingSizeExtraSmall,
-        ),
-        primaryColor: Theme.of(context).textTheme.bodyLarge!.color,
-      ),
-      iconColor: Theme.of(context).disabledColor,
-      dropdownStyle: DropdownStyle(
-        elevation: 10,
-        borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-        padding: const EdgeInsets.all(Dimensions.paddingSizeExtraSmall),
-      ),
-      items: unitList,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 8),
-        child: Text(
-          // 👇 إذا في عنصر مختار ضمن القائمة، اعرضه، غير هيك اعرض "unit"
-          (widget.item != null &&
-                  storeController.unitList != null &&
-                  storeController.unitList!.isNotEmpty &&
-                  storeController.unitIndex != null &&
-                  storeController.unitIndex! < storeController.unitList!.length)
-              ? storeController.unitList![storeController.unitIndex!].unit!.tr
-              : 'unit'.tr,
-          style: cairoRegular.copyWith(
-            color: Theme.of(context).disabledColor,
-            fontSize: Dimensions.fontSizeLarge,
-          ),
-        ),
-      ),
-    ),
-  ),
-)
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                      borderRadius: BorderRadius
+                                                          .circular(Dimensions
+                                                              .radiusDefault),
+                                                      color: Theme.of(context)
+                                                          .cardColor,
+                                                      border: Border.all(
+                                                        color: Theme.of(context)
+                                                            .disabledColor
+                                                            .withValues(
+                                                                alpha: 0.5),
+                                                      ),
+                                                    ),
+                                                    child: CustomDropdown<int>(
+                                                      onChange: (int? value,
+                                                          int index) {
+                                                        if (value != null) {
+                                                          storeController
+                                                              .setUnitIndex(
+                                                                  value, true);
+                                                        }
+                                                      },
+                                                      dropdownButtonStyle:
+                                                          DropdownButtonStyle(
+                                                        height: 45,
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .symmetric(
+                                                          vertical: Dimensions
+                                                              .paddingSizeExtraSmall,
+                                                          horizontal: Dimensions
+                                                              .paddingSizeExtraSmall,
+                                                        ),
+                                                        primaryColor:
+                                                            Theme.of(context)
+                                                                .textTheme
+                                                                .bodyLarge!
+                                                                .color,
+                                                      ),
+                                                      iconColor:
+                                                          Theme.of(context)
+                                                              .disabledColor,
+                                                      dropdownStyle:
+                                                          DropdownStyle(
+                                                        elevation: 10,
+                                                        borderRadius: BorderRadius
+                                                            .circular(Dimensions
+                                                                .radiusDefault),
+                                                        padding: const EdgeInsets
+                                                            .all(Dimensions
+                                                                .paddingSizeExtraSmall),
+                                                      ),
+                                                      items: unitList,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(left: 8),
+                                                        child: Text(
+                                                          // 👇 إذا في عنصر مختار ضمن القائمة، اعرضه، غير هيك اعرض "unit"
+                                                          (widget.item !=
+                                                                      null &&
+                                                                  storeController
+                                                                          .unitList !=
+                                                                      null &&
+                                                                  storeController
+                                                                      .unitList!
+                                                                      .isNotEmpty &&
+                                                                  storeController
+                                                                          .unitIndex !=
+                                                                      null &&
+                                                                  storeController
+                                                                          .unitIndex! <
+                                                                      storeController
+                                                                          .unitList!
+                                                                          .length)
+                                                              ? storeController
+                                                                  .unitList![
+                                                                      storeController
+                                                                          .unitIndex!]
+                                                                  .unit!
+                                                                  .tr
+                                                              : 'unit'.tr,
+                                                          style: cairoRegular
+                                                              .copyWith(
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .disabledColor,
+                                                            fontSize: Dimensions
+                                                                .fontSizeLarge,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
                                               : const SizedBox(),
                                         ])
                                       : const SizedBox(),
