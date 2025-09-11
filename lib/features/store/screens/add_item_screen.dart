@@ -3007,6 +3007,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                               _maxOrderQuantityController.text.isNotEmpty
                                   ? int.parse(_maxOrderQuantityController.text)
                                   : 0;
+
                           bool haveBlankVariant = false;
                           bool blankVariantPrice = false;
                           bool blankVariantStock = false;
@@ -3018,18 +3019,20 @@ class _AddItemScreenState extends State<AddItemScreen>
                           bool variationMinLessThenZero = false;
                           bool variationMaxSmallThenMin = false;
                           bool variationMaxBigThenOptions = false;
+
                           for (AttributeModel attr
-                              in storeController.attributeList!) {
+                              in storeController.attributeList ?? []) {
                             if (attr.active && attr.variants.isEmpty) {
                               haveBlankVariant = true;
                               break;
                             }
                           }
+
                           if (Get.find<SplashController>()
                               .getStoreModuleConfig()
                               .newVariation!) {
                             for (VariationModelBodyModel variationModel
-                                in storeController.variationList!) {
+                                in storeController.variationList ?? []) {
                               if (variationModel.nameController!.text.isEmpty) {
                                 variationNameEmpty = true;
                               } else if (!variationModel.isSingle) {
@@ -3049,11 +3052,12 @@ class _AddItemScreenState extends State<AddItemScreen>
                                   variationMaxSmallThenMin = true;
                                 } else if (int.parse(
                                         variationModel.maxController!.text) >
-                                    variationModel.options!.length) {
+                                    (variationModel.options?.length ?? 0)) {
                                   variationMaxBigThenOptions = true;
                                 }
                               } else {
-                                for (Option option in variationModel.options!) {
+                                for (Option option
+                                    in variationModel.options ?? []) {
                                   if (option
                                       .optionNameController!.text.isEmpty) {
                                     variationOptionNameEmpty = true;
@@ -3066,7 +3070,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                             }
                           } else {
                             for (VariantTypeModel variantType
-                                in storeController.variantTypeList!) {
+                                in storeController.variantTypeList ?? []) {
                               if (variantType.priceController.text.isEmpty) {
                                 blankVariantPrice = true;
                                 break;
@@ -3100,12 +3104,15 @@ class _AddItemScreenState extends State<AddItemScreen>
 
                           bool checkDiscountWithVariationPrice = false;
                           if (storeController.discountTypeIndex == 1 &&
-                              storeController.variantTypeList!.isNotEmpty) {
+                              (storeController.variantTypeList?.isNotEmpty ??
+                                  false)) {
                             for (VariantTypeModel variantType
                                 in storeController.variantTypeList!) {
-                              double variantPrice = double.parse(
-                                  variantType.priceController.text);
-                              double discountValue = double.parse(discount);
+                              double variantPrice = double.tryParse(
+                                      variantType.priceController.text) ??
+                                  0;
+                              double discountValue =
+                                  double.tryParse(discount) ?? 0;
                               if (variantPrice < discountValue) {
                                 checkDiscountWithVariationPrice = true;
                                 break;
@@ -3115,7 +3122,9 @@ class _AddItemScreenState extends State<AddItemScreen>
 
                           if (defaultDataNull) {
                             showCustomSnackBar('enter_data_for_english'.tr);
-                          } else if (categoryController.categoryIndex == null) {
+                          } else if (categoryController.categoryIndex == null ||
+                              (categoryController.categoryList?.isEmpty ??
+                                  true)) {
                             showCustomSnackBar('select_a_category'.tr);
                           } else if (price.isEmpty) {
                             showCustomSnackBar('enter_item_price'.tr);
@@ -3155,7 +3164,8 @@ class _AddItemScreenState extends State<AddItemScreen>
                             showCustomSnackBar(
                                 'enter_stock_for_every_variant'.tr);
                           } else if (_module.stock! &&
-                              storeController.variantTypeList!.isEmpty &&
+                              (storeController.variantTypeList?.isEmpty ??
+                                  true) &&
                               _stockController.text.trim().isEmpty) {
                             showCustomSnackBar('enter_stock'.tr);
                           } else if (_module.unit! &&
@@ -3184,7 +3194,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                                       .getStoreModuleConfig()
                                       .newVariation!
                                   ? false
-                                  : storeController.rawImages.isEmpty)) {
+                                  : (storeController.rawImages.isEmpty))) {
                             showCustomSnackBar('upload_item_image'.tr);
                           } else if (checkDiscountWithVariationPrice) {
                             showCustomSnackBar(
@@ -3194,7 +3204,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                                       .configModel!
                                       .systemTaxType ==
                                   'product_wise' &&
-                              storeController.selectedVatTaxIdList.isEmpty) {
+                              (storeController.selectedVatTaxIdList.isEmpty)) {
                             showCustomSnackBar('select_vat_tax'.tr);
                           } else {
                             _item.veg = storeController.isVeg ? 1 : 0;
@@ -3203,55 +3213,77 @@ class _AddItemScreenState extends State<AddItemScreen>
                             _item.isHalal = storeController.isHalal ? 1 : 0;
                             _item.isBasicMedicine =
                                 storeController.isBasicMedicine ? 1 : 0;
-                            _item.price = double.parse(price);
-                            _item.discount = double.parse(discount);
+                            _item.price = double.tryParse(price) ?? 0;
+                            _item.discount = double.tryParse(discount) ?? 0;
                             _item.discountType =
                                 storeController.discountTypeIndex == 0
                                     ? 'percent'
                                     : 'amount';
                             _item.categoryIds = [];
-                            _item.maxOrderQuantity = maxOrderQuantity;
-                            _item.categoryIds!.add(CategoryIds(
+
+                            // ✅ category
+                            if (categoryController.categoryIndex != null &&
+                                (categoryController.categoryList?.isNotEmpty ??
+                                    false)) {
+                              _item.categoryIds!.add(CategoryIds(
                                 id: categoryController
                                     .categoryList![
                                         categoryController.categoryIndex!]
                                     .id
-                                    .toString()));
-                            if (categoryController.subCategoryIndex != null) {
+                                    .toString(),
+                              ));
+                            }
+                            if (categoryController.subCategoryIndex != null &&
+                                (categoryController
+                                        .subCategoryList?.isNotEmpty ??
+                                    false)) {
                               _item.categoryIds!.add(CategoryIds(
-                                  id: categoryController
-                                      .subCategoryList![
-                                          categoryController.subCategoryIndex!]
-                                      .id
-                                      .toString()));
-                            } else {
-                              if (_item.categoryIds!.length > 1) {
-                                _item.categoryIds!.removeAt(1);
+                                id: categoryController
+                                    .subCategoryList![
+                                        categoryController.subCategoryIndex!]
+                                    .id
+                                    .toString(),
+                              ));
+                            }
+
+                            _item.addOns = [];
+                            for (var index
+                                in storeController.selectedAddons ?? []) {
+                              if (Get.find<AddonController>().addonList !=
+                                      null &&
+                                  index <
+                                      Get.find<AddonController>()
+                                          .addonList!
+                                          .length) {
+                                _item.addOns!.add(Get.find<AddonController>()
+                                    .addonList![index]);
                               }
                             }
-                            _item.addOns = [];
-                            for (var index in storeController.selectedAddons!) {
-                              _item.addOns!.add(Get.find<AddonController>()
-                                  .addonList![index]);
-                            }
-                            if (_module.unit!) {
+
+                            if (_module.unit! &&
+                                storeController.unitIndex != null &&
+                                (storeController.unitList?.isNotEmpty ??
+                                    false)) {
                               _item.unitType = storeController
                                   .unitList![storeController.unitIndex!].id
                                   .toString();
                             }
+
                             if (_module.stock!) {
                               _item.stock =
-                                  int.parse(_stockController.text.trim());
+                                  int.tryParse(_stockController.text.trim()) ??
+                                      0;
                             }
+
                             if (Get.find<SplashController>()
                                     .configModel!
                                     .systemTaxType ==
                                 'product_wise') {
-                              _item.taxVatIds = [];
                               _item.taxVatIds =
                                   storeController.selectedVatTaxIdList;
                             }
 
+                            // translations
                             List<Translation> translations = [];
                             for (int index = 0;
                                 index < _languageList.length;
@@ -3279,31 +3311,38 @@ class _AddItemScreenState extends State<AddItemScreen>
                                     : _descriptionControllerList[0].text.trim(),
                               ));
                             }
+                            _item.translations = translations;
 
-                            _item.translations = [];
-                            _item.translations!.addAll(translations);
+                            // ✅ brand
+                            _item.brandId =
+                                (storeController.brandList != null &&
+                                        storeController.brandList!.isNotEmpty &&
+                                        storeController.brandIndex != null)
+                                    ? storeController
+                                        .brandList![storeController.brandIndex!]
+                                        .id
+                                    : 0;
 
-                            _item.brandId = storeController.brandList != null &&
-                                    storeController.brandList!.isNotEmpty
-                                ? storeController
-                                    .brandList![storeController.brandIndex!].id
-                                : 0;
+                            // ✅ condition
                             _item.conditionId =
-                                storeController.suitableTagList != null &&
+                                (storeController.suitableTagList != null &&
                                         storeController
-                                            .suitableTagList!.isNotEmpty
+                                            .suitableTagList!.isNotEmpty &&
+                                        storeController.suitableTagIndex !=
+                                            null)
                                     ? storeController
                                         .suitableTagList![
                                             storeController.suitableTagIndex!]
                                         .id
                                     : 0;
+
                             bool hasEmptyValue = false;
                             if (Get.find<SplashController>()
                                 .getStoreModuleConfig()
                                 .newVariation!) {
                               _item.foodVariations = [];
                               for (VariationModelBodyModel variation
-                                  in storeController.variationList!) {
+                                  in storeController.variationList ?? []) {
                                 if (variation.nameController!.text
                                     .trim()
                                     .isEmpty) {
@@ -3311,7 +3350,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                                   break;
                                 }
                                 List<VariationValue> values = [];
-                                for (Option option in variation.options!) {
+                                for (Option option in variation.options ?? []) {
                                   if (option.optionNameController!.text
                                           .trim()
                                           .isEmpty ||
@@ -3329,9 +3368,7 @@ class _AddItemScreenState extends State<AddItemScreen>
                                         .trim(),
                                   ));
                                 }
-                                if (hasEmptyValue) {
-                                  break;
-                                }
+                                if (hasEmptyValue) break;
                                 _item.foodVariations!.add(FoodVariation(
                                   name: variation.nameController!.text.trim(),
                                   type: variation.isSingle ? 'single' : 'multi',
@@ -3342,15 +3379,18 @@ class _AddItemScreenState extends State<AddItemScreen>
                                 ));
                               }
                             }
+
                             if (hasEmptyValue) {
                               showCustomSnackBar(
                                   'set_value_for_all_variation'.tr);
                             } else {
                               storeController.addItem(
-                                  _item, widget.item == null,
-                                  genericNameData:
-                                      _genericNameSuggestionController.text
-                                          .trim());
+                                _item,
+                                widget.item == null,
+                                genericNameData:
+                                    _genericNameSuggestionController.text
+                                        .trim(),
+                              );
                             }
                           }
                         },
